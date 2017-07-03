@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/30/fffff的副本/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="（一）要对元素进行修改或者替换删减，首先要获取元素。这里有一个getElementById()方法，获取html中出现过的id值，前面定义一个变量以得到确切的id值。除了id，还有多个元素可以使用相同的name属性，如复选框。使用getElementByName()函数; 获取元素：document.getElementById(“id”);获取或替换元素：innerHTML     语法：Obj">
-<meta property="og:updated_time" content="2017-07-02T13:36:04.000Z">
+<meta property="og:updated_time" content="2017-07-03T13:35:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="通过JavaScript操作DOM改变HTML结构">
 <meta name="twitter:description" content="（一）要对元素进行修改或者替换删减，首先要获取元素。这里有一个getElementById()方法，获取html中出现过的id值，前面定义一个变量以得到确切的id值。除了id，还有多个元素可以使用相同的name属性，如复选框。使用getElementByName()函数; 获取元素：document.getElementById(“id”);获取或替换元素：innerHTML     语法：Obj">
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -88,39 +88,21 @@
         <p>（一）<br>要对元素进行修改或者替换删减，首先要获取元素。<br>这里有一个getElementById()方法，获取html中出现过的id值，前面定义一个变量以得到确切的id值。<br>除了id，还有多个元素可以使用相同的name属性，如复选框。使用getElementByName()函数;</p>
 <p>获取元素：document.getElementById(“id”);<br>获取或替换元素：innerHTML     语法：Object.innerHTML   Object是获取的元素对象<br>改变html样式：Object.style.property = new style;<br>控制类名：className     object.classname = classname 可获取某元素的css样式进而修改</p>
 <p>eg：<br>改变元素的颜色：</p>
-<p></p><h2 id="con">JavaScript课程</h2><p></p>
-<p><div id="txt"> </div></p>
-<p></p><h5>JavaScript为网页添加动态效果并实现与用户交互的功能。</h5><br><p></p>
-<p><input type="button" value="改变颜色" onclick="changeColor()"><br>/定义”改变颜色”的函数<br>var myh = document.getElementById(“con”);<br>var mydiv = document.getElementById(“txt”);<br>//定义”改变颜色”的函数<br>function changeColor(){<br>mydiv.style.color=”red”;<br>mydiv.style.backgroundColor=”#ccc”;<br>}</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;h2 id=<span class="string">"con"</span>&gt;JavaScript课程&lt;/H2&gt;</div><div class="line">&lt;div id=<span class="string">"txt"</span>&gt; </div><div class="line">&lt;h5&gt;JavaScript为网页添加动态效果并实现与用户交互的功能。&lt;/h5&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"button"</span> value=<span class="string">"改变颜色"</span> onclick = <span class="string">"changeColor()"</span> &gt;  </div><div class="line">/定义<span class="string">"改变颜色"</span>的函数</div><div class="line">var myh = document.getElementById(<span class="string">"con"</span>);</div><div class="line">var mydiv = document.getElementById(<span class="string">"txt"</span>);</div><div class="line">//定义<span class="string">"改变颜色"</span>的函数</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">changeColor</span></span>()&#123;</div><div class="line">mydiv.style.color=<span class="string">"red"</span>;</div><div class="line">mydiv.style.backgroundColor=<span class="string">"#ccc"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>更新DOM：可以直接修改节点的文本：<br>1.修改innerHTML属性（强大），操作：获取id值—设置<br>eg：</p>
 <p></p><p id="“p-id”"><br>var p = document.getElementById(‘p-id’);<br>p.innerHTML = ‘ABC’;<br>2.修改innerText或textContent属性，这样可自动对字符串进行HTML编码<br>eg：<br>var p = document.getElementById(‘p-id’);<br>p.innerText = ‘<script>alert(“hi”)</script>’;</p>
-<p>插入DOM：如果是空节点，则是插入；如果不是空节点，则会替换原来的节点；<br>1.使用appendChild，把一个字节点添加到父节点的最后一个字节点。<br>eg.：</p>
-<p></p><p id="js">JavaScript</p><p></p>
-<p><div id="list"></div></p>
-<p></p><p id="java">Java</p><p></p>
-<p></p><p id="python">Python</p><p></p>
-<p></p><p id="scheme">Scheme</p><br><br>把<p id="js">JavaScript</p>添加到<div id="list">的最后一项：<br>var js = document.getElementById(‘js’);<br>var list = document.getElementById(‘list’);<br>list.appendChild(js);<br>2.从零创建一个新的节点，然后插入到指定位置：<br>var<br>list = document.getElementById(‘list’);<br>haskell = document.createElement(‘p’);<br>haskell.id = ‘haskell’;<br>haskell.innerText = ‘Haskell’;<br>list.appendChild(haskell);<p></p>
-<p>Dom的排序方法：<br>&lt;!DOCTYPE html&gt;</p>
-<p><html lang="en"></html></p>
-<p><head></head></p>
-<p><meta charset="UTF-8"></p>
-<p><title></title></p>
-<p><script><br>var li=document.getElementById(“test-list”);<br>var list=document.getElementsByClassName(‘lang’);<br>for(var j=1;j<list.length;j++){
-for(var i=0;i<j;i++){
-if(list[i].innerHTML>list[j].innerHTML){<br>li.insertBefore(list[j], list[i]);<br>}<br>}<br>}<br></script><br></p>
-<p><body></body></p>
-<ol id="test-list"><br><li class="lang">Scheme</li><br><li class="lang">JavaScript</li><br><li class="lang">Python</li><br><li class="lang">Ruby</li><br><li class="lang">Haskell</li><br></ol>
-
-<p><br><br>最后排序效果：</p>
+<p>插入DOM：如果是空节点，则是插入；如果不是空节点，则会替换原来的节点；<br>1.使用appendChild，把一个字节点添加到父节点的最后一个字节点。<br>eg.：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;p id=<span class="string">"js"</span>&gt;JavaScript&lt;/p&gt;</div><div class="line">&lt;div id=<span class="string">"list"</span>&gt;</div><div class="line">&lt;p id=<span class="string">"java"</span>&gt;Java&lt;/p&gt;</div><div class="line">&lt;p id=<span class="string">"python"</span>&gt;Python&lt;/p&gt;</div><div class="line">&lt;p id=<span class="string">"scheme"</span>&gt;Scheme&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">把&lt;p id=<span class="string">"js"</span>&gt;JavaScript&lt;/p&gt;添加到&lt;div id=<span class="string">"list"</span>&gt;的最后一项：</div><div class="line">var js = document.getElementById(‘js’);</div><div class="line">var list = document.getElementById(‘list’);</div><div class="line">list.appendChild(js);</div></pre></td></tr></table></figure></p>
+<p>2.从零创建一个新的节点，然后插入到指定位置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var </div><div class="line">list = document.getElementById(‘list’);</div><div class="line">haskell = document.createElement(‘p’);</div><div class="line">haskell.id = ‘haskell’;</div><div class="line">haskell.innerText = ‘Haskell’;</div><div class="line">list.appendChild(haskell);</div></pre></td></tr></table></figure></p>
+<p>Dom的排序方法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">&lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var li=document.getElementById(<span class="string">"test-list"</span>);</div><div class="line">var list=document.getElementsByClassName(<span class="string">'lang'</span>);</div><div class="line"><span class="keyword">for</span>(var j=1;j&lt;list.length;j++)&#123;</div><div class="line"><span class="keyword">for</span>(var i=0;i&lt;j;i++)&#123;</div><div class="line"><span class="keyword">if</span>(list[i].innerHTML&gt;list[j].innerHTML)&#123;</div><div class="line">li.insertBefore(list[j], list[i]);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;ol id=<span class="string">"test-list"</span>&gt;</div><div class="line">&lt;li class=<span class="string">"lang"</span>&gt;Scheme&lt;/li&gt;</div><div class="line">&lt;li class=<span class="string">"lang"</span>&gt;JavaScript&lt;/li&gt;</div><div class="line">&lt;li class=<span class="string">"lang"</span>&gt;Python&lt;/li&gt;</div><div class="line">&lt;li class=<span class="string">"lang"</span>&gt;Ruby&lt;/li&gt;</div><div class="line">&lt;li class=<span class="string">"lang"</span>&gt;Haskell&lt;/li&gt;</div><div class="line">&lt;/ol&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
 <p>删除DOM：获得节点—获得父节点—调节父节点的removeChild把自己删掉<br>var self = document.getElementById(‘to-be-removed’);<br>var parent = self.parentElement;<br>var removed = parent.removeChild(self);<br>removed === self;</p>
 <p>（二）<br>DOM节点类型：<br>Element（元素）<br>Attr（属性）<br>Text（文本节点）<br>Comment（注释节点）<br>Document（文档节点）<br>DocumentType（文档类型节点）<br>DocumentFragment（文档片段节点）有利于实现文档的剪切，只作为临时的占位符</p>
 <p>每次进入html后，有一个渲染引擎的过程，这个过程用不同的方法速度也会不一样，所以为了达到最优的用户体验会需求最优的渲染方法。<br>过程：解析html—构建dom树—布局渲染树（dom节点）—绘制渲染树</p>
 <p>方法：<br>1.<br>window.onload = function() //比较慢<br>{ document.getElementById（“header”）.style.color = “red”;}<br>2.<br>domready的实现；</p>
-</div>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/fffff的副本/" data-id="cj4o6i1gl00017qthqew2dbmb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/fffff的副本/" data-id="cj4o6v3wg0000jwth63ep423i" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -131,7 +113,7 @@ if(list[i].innerHTML>list[j].innerHTML){<br>li.insertBefore(list[j], list[i]);<b
   
   
     <a href="/2017/06/30/luomingchuan/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">猜猜我是谁</div>
     </a>
   
@@ -164,7 +146,7 @@ if(list[i].innerHTML>list[j].innerHTML){<br>li.insertBefore(list[j], list[i]);<b
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -197,7 +179,7 @@ if(list[i].innerHTML>list[j].innerHTML){<br>li.insertBefore(list[j], list[i]);<b
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
