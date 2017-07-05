@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>简单算法思想01|排序 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.桶排序：把对应的数放入对应的桶，然后输出桶。12345678910111213141516#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	int a[11],i,j,t;	for(i = 0;i&amp;lt;=10;i++)		a[i] = 0;	for(i=1;i&amp;lt;=8;i++)	&amp;#123;		scanf(&quot;%d&quot;,&amp;amp;t);		a[t]++;	&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简单算法思想01|排序">
+<meta property="og:url" content="http://yoursite.com/2017/06/30/hello-world的副本/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.桶排序：把对应的数放入对应的桶，然后输出桶。12345678910111213141516#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	int a[11],i,j,t;	for(i = 0;i&amp;lt;=10;i++)		a[i] = 0;	for(i=1;i&amp;lt;=8;i++)	&amp;#123;		scanf(&quot;%d&quot;,&amp;amp;t);		a[t]++;	&amp;">
+<meta property="og:updated_time" content="2017-07-05T02:10:49.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="简单算法思想01|排序">
+<meta name="twitter:description" content="1.桶排序：把对应的数放入对应的桶，然后输出桶。12345678910111213141516#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	int a[11],i,j,t;	for(i = 0;i&amp;lt;=10;i++)		a[i] = 0;	for(i=1;i&amp;lt;=8;i++)	&amp;#123;		scanf(&quot;%d&quot;,&amp;amp;t);		a[t]++;	&amp;">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hello-world的副本" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/hello-world的副本/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      简单算法思想01|排序
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-桶排序：把对应的数放入对应的桶，然后输出桶。"><a href="#1-桶排序：把对应的数放入对应的桶，然后输出桶。" class="headerlink" title="1.桶排序：把对应的数放入对应的桶，然后输出桶。"></a>1.桶排序：把对应的数放入对应的桶，然后输出桶。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int a[11],i,j,t;</div><div class="line">	<span class="keyword">for</span>(i = 0;i&lt;=10;i++)</div><div class="line">		a[i] = 0;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=8;i++)</div><div class="line">	&#123;</div><div class="line">		scanf(<span class="string">"%d"</span>,&amp;t);</div><div class="line">		a[t]++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(i = 0;i&lt;=10;i++)</div><div class="line">		<span class="keyword">for</span>(j=0;j&lt;a[i];j++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,i);</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>优点：简单<br>缺点：浪费空间</p>
+<h3 id="2-冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换-过来。"><a href="#2-冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换-过来。" class="headerlink" title="2.冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换 过来。"></a>2.冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换 过来。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int a[100],i,j,t,n;</div><div class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		scanf(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n-1;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span>(j=1;j&lt;=n-1;j++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span> (a[j]&lt;a[j+1]) &#123;</div><div class="line">				t=a[j];a[j]=a[j+1];a[j+1]=t;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</div><div class="line">		</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">		</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>优点：可以结合字符串输出信息。</p>
+<h3 id="3-最常用的排序：快速排序（基于一种二分的思想）"><a href="#3-最常用的排序：快速排序（基于一种二分的思想）" class="headerlink" title="3.最常用的排序：快速排序（基于一种二分的思想）"></a>3.最常用的排序：快速排序（基于一种二分的思想）</h3><p>首先选择一个数作为基准数（用来参照的数）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">#include &lt;stdio.h&gt;</div><div class="line">int a[100],n;</div><div class="line">void quicksort(int left, int right)</div><div class="line">&#123;</div><div class="line">	int i,j,t,temp;</div><div class="line">	if (left&gt;right) </div><div class="line">		return;</div><div class="line">		temp = a[left];//存基准数</div><div class="line">		i=left;</div><div class="line">		j=right;</div><div class="line">		while (i!=j) </div><div class="line">		&#123;</div><div class="line">			while (a[j]&gt;=temp &amp;&amp; i&lt;j) //从右往左找</div><div class="line">				j--;</div><div class="line">			while (a[i]&lt;=temp &amp;&amp; i&lt;j) </div><div class="line">				i++;</div><div class="line">			if (i&lt;j) &#123;</div><div class="line">				t=a[i];</div><div class="line">				a[i]=a[j];</div><div class="line">				a[j]=t;</div><div class="line">			&#125;	</div><div class="line">		&#125;</div><div class="line">		//最终将基准数归位</div><div class="line">		a[left]=a[i];</div><div class="line">		a[i]=temp;</div><div class="line">		quicksort(left, i-1);</div><div class="line">		quicksort(i+1, right);</div><div class="line">&#125;</div><div class="line">int main() &#123;</div><div class="line">	int i,j,t;</div><div class="line">	scanf(&quot;%d&quot;,&amp;n);</div><div class="line">	for(i=1;i&lt;=n;i++)</div><div class="line">		scanf(&quot;%d&quot;,&amp;a[i]);</div><div class="line">	quicksort(1,n);</div><div class="line">	for(i=1;i&lt;=n;i++)</div><div class="line">		printf(&quot;%d\t&quot;,a[i]);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/hello-world的副本/" data-id="cj4qdalgj00007j3mz7kbx7x3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/30/luomingchuan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          猜猜我是谁
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/30/fffff的副本/">通过JavaScript操作DOM改变HTML结构</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/luomingchuan/">猜猜我是谁</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/hello-world的副本/">简单算法思想01|排序</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/javascript/">推荐几个javascript思维导图</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
