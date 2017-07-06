@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -100,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/fffff的副本/" data-id="cj4qdiab90000fa3mp1opgoeg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/fffff的副本/" data-id="cj4s5zueg0001qd3mspzfbbtn" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -137,7 +137,82 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/luomingchuan/" data-id="cj4qdiabm0004fa3m3o8hj33k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/luomingchuan/" data-id="cj4s5zuek0003qd3mtt1l5vps" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/C/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-算法02-栈与队列"><a href="#title-算法02-栈与队列" class="headerlink" title="title:算法02|栈与队列"></a>title:算法02|栈与队列</h2><h3 id="（队列）数组操作："><a href="#（队列）数组操作：" class="headerlink" title="（队列）数组操作："></a>（队列）数组操作：</h3><p>两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。<br>在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++;</p>
+<p>简单队列：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int q[101]=&#123;0,6,3,1,7,5,8,9,2,4&#125;,head,tail;</div><div class="line">	int i;</div><div class="line">	head = 1;</div><div class="line">	tail = 10;</div><div class="line">	<span class="keyword">while</span>(head&lt;tail)</div><div class="line">	&#123;</div><div class="line">		//打印队首并将队首出列</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,q[head]);</div><div class="line">		head++;</div><div class="line">		q[tail]=q[head];</div><div class="line">		tail++;</div><div class="line">		//再将队首出列</div><div class="line">		head++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h3 id="队列将是我们今后学习广度优先搜索以及队列优化的-Bellman-Ford-最短路算法的核心-数据结构。所以现在将队列的三个基本元素-一个数组，两个变量-封装为一个结构体类型，-如下。"><a href="#队列将是我们今后学习广度优先搜索以及队列优化的-Bellman-Ford-最短路算法的核心-数据结构。所以现在将队列的三个基本元素-一个数组，两个变量-封装为一个结构体类型，-如下。" class="headerlink" title="队列将是我们今后学习广度优先搜索以及队列优化的 Bellman-Ford 最短路算法的核心 数据结构。所以现在将队列的三个基本元素(一个数组，两个变量)封装为一个结构体类型， 如下。"></a>队列将是我们今后学习广度优先搜索以及队列优化的 Bellman-Ford 最短路算法的核心 数据结构。所以现在将队列的三个基本元素(一个数组，两个变量)封装为一个结构体类型， 如下。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">struct queue</div><div class="line">&#123;</div><div class="line">int data[100];//队列的主体，用来存储内容</div><div class="line">int head;//队首</div><div class="line">int tail;//队尾 </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="回文字符串"><a href="#回文字符串" class="headerlink" title="回文字符串 :"></a>回文字符串 :</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#include &lt;string.h&gt;</span></div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	char a[101],s[101];</div><div class="line">	int i,len,mid,next,top;</div><div class="line">	gets(a);</div><div class="line">	len = strlen(a);</div><div class="line">	mid = len/2-1;</div><div class="line">	top = 0;//栈的初始化</div><div class="line">	<span class="keyword">for</span>(i=0;i&lt;=mid;i++)//将mid前的字符依次入栈</div><div class="line">		s[++top]=a[i];</div><div class="line">		//判断字符串的长度是奇数还是偶数，并找出需要进行字符匹配的起始下标</div><div class="line">		<span class="keyword">if</span> (len%2==0) &#123;</div><div class="line">			next = mid+1;</div><div class="line">		&#125;<span class="keyword">else</span></div><div class="line">			next=mid+2;</div><div class="line">	<span class="keyword">for</span>(i=next;i&lt;=len-1;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(a[i]!=s[top])</div><div class="line">		<span class="built_in">break</span>;</div><div class="line">		top--;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (top==0) </div><div class="line">		<span class="built_in">printf</span>(<span class="string">"yes"</span>);</div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"no"</span>);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>动态存储：</p>
+<p>malloc(4);<br>malloc函数的作用就是从内存中申请分配指定字节大小的内存空间。上面这行代码就申 请了 4 个字节。 </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/C/" data-id="cj4s5zudq0000qd3mhqpt66f0" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world的副本" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/hello-world的副本/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/hello-world的副本/">简单算法思想01|排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-桶排序：把对应的数放入对应的桶，然后输出桶。"><a href="#1-桶排序：把对应的数放入对应的桶，然后输出桶。" class="headerlink" title="1.桶排序：把对应的数放入对应的桶，然后输出桶。"></a>1.桶排序：把对应的数放入对应的桶，然后输出桶。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int a[11],i,j,t;</div><div class="line">	<span class="keyword">for</span>(i = 0;i&lt;=10;i++)</div><div class="line">		a[i] = 0;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=8;i++)</div><div class="line">	&#123;</div><div class="line">		scanf(<span class="string">"%d"</span>,&amp;t);</div><div class="line">		a[t]++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(i = 0;i&lt;=10;i++)</div><div class="line">		<span class="keyword">for</span>(j=0;j&lt;a[i];j++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,i);</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>优点：简单<br>缺点：浪费空间</p>
+<h3 id="2-冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换-过来。"><a href="#2-冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换-过来。" class="headerlink" title="2.冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换 过来。"></a>2.冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换 过来。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int a[100],i,j,t,n;</div><div class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		scanf(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n-1;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span>(j=1;j&lt;=n-1;j++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span> (a[j]&lt;a[j+1]) &#123;</div><div class="line">				t=a[j];a[j]=a[j+1];a[j+1]=t;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</div><div class="line">		</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">		</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>优点：可以结合字符串输出信息。</p>
+<h3 id="3-最常用的排序：快速排序（基于一种二分的思想）"><a href="#3-最常用的排序：快速排序（基于一种二分的思想）" class="headerlink" title="3.最常用的排序：快速排序（基于一种二分的思想）"></a>3.最常用的排序：快速排序（基于一种二分的思想）</h3><p>首先选择一个数作为基准数（用来参照的数）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line">int a[100],n;</div><div class="line">void quicksort(int left, int right)</div><div class="line">&#123;</div><div class="line">	int i,j,t,temp;</div><div class="line">	<span class="keyword">if</span> (left&gt;right) </div><div class="line">		<span class="built_in">return</span>;</div><div class="line">		temp = a[left];//存基准数</div><div class="line">		i=left;</div><div class="line">		j=right;</div><div class="line">		<span class="keyword">while</span> (i!=j) </div><div class="line">		&#123;</div><div class="line">			<span class="keyword">while</span> (a[j]&gt;=temp &amp;&amp; i&lt;j) //从右往左找</div><div class="line">				j--;</div><div class="line">			<span class="keyword">while</span> (a[i]&lt;=temp &amp;&amp; i&lt;j) </div><div class="line">				i++;</div><div class="line">			<span class="keyword">if</span> (i&lt;j) &#123;</div><div class="line">				t=a[i];</div><div class="line">				a[i]=a[j];</div><div class="line">				a[j]=t;</div><div class="line">			&#125;	</div><div class="line">		&#125;</div><div class="line">		//最终将基准数归位</div><div class="line">		a[left]=a[i];</div><div class="line">		a[i]=temp;</div><div class="line">		quicksort(left, i-1);</div><div class="line">		quicksort(i+1, right);</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int i,j,t;</div><div class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		scanf(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">	quicksort(1,n);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/hello-world的副本/" data-id="cj4s5zuei0002qd3mmrjqzddn" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -182,48 +257,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/hello-world/" data-id="cj4qdiabf0001fa3mxnhrkbsb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world的副本" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/30/hello-world的副本/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/hello-world的副本/">简单算法思想01|排序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-桶排序：把对应的数放入对应的桶，然后输出桶。"><a href="#1-桶排序：把对应的数放入对应的桶，然后输出桶。" class="headerlink" title="1.桶排序：把对应的数放入对应的桶，然后输出桶。"></a>1.桶排序：把对应的数放入对应的桶，然后输出桶。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int a[11],i,j,t;</div><div class="line">	<span class="keyword">for</span>(i = 0;i&lt;=10;i++)</div><div class="line">		a[i] = 0;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=8;i++)</div><div class="line">	&#123;</div><div class="line">		scanf(<span class="string">"%d"</span>,&amp;t);</div><div class="line">		a[t]++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(i = 0;i&lt;=10;i++)</div><div class="line">		<span class="keyword">for</span>(j=0;j&lt;a[i];j++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,i);</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>优点：简单<br>缺点：浪费空间</p>
-<h3 id="2-冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换-过来。"><a href="#2-冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换-过来。" class="headerlink" title="2.冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换 过来。"></a>2.冒泡排序：每次比较两个相邻的元素，如果它们的顺序错误就把它们交换 过来。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int a[100],i,j,t,n;</div><div class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		scanf(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n-1;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span>(j=1;j&lt;=n-1;j++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span> (a[j]&lt;a[j+1]) &#123;</div><div class="line">				t=a[j];a[j]=a[j+1];a[j+1]=t;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</div><div class="line">		</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">		</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>优点：可以结合字符串输出信息。</p>
-<h3 id="3-最常用的排序：快速排序（基于一种二分的思想）"><a href="#3-最常用的排序：快速排序（基于一种二分的思想）" class="headerlink" title="3.最常用的排序：快速排序（基于一种二分的思想）"></a>3.最常用的排序：快速排序（基于一种二分的思想）</h3><p>首先选择一个数作为基准数（用来参照的数）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line">int a[100],n;</div><div class="line">void quicksort(int left, int right)</div><div class="line">&#123;</div><div class="line">	int i,j,t,temp;</div><div class="line">	<span class="keyword">if</span> (left&gt;right) </div><div class="line">		<span class="built_in">return</span>;</div><div class="line">		temp = a[left];//存基准数</div><div class="line">		i=left;</div><div class="line">		j=right;</div><div class="line">		<span class="keyword">while</span> (i!=j) </div><div class="line">		&#123;</div><div class="line">			<span class="keyword">while</span> (a[j]&gt;=temp &amp;&amp; i&lt;j) //从右往左找</div><div class="line">				j--;</div><div class="line">			<span class="keyword">while</span> (a[i]&lt;=temp &amp;&amp; i&lt;j) </div><div class="line">				i++;</div><div class="line">			<span class="keyword">if</span> (i&lt;j) &#123;</div><div class="line">				t=a[i];</div><div class="line">				a[i]=a[j];</div><div class="line">				a[j]=t;</div><div class="line">			&#125;	</div><div class="line">		&#125;</div><div class="line">		//最终将基准数归位</div><div class="line">		a[left]=a[i];</div><div class="line">		a[i]=temp;</div><div class="line">		quicksort(left, i-1);</div><div class="line">		quicksort(i+1, right);</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int i,j,t;</div><div class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		scanf(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">	quicksort(1,n);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/hello-world的副本/" data-id="cj4qdiabi0002fa3mb0v9yn8z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/hello-world/" data-id="cj4s5zuel0004qd3mnnunqu61" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -260,7 +294,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/javascript/" data-id="cj4qdiabk0003fa3m9s709q1z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/javascript/" data-id="cj4s5zueo0005qd3mlr4wrhu7" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -295,7 +329,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -308,7 +342,7 @@
           </li>
         
           <li>
-            <a href="/2017/06/30/hello-world/">Hello World</a>
+            <a href="/2017/06/30/C/">(no title)</a>
           </li>
         
           <li>
@@ -316,7 +350,7 @@
           </li>
         
           <li>
-            <a href="/2017/06/30/javascript/">推荐几个javascript思维导图</a>
+            <a href="/2017/06/30/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -332,7 +366,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
