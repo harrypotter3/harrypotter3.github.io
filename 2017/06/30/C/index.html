@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>简单算法思想02|栈与队列 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:算法02|栈与队列（队列）数组操作：两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++; 简单队列： 12345678910111213141516171819#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	int q[101]=&amp;#123;">
+  <meta name="description" content="（队列）数组操作：两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++; 简单队列： 12345678910111213141516171819#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	int q[101]=&amp;#123;0,6,3,1,7,5,8,9,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="简单算法思想02|栈与队列">
 <meta property="og:url" content="http://yoursite.com/2017/06/30/C/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title:算法02|栈与队列（队列）数组操作：两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++; 简单队列： 12345678910111213141516171819#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	int q[101]=&amp;#123;">
-<meta property="og:updated_time" content="2017-07-06T08:21:58.000Z">
+<meta property="og:description" content="（队列）数组操作：两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++; 简单队列： 12345678910111213141516171819#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	int q[101]=&amp;#123;0,6,3,1,7,5,8,9,">
+<meta property="og:updated_time" content="2017-07-06T08:25:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="title:算法02|栈与队列（队列）数组操作：两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++; 简单队列： 12345678910111213141516171819#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	int q[101]=&amp;#123;">
+<meta name="twitter:title" content="简单算法思想02|栈与队列">
+<meta name="twitter:description" content="（队列）数组操作：两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++; 简单队列： 12345678910111213141516171819#include &amp;lt;stdio.h&amp;gt;int main() &amp;#123;	int q[101]=&amp;#123;0,6,3,1,7,5,8,9,">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -73,10 +73,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      简单算法思想02|栈与队列
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-算法02-栈与队列"><a href="#title-算法02-栈与队列" class="headerlink" title="title:算法02|栈与队列"></a>title:算法02|栈与队列</h2><h3 id="（队列）数组操作："><a href="#（队列）数组操作：" class="headerlink" title="（队列）数组操作："></a>（队列）数组操作：</h3><p>两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。<br>在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++;</p>
+        <h3 id="（队列）数组操作："><a href="#（队列）数组操作：" class="headerlink" title="（队列）数组操作："></a>（队列）数组操作：</h3><p>两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。<br>在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++;</p>
 <p>简单队列：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int q[101]=&#123;0,6,3,1,7,5,8,9,2,4&#125;,head,tail;</div><div class="line">	int i;</div><div class="line">	head = 1;</div><div class="line">	tail = 10;</div><div class="line">	<span class="keyword">while</span>(head&lt;tail)</div><div class="line">	&#123;</div><div class="line">		//打印队首并将队首出列</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,q[head]);</div><div class="line">		head++;</div><div class="line">		q[tail]=q[head];</div><div class="line">		tail++;</div><div class="line">		//再将队首出列</div><div class="line">		head++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 <h3 id="队列将是我们今后学习广度优先搜索以及队列优化的-Bellman-Ford-最短路算法的核心-数据结构。所以现在将队列的三个基本元素-一个数组，两个变量-封装为一个结构体类型，-如下。"><a href="#队列将是我们今后学习广度优先搜索以及队列优化的-Bellman-Ford-最短路算法的核心-数据结构。所以现在将队列的三个基本元素-一个数组，两个变量-封装为一个结构体类型，-如下。" class="headerlink" title="队列将是我们今后学习广度优先搜索以及队列优化的 Bellman-Ford 最短路算法的核心 数据结构。所以现在将队列的三个基本元素(一个数组，两个变量)封装为一个结构体类型， 如下。"></a>队列将是我们今后学习广度优先搜索以及队列优化的 Bellman-Ford 最短路算法的核心 数据结构。所以现在将队列的三个基本元素(一个数组，两个变量)封装为一个结构体类型， 如下。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">struct queue</div><div class="line">&#123;</div><div class="line">int data[100];//队列的主体，用来存储内容</div><div class="line">int head;//队首</div><div class="line">int tail;//队尾 </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
@@ -87,7 +96,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/C/" data-id="cj4s5zudq0000qd3mhqpt66f0" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/06/30/C/" data-id="cj4s63d9h0000uw3ma3hj0lz6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -97,7 +106,7 @@
 <nav id="article-nav">
   
     <a href="/2017/06/30/luomingchuan/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           猜猜我是谁
@@ -106,9 +115,9 @@
     </a>
   
   
-    <a href="/2017/06/30/hello-world的副本/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">简单算法思想01|排序</div>
+    <a href="/2017/06/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
     </a>
   
 </nav>
@@ -140,7 +149,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -153,15 +162,15 @@
           </li>
         
           <li>
-            <a href="/2017/06/30/C/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/30/hello-world的副本/">简单算法思想01|排序</a>
+            <a href="/2017/06/30/C/">简单算法思想02|栈与队列</a>
           </li>
         
           <li>
             <a href="/2017/06/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/hello-world的副本/">简单算法思想01|排序</a>
           </li>
         
       </ul>
@@ -177,7 +186,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
