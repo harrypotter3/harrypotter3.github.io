@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Js|构造函数 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="构造函数调用如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。如下面两行代码等价： 12var o=new Object();var o=new Object; 构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Js|构造函数">
+<meta property="og:url" content="http://yoursite.com/2017/06/30/构造函数/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="构造函数调用如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。如下面两行代码等价： 12var o=new Object();var o=new Object; 构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象">
+<meta property="og:updated_time" content="2017-07-15T09:40:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Js|构造函数">
+<meta name="twitter:description" content="构造函数调用如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。如下面两行代码等价： 12var o=new Object();var o=new Object; 构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-构造函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/构造函数/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Js|构造函数
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="构造函数调用"><a href="#构造函数调用" class="headerlink" title="构造函数调用"></a>构造函数调用</h3><p>如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。<br>如下面两行代码等价：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o=new Object();</div><div class="line">var o=new Object;</div></pre></td></tr></table></figure>
+<p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象。构造函数一般不使用return关键字。<br>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.name=name;</div><div class="line">this.qq=qq;</div><div class="line">this.showName=<span class="function"><span class="title">function</span></span> ()</div><div class="line">&#123;</div><div class="line">	alert(<span class="string">'my name is :'</span>+this.name);</div><div class="line">&#125;</div><div class="line">this.showQq=<span class="function"><span class="title">function</span></span>()</div><div class="line">	&#123;</div><div class="line">		alert(<span class="string">'my qq is :'</span>+this.qq);</div><div class="line">	&#125;;</div><div class="line">&#125;//只需在调用时在对象前加new</div></pre></td></tr></table></figure>
+<h3 id="可变长的实参列表：实参对象"><a href="#可变长的实参列表：实参对象" class="headerlink" title="可变长的实参列表：实参对象"></a>可变长的实参列表：实参对象</h3><p>调用函数时传入的实参个数超过函数定义时的形参个数，没办法直接获得未命名值的引用，而参数对象解决了这个问题。<br>在函数体内，标识符arguments是指向实参对象的引用。</p>
+<p>假设定义了函数f，实参只有一个x。如果调用这个函数时传入两个实参，第一个实参可以通过参数名x来获得，也可以通过arguments[0]来得到，第二个实参只能通过arguments[1]来得到，此外，与真正的数组一样，arguments也包含一个length属性，用以标识其所包含元素的个数。因此，如果调用函数f（）时传入两个参数，arguments.length的值就是2.</p>
+<p>arduments并不是真正的数组，是一个实参对象。</p>
+<h3 id="闭包：函数对象可以通过作用域链相互关联起来。"><a href="#闭包：函数对象可以通过作用域链相互关联起来。" class="headerlink" title="闭包：函数对象可以通过作用域链相互关联起来。"></a>闭包：函数对象可以通过作用域链相互关联起来。</h3><p>js采用词法作用域，也就是说，函数的执行依赖与变量作用域。为了实现这种，js内部状态不仅包含函数的代码逻辑，还必须引用当前的作用域链。一定角度来讲，所有的函数都是闭包：它们都是对象，都关联到作用域链。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=“global scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">checkscope</span></span>()&#123;</div><div class="line">var scope=“<span class="built_in">local</span> scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;<span class="built_in">return</span> scope;&#125;</div><div class="line"><span class="built_in">return</span> f();</div><div class="line">&#125;</div><div class="line">checkscope();  //<span class="built_in">local</span> scope</div></pre></td></tr></table></figure>
+<p>如果是checkscope()();则返回函数内嵌套的一个函数对象</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj553qx160007be3m1sjxjerq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/30/javascript/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          推荐几个javascript思维导图
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/30/c2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">算法03|搜索</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/30/fffff的副本/">通过JavaScript操作DOM改变HTML结构</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/luomingchuan/">猜猜我是谁</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/hello-world的副本/">简单算法思想01|排序</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/C/">简单算法思想02|栈与队列</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
