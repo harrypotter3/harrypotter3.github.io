@@ -100,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/fffff的副本/" data-id="cj553qx0w0003be3mxe6eth5n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/fffff的副本/" data-id="cj590lk2p0003fp3murxlmlky" class="article-share-link">Share</a>
       
       
     </footer>
@@ -137,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/luomingchuan/" data-id="cj553qx1g0008be3m2jo9m04c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/luomingchuan/" data-id="cj590lk2y0007fp3m88ikfnfq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/hello-world的副本/" data-id="cj553qx100005be3mowbczpv6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/hello-world的副本/" data-id="cj590lk2w0006fp3mqzy3zcvn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -221,7 +221,89 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/C/" data-id="cj553qx0n0000be3m8uijqiwd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/C/" data-id="cj590lk250000fp3m11d692dk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-c2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/c2/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/c2/">算法03|搜索</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="深度搜索模型；"><a href="#深度搜索模型；" class="headerlink" title="深度搜索模型；"></a>深度搜索模型；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">void bfs (int step)</div><div class="line">&#123; </div><div class="line">  	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">	       dfs(step+1);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h3 id="迷宫问题"><a href="#迷宫问题" class="headerlink" title="迷宫问题"></a>迷宫问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">//迷宫问题</div><div class="line">int n,m,p,q,min=99999999;</div><div class="line">int a[51][51],book[51][51];</div><div class="line">void dfs(int x,int y,int step)</div><div class="line">&#123;</div><div class="line">	int next[4][2] = &#123;</div><div class="line">		&#123;0,1&#125;,&#123;1,0&#125;,&#123;0,-1&#125;,&#123;-1,0&#125;</div><div class="line">	&#125;;</div><div class="line">	int tx,ty,k;</div><div class="line">	<span class="keyword">if</span> (x==p &amp;&amp; y==q) &#123;</div><div class="line">		<span class="keyword">if</span> (step&lt;min) </div><div class="line">			min = step;</div><div class="line">			<span class="built_in">return</span> ;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(k=0;k&lt;=3;k++)</div><div class="line">	&#123;</div><div class="line">		tx=x+next[k][0];</div><div class="line">		ty=y+next[k][1];</div><div class="line">		<span class="keyword">if</span> (tx&lt;1 || tx&gt;n || ty&lt;1 || ty&gt;m) </div><div class="line">			<span class="built_in">continue</span>;</div><div class="line">			//判断该点是否成为障碍物或者已经在路径中</div><div class="line">		<span class="keyword">if</span>(a[tx][ty]==0 &amp;&amp; book[tx][ty]==0)</div><div class="line">		&#123;</div><div class="line">			book[tx][ty]=1;</div><div class="line">			dfs(tx, ty, step+1);</div><div class="line">			book[tx][ty]=0;</div><div class="line">		&#125;	</div><div class="line">		</div><div class="line">	&#125;<span class="built_in">return</span>;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	int i,j,startx,starty;</div><div class="line">	scanf(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n;i++)</div><div class="line">		<span class="keyword">for</span>(j=1;j&lt;=m;j++)</div><div class="line">			scanf(<span class="string">"%d"</span>,&amp;a[i][j]);</div><div class="line">		scanf(<span class="string">"%d %d %d"</span>,&amp;startx,&amp;starty,&amp;p,&amp;q);</div><div class="line">		book[startx][startx]=1;</div><div class="line">		dfs(startx, starty, 0);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,min);</div><div class="line">		getchar();getchar();</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/c2/" data-id="cj590lk2q0004fp3mll7fy8f6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jscookie" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/jscookie/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/jscookie/">js中cookie的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><h3 id="用来保存信息"><a href="#用来保存信息" class="headerlink" title="用来保存信息"></a>用来保存信息</h3><p>特性：同一个网站中所有页面共享一套cookie<br>       数量大小有限<br>        过期时间<br>Js中使用cookie：document.cookie</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var oDate=new Date();</div><div class="line">oDate.setDate(oDate.getDate()+10);</div><div class="line">alert(oDate.getFullYear()+<span class="string">'-'</span>+(oDate.getMonth()+1)+<span class="string">'-'</span>+oDate.getDate());</div><div class="line">document.cookie=<span class="string">'user=emrys'</span>;</div><div class="line">alert(document.cookie);</div></pre></td></tr></table></figure>
+<p>###1.设置cookie：<br>    格式：名字=值<br>    不会覆盖<br>    过期时间：expires=时间<br>        日期对象的使用 get，set<br>    封装函数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> setCookie(name, value, iDay)</div><div class="line">	&#123;</div><div class="line">		var oDate=new Date();</div><div class="line">		oDate.setDate(oDate.getDate()+iDay);</div><div class="line">		document.cookie=<span class="string">'name=value;expires=date'</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>###2.读取cookie<br>    字符串分割</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> getCookie(name)</div><div class="line">	&#123;</div><div class="line">		var arr = document.cookie.split(<span class="string">'; '</span>);</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			var arr2=arr[i].split(<span class="string">'='</span>);</div><div class="line"></div><div class="line">			<span class="keyword">if</span> (arr2[0]==name) &#123;</div><div class="line">				<span class="built_in">return</span> arr2[1];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span> <span class="string">''</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>###3.删除cookie</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> removeCookie(name)</div><div class="line">	&#123;</div><div class="line">		setCookie(name, 1, -1);//-1天，昨天过期</div><div class="line">	&#125;</div><div class="line">	removeCookie(<span class="string">'name'</span>);</div><div class="line">	alert(document.cook</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/jscookie/" data-id="cj590lk2t0005fp3mn6x8lxfj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -266,7 +348,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/hello-world/" data-id="cj553qx0y0004be3mss72we8j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/hello-world/" data-id="cj590lk2l0001fp3m4l3kxhrz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -312,128 +394,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/axure/" data-id="cj553qx0s0001be3mzf4psofz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-javascript" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/30/javascript/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/javascript/">推荐几个javascript思维导图</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>来自简书—<br>九张图看懂javascript<br><a href="http://www.jianshu.com/p/a4171444e512" target="_blank" rel="external">http://www.jianshu.com/p/a4171444e512</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/javascript/" data-id="cj553qx140006be3mu2u4mvln" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-构造函数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/30/构造函数/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/构造函数/">Js|构造函数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="构造函数调用"><a href="#构造函数调用" class="headerlink" title="构造函数调用"></a>构造函数调用</h3><p>如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。<br>如下面两行代码等价：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o=new Object();</div><div class="line">var o=new Object;</div></pre></td></tr></table></figure>
-<p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象。构造函数一般不使用return关键字。<br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.name=name;</div><div class="line">this.qq=qq;</div><div class="line">this.showName=<span class="function"><span class="title">function</span></span> ()</div><div class="line">&#123;</div><div class="line">	alert(<span class="string">'my name is :'</span>+this.name);</div><div class="line">&#125;</div><div class="line">this.showQq=<span class="function"><span class="title">function</span></span>()</div><div class="line">	&#123;</div><div class="line">		alert(<span class="string">'my qq is :'</span>+this.qq);</div><div class="line">	&#125;;</div><div class="line">&#125;//只需在调用时在对象前加new</div></pre></td></tr></table></figure>
-<h3 id="可变长的实参列表：实参对象"><a href="#可变长的实参列表：实参对象" class="headerlink" title="可变长的实参列表：实参对象"></a>可变长的实参列表：实参对象</h3><p>调用函数时传入的实参个数超过函数定义时的形参个数，没办法直接获得未命名值的引用，而参数对象解决了这个问题。<br>在函数体内，标识符arguments是指向实参对象的引用。</p>
-<p>假设定义了函数f，实参只有一个x。如果调用这个函数时传入两个实参，第一个实参可以通过参数名x来获得，也可以通过arguments[0]来得到，第二个实参只能通过arguments[1]来得到，此外，与真正的数组一样，arguments也包含一个length属性，用以标识其所包含元素的个数。因此，如果调用函数f（）时传入两个参数，arguments.length的值就是2.</p>
-<p>arduments并不是真正的数组，是一个实参对象。</p>
-<h3 id="闭包：函数对象可以通过作用域链相互关联起来。"><a href="#闭包：函数对象可以通过作用域链相互关联起来。" class="headerlink" title="闭包：函数对象可以通过作用域链相互关联起来。"></a>闭包：函数对象可以通过作用域链相互关联起来。</h3><p>js采用词法作用域，也就是说，函数的执行依赖与变量作用域。为了实现这种，js内部状态不仅包含函数的代码逻辑，还必须引用当前的作用域链。一定角度来讲，所有的函数都是闭包：它们都是对象，都关联到作用域链。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=“global scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">checkscope</span></span>()&#123;</div><div class="line">var scope=“<span class="built_in">local</span> scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;<span class="built_in">return</span> scope;&#125;</div><div class="line"><span class="built_in">return</span> f();</div><div class="line">&#125;</div><div class="line">checkscope();  //<span class="built_in">local</span> scope</div></pre></td></tr></table></figure>
-<p>如果是checkscope()();则返回函数内嵌套的一个函数对象</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj553qx160007be3m1sjxjerq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-c2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/30/c2/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/c2/">算法03|搜索</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="深度搜索模型；"><a href="#深度搜索模型；" class="headerlink" title="深度搜索模型；"></a>深度搜索模型；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">void bfs (int step)</div><div class="line">&#123; </div><div class="line">  	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">	       dfs(step+1);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h3 id="迷宫问题"><a href="#迷宫问题" class="headerlink" title="迷宫问题"></a>迷宫问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">//迷宫问题</div><div class="line">int n,m,p,q,min=99999999;</div><div class="line">int a[51][51],book[51][51];</div><div class="line">void dfs(int x,int y,int step)</div><div class="line">&#123;</div><div class="line">	int next[4][2] = &#123;</div><div class="line">		&#123;0,1&#125;,&#123;1,0&#125;,&#123;0,-1&#125;,&#123;-1,0&#125;</div><div class="line">	&#125;;</div><div class="line">	int tx,ty,k;</div><div class="line">	<span class="keyword">if</span> (x==p &amp;&amp; y==q) &#123;</div><div class="line">		<span class="keyword">if</span> (step&lt;min) </div><div class="line">			min = step;</div><div class="line">			<span class="built_in">return</span> ;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(k=0;k&lt;=3;k++)</div><div class="line">	&#123;</div><div class="line">		tx=x+next[k][0];</div><div class="line">		ty=y+next[k][1];</div><div class="line">		<span class="keyword">if</span> (tx&lt;1 || tx&gt;n || ty&lt;1 || ty&gt;m) </div><div class="line">			<span class="built_in">continue</span>;</div><div class="line">			//判断该点是否成为障碍物或者已经在路径中</div><div class="line">		<span class="keyword">if</span>(a[tx][ty]==0 &amp;&amp; book[tx][ty]==0)</div><div class="line">		&#123;</div><div class="line">			book[tx][ty]=1;</div><div class="line">			dfs(tx, ty, step+1);</div><div class="line">			book[tx][ty]=0;</div><div class="line">		&#125;	</div><div class="line">		</div><div class="line">	&#125;<span class="built_in">return</span>;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	int i,j,startx,starty;</div><div class="line">	scanf(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n;i++)</div><div class="line">		<span class="keyword">for</span>(j=1;j&lt;=m;j++)</div><div class="line">			scanf(<span class="string">"%d"</span>,&amp;a[i][j]);</div><div class="line">		scanf(<span class="string">"%d %d %d"</span>,&amp;startx,&amp;starty,&amp;p,&amp;q);</div><div class="line">		book[startx][startx]=1;</div><div class="line">		dfs(startx, starty, 0);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,min);</div><div class="line">		getchar();getchar();</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/c2/" data-id="cj553qx0u0002be3mwv1ccsnh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/axure/" data-id="cj590lk2m0002fp3mfelp4bib" class="article-share-link">Share</a>
       
       
     </footer>
@@ -471,7 +432,44 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/lmc/" data-id="cj553qx1i0009be3mm8pkfzym" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/lmc/" data-id="cj590lk350008fp3mdja0bb3p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/javascript/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/javascript/">推荐几个javascript思维导图</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>来自简书—<br>九张图看懂javascript<br><a href="http://www.jianshu.com/p/a4171444e512" target="_blank" rel="external">http://www.jianshu.com/p/a4171444e512</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/javascript/" data-id="cj590lk360009fp3m5j8xmx9x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -531,7 +529,7 @@
           </li>
         
           <li>
-            <a href="/2017/06/30/hello-world/">Hello World</a>
+            <a href="/2017/06/30/c2/">算法03|搜索</a>
           </li>
         
       </ul>
