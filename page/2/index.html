@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,9 +61,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-axure" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-c2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/axure/" class="article-date">
+    <a href="/2017/06/30/c2/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/axure/">Axure|产品设计与原型</a>
+      <a class="article-title" href="/2017/06/30/c2/">算法03|搜索</a>
     </h1>
   
 
@@ -83,21 +83,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Axure-Axure-RP-能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。"><a href="#Axure-Axure-RP-能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。" class="headerlink" title="Axure:Axure RP 能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。"></a>Axure:Axure RP 能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。</h3><p>分成几个部分：<br>元件<br>变量<br>动态面板<br>交互<br>中继器</p>
-<h3 id="元件："><a href="#元件：" class="headerlink" title="元件："></a>元件：</h3><pre><code>        表单元件
-菜单与表格元件
-基本元件. 
-</code></pre><h3 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h3><p>全局变量：如果要在B页面获取A页面的数据，必须通过全局变量进行传递。</p>
-<h3 id="动态面板："><a href="#动态面板：" class="headerlink" title="动态面板："></a>动态面板：</h3><pre><code>二级菜单
-    遮罩效果
-    固定.
-</code></pre><p>小结：<br>PS与html的结合体<br>作图功能比不上PS，html效果也还行<br>交互设计这块却是很好，可在web完成前就看到效果<br>良好的用户体验</p>
-<p>command+ （改变角度）</p>
+        <h3 id="深度搜索模型；"><a href="#深度搜索模型；" class="headerlink" title="深度搜索模型；"></a>深度搜索模型；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">void bfs (int step)</div><div class="line">&#123; </div><div class="line">  	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">	       dfs(step+1);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h3 id="迷宫问题"><a href="#迷宫问题" class="headerlink" title="迷宫问题"></a>迷宫问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">//迷宫问题</div><div class="line">int n,m,p,q,min=99999999;</div><div class="line">int a[51][51],book[51][51];</div><div class="line">void dfs(int x,int y,int step)</div><div class="line">&#123;</div><div class="line">	int next[4][2] = &#123;</div><div class="line">		&#123;0,1&#125;,&#123;1,0&#125;,&#123;0,-1&#125;,&#123;-1,0&#125;</div><div class="line">	&#125;;</div><div class="line">	int tx,ty,k;</div><div class="line">	<span class="keyword">if</span> (x==p &amp;&amp; y==q) &#123;</div><div class="line">		<span class="keyword">if</span> (step&lt;min) </div><div class="line">			min = step;</div><div class="line">			<span class="built_in">return</span> ;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(k=0;k&lt;=3;k++)</div><div class="line">	&#123;</div><div class="line">		tx=x+next[k][0];</div><div class="line">		ty=y+next[k][1];</div><div class="line">		<span class="keyword">if</span> (tx&lt;1 || tx&gt;n || ty&lt;1 || ty&gt;m) </div><div class="line">			<span class="built_in">continue</span>;</div><div class="line">			//判断该点是否成为障碍物或者已经在路径中</div><div class="line">		<span class="keyword">if</span>(a[tx][ty]==0 &amp;&amp; book[tx][ty]==0)</div><div class="line">		&#123;</div><div class="line">			book[tx][ty]=1;</div><div class="line">			dfs(tx, ty, step+1);</div><div class="line">			book[tx][ty]=0;</div><div class="line">		&#125;	</div><div class="line">		</div><div class="line">	&#125;<span class="built_in">return</span>;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	int i,j,startx,starty;</div><div class="line">	scanf(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n;i++)</div><div class="line">		<span class="keyword">for</span>(j=1;j&lt;=m;j++)</div><div class="line">			scanf(<span class="string">"%d"</span>,&amp;a[i][j]);</div><div class="line">		scanf(<span class="string">"%d %d %d"</span>,&amp;startx,&amp;starty,&amp;p,&amp;q);</div><div class="line">		book[startx][startx]=1;</div><div class="line">		dfs(startx, starty, 0);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,min);</div><div class="line">		getchar();getchar();</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/axure/" data-id="cj5g671oc0002lc3mfy9vdf7s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/c2/" data-id="cj5hsoc3c0002we3mjaxe3uia" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -107,9 +99,9 @@
 
 
   
-    <article id="post-构造函数" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-判断内核" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/构造函数/" class="article-date">
+    <a href="/2017/06/30/判断内核/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -121,7 +113,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/构造函数/">Js|构造函数</a>
+      <a class="article-title" href="/2017/06/30/判断内核/">JS来判断浏览器类型或内核的三种方法</a>
     </h1>
   
 
@@ -129,21 +121,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="构造函数调用"><a href="#构造函数调用" class="headerlink" title="构造函数调用"></a>构造函数调用</h3><p>如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。<br>如下面两行代码等价：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o=new Object();</div><div class="line">var o=new Object;</div></pre></td></tr></table></figure>
-<p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象。构造函数一般不使用return关键字。<br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.name=name;</div><div class="line">this.qq=qq;</div><div class="line">this.showName=<span class="function"><span class="title">function</span></span> ()</div><div class="line">&#123;</div><div class="line">	alert(<span class="string">'my name is :'</span>+this.name);</div><div class="line">&#125;</div><div class="line">this.showQq=<span class="function"><span class="title">function</span></span>()</div><div class="line">	&#123;</div><div class="line">		alert(<span class="string">'my qq is :'</span>+this.qq);</div><div class="line">	&#125;;</div><div class="line">&#125;//只需在调用时在对象前加new</div></pre></td></tr></table></figure>
-<h3 id="可变长的实参列表：实参对象"><a href="#可变长的实参列表：实参对象" class="headerlink" title="可变长的实参列表：实参对象"></a>可变长的实参列表：实参对象</h3><p>调用函数时传入的实参个数超过函数定义时的形参个数，没办法直接获得未命名值的引用，而参数对象解决了这个问题。<br>在函数体内，标识符arguments是指向实参对象的引用。</p>
-<p>假设定义了函数f，实参只有一个x。如果调用这个函数时传入两个实参，第一个实参可以通过参数名x来获得，也可以通过arguments[0]来得到，第二个实参只能通过arguments[1]来得到，此外，与真正的数组一样，arguments也包含一个length属性，用以标识其所包含元素的个数。因此，如果调用函数f（）时传入两个参数，arguments.length的值就是2.</p>
-<p>arduments并不是真正的数组，是一个实参对象。</p>
-<h3 id="闭包：函数对象可以通过作用域链相互关联起来。"><a href="#闭包：函数对象可以通过作用域链相互关联起来。" class="headerlink" title="闭包：函数对象可以通过作用域链相互关联起来。"></a>闭包：函数对象可以通过作用域链相互关联起来。</h3><p>js采用词法作用域，也就是说，函数的执行依赖与变量作用域。为了实现这种，js内部状态不仅包含函数的代码逻辑，还必须引用当前的作用域链。一定角度来讲，所有的函数都是闭包：它们都是对象，都关联到作用域链。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=“global scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">checkscope</span></span>()&#123;</div><div class="line">var scope=“<span class="built_in">local</span> scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;<span class="built_in">return</span> scope;&#125;</div><div class="line"><span class="built_in">return</span> f();</div><div class="line">&#125;</div><div class="line">checkscope();  //<span class="built_in">local</span> scope</div></pre></td></tr></table></figure>
-<p>如果是checkscope()();则返回函数内嵌套的一个函数对象</p>
+        <h3 id="（一）"><a href="#（一）" class="headerlink" title="（一）"></a>（一）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line"> window.onload=<span class="function"><span class="title">function</span></span>()</div><div class="line">        &#123;</div><div class="line">        var oDiv = document.getElementById(<span class="string">'div1'</span>);</div><div class="line">        var oImg1 = document.getElementById(<span class="string">'img1'</span>);</div><div class="line">        var oImg2 = document.getElementById(<span class="string">'img2'</span>);</div><div class="line">    </div><div class="line">        <span class="keyword">function</span> <span class="function"><span class="title">getOs</span></span>()  </div><div class="line">        &#123;  </div><div class="line">            var OsObject = <span class="string">""</span>;  </div><div class="line">           <span class="keyword">if</span>(navigator.userAgent.indexOf(<span class="string">"MSIE"</span>)&gt;0) &#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"MSIE"</span>;  </div><div class="line">           &#125;  </div><div class="line">           <span class="keyword">if</span>(isFirefox=navigator.userAgent.indexOf(<span class="string">"Firefox"</span>)&gt;0)&#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Firefox"</span>;  </div><div class="line">           &#125; </div><div class="line">           <span class="keyword">if</span>(isChrome=navigator.userAgent.indexOf(<span class="string">"Chrome"</span>)&gt;0)&#123;</div><div class="line">                  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Chrome"</span>;  </div><div class="line">           &#125;   </div><div class="line">           <span class="keyword">if</span>(isSafari=navigator.userAgent.indexOf(<span class="string">"Safari"</span>)&gt;0) &#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Safari"</span>;  </div><div class="line">           &#125;   </div><div class="line">           <span class="keyword">if</span>(isCamino=navigator.userAgent.indexOf(<span class="string">"Camino"</span>)&gt;0)&#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Camino"</span>;  </div><div class="line">           &#125;  </div><div class="line">           <span class="keyword">if</span>(isMozilla=navigator.userAgent.indexOf(<span class="string">"Gecko/"</span>)&gt;0)&#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Gecko"</span>;  </div><div class="line">           &#125;  </div><div class="line">	&#125;</div><div class="line"> <span class="keyword">if</span> (getVendorPrefix()==<span class="string">"webkit"</span>) &#123;</div><div class="line">            document.getElementById(<span class="string">"img1"</span>).src = <span class="string">"1.webP"</span>; </div><div class="line">        &#125; <span class="keyword">else</span> </div><div class="line">        &#123;</div><div class="line">            document.getElementById(<span class="string">"img1"</span>).src = <span class="string">"web.jpg"</span>; </div><div class="line">         &#125;</div><div class="line">        &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="（二）"><a href="#（二）" class="headerlink" title="（二）"></a>（二）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var browser=</div><div class="line">        &#123;  </div><div class="line">          versions:<span class="function"><span class="title">function</span></span>()</div><div class="line">          &#123;   </div><div class="line">          var u = navigator.userAgent, app = navigator.appVersion;   </div><div class="line">          <span class="built_in">return</span> &#123;//移动终端浏览器版本信息   </div><div class="line">               trident: u.indexOf(<span class="string">'Trident'</span>) &gt; -1, //IE内核  </div><div class="line">               presto: u.indexOf(<span class="string">'Presto'</span>) &gt; -1, //opera内核  </div><div class="line">               webKit: u.indexOf(<span class="string">'AppleWebKit'</span>) &gt; -1, //苹果、谷歌内核  </div><div class="line">               gecko: u.indexOf(<span class="string">'Gecko'</span>) &gt; -1 &amp;&amp; u.indexOf(<span class="string">'KHTML'</span>) == -1, //火狐内核  </div><div class="line">               mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端  </div><div class="line">               ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  </div><div class="line">               android: u.indexOf(<span class="string">'Android'</span>) &gt; -1 || u.indexOf(<span class="string">'Linux'</span>) &gt; -1, //android终端或者uc浏览器  </div><div class="line">               iPhone: u.indexOf(<span class="string">'iPhone'</span>) &gt; -1 || u.indexOf(<span class="string">'Mac'</span>) &gt; -1, //是否为iPhone或者QQHD浏览器  </div><div class="line">               iPad: u.indexOf(<span class="string">'iPad'</span>) &gt; -1, //是否iPad  </div><div class="line">               webApp: u.indexOf(<span class="string">'Safari'</span>) == -1 //是否web应该程序，没有头部与底部  </div><div class="line">                 &#125;;  </div><div class="line">        &#125;(),  </div><div class="line">        language:(navigator.browserLanguage || navigator.language).toLowerCase()  </div><div class="line">       &#125;   </div><div class="line">               document.writeln(<span class="string">"语言版本: "</span>+browser.language);  </div><div class="line">               document.writeln(<span class="string">" 是否为移动终端: "</span>+browser.versions.mobile);  </div><div class="line">               document.writeln(<span class="string">" ios终端: "</span>+browser.versions.ios);  </div><div class="line">               document.writeln(<span class="string">" android终端: "</span>+browser.versions.android);  </div><div class="line">               document.writeln(<span class="string">" 是否为iPhone: "</span>+browser.versions.iPhone);  </div><div class="line">               document.writeln(<span class="string">" 是否iPad: "</span>+browser.versions.iPad);  </div><div class="line">               document.writeln(navigator.userAgent);  </div><div class="line">         </div><div class="line">        alert(<span class="string">"您的浏览器类型为:"</span>+getOs());</div></pre></td></tr></table></figure>
+<h3 id="（三）"><a href="#（三）" class="headerlink" title="（三）"></a>（三）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">getVendorPrefix</span></span>() &#123;</div><div class="line">          // 使用body是为了避免在还需要传入元素</div><div class="line">          var body = document.body || document.documentElement,</div><div class="line">            style = body.style,</div><div class="line">            vendor = [<span class="string">'webkit'</span>, <span class="string">'khtml'</span>, <span class="string">'moz'</span>, <span class="string">'ms'</span>, <span class="string">'o'</span>],</div><div class="line">            i = 0;</div><div class="line"></div><div class="line">          <span class="keyword">while</span> (i &lt; vendor.length) &#123;</div><div class="line">            // 此处进行判断是否有对应的内核前缀</div><div class="line">            <span class="keyword">if</span> (typeof style[vendor[i] + <span class="string">'Transition'</span>] === <span class="string">'string'</span>) &#123;</div><div class="line">              <span class="built_in">return</span> vendor[i];</div><div class="line">            &#125;</div><div class="line">            i++;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">          alert(getVendorPrefix());</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj5g671p2000blc3myyst0487" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/判断内核/" data-id="cj5hsoc4u000bwe3m9tcs135h" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/面向对象/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/面向对象/">面向对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>面向对象：不了解原理的情况下，会使用功能。<br>对象：不了解内部的结构，但是知道它的操作。（电视）<br>（Date对象）<br>Array对象，sort()方法。（内部的各种排序方法。）<br>使用对象时，只关注对象提供的功能，不关注其内部细节。</p>
+<p>里面至少有两种人：<br>1.用对象<br>2.写对象</p>
+<p>封装：把东西封装好，会用就可以。<br>继承：从已有对象上，继承出新的对象。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj5hsoc4x000cwe3mc12i3gt0" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -194,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cj5g671p4000clc3mgwnc7i2c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cj5hsoc50000dwe3m89b4fp42" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -204,9 +228,9 @@
 
 
   
-    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-构造函数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/面向对象/" class="article-date">
+    <a href="/2017/06/30/构造函数/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -218,7 +242,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/面向对象/">面向对象</a>
+      <a class="article-title" href="/2017/06/30/构造函数/">Js|构造函数</a>
     </h1>
   
 
@@ -226,14 +250,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>面向对象：不了解原理的情况下，会使用功能。<br>对象：不了解内部的结构，但是知道它的操作。（电视）<br>（Date对象）<br>Array对象，sort()方法。（内部的各种排序方法。）<br>使用对象时，只关注对象提供的功能，不关注其内部细节。</p>
-<p>里面至少有两种人：<br>1.用对象<br>2.写对象</p>
-<p>封装：把东西封装好，会用就可以。<br>继承：从已有对象上，继承出新的对象。</p>
+        <h3 id="构造函数调用"><a href="#构造函数调用" class="headerlink" title="构造函数调用"></a>构造函数调用</h3><p>如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。<br>如下面两行代码等价：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o=new Object();</div><div class="line">var o=new Object;</div></pre></td></tr></table></figure>
+<p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象。构造函数一般不使用return关键字。<br>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.name=name;</div><div class="line">this.qq=qq;</div><div class="line">this.showName=<span class="function"><span class="title">function</span></span> ()</div><div class="line">&#123;</div><div class="line">	alert(<span class="string">'my name is :'</span>+this.name);</div><div class="line">&#125;</div><div class="line">this.showQq=<span class="function"><span class="title">function</span></span>()</div><div class="line">	&#123;</div><div class="line">		alert(<span class="string">'my qq is :'</span>+this.qq);</div><div class="line">	&#125;;</div><div class="line">&#125;//只需在调用时在对象前加new</div></pre></td></tr></table></figure>
+<h3 id="可变长的实参列表：实参对象"><a href="#可变长的实参列表：实参对象" class="headerlink" title="可变长的实参列表：实参对象"></a>可变长的实参列表：实参对象</h3><p>调用函数时传入的实参个数超过函数定义时的形参个数，没办法直接获得未命名值的引用，而参数对象解决了这个问题。<br>在函数体内，标识符arguments是指向实参对象的引用。</p>
+<p>假设定义了函数f，实参只有一个x。如果调用这个函数时传入两个实参，第一个实参可以通过参数名x来获得，也可以通过arguments[0]来得到，第二个实参只能通过arguments[1]来得到，此外，与真正的数组一样，arguments也包含一个length属性，用以标识其所包含元素的个数。因此，如果调用函数f（）时传入两个参数，arguments.length的值就是2.</p>
+<p>arduments并不是真正的数组，是一个实参对象。</p>
+<h3 id="闭包：函数对象可以通过作用域链相互关联起来。"><a href="#闭包：函数对象可以通过作用域链相互关联起来。" class="headerlink" title="闭包：函数对象可以通过作用域链相互关联起来。"></a>闭包：函数对象可以通过作用域链相互关联起来。</h3><p>js采用词法作用域，也就是说，函数的执行依赖与变量作用域。为了实现这种，js内部状态不仅包含函数的代码逻辑，还必须引用当前的作用域链。一定角度来讲，所有的函数都是闭包：它们都是对象，都关联到作用域链。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=“global scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">checkscope</span></span>()&#123;</div><div class="line">var scope=“<span class="built_in">local</span> scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;<span class="built_in">return</span> scope;&#125;</div><div class="line"><span class="built_in">return</span> f();</div><div class="line">&#125;</div><div class="line">checkscope();  //<span class="built_in">local</span> scope</div></pre></td></tr></table></figure>
+<p>如果是checkscope()();则返回函数内嵌套的一个函数对象</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj5g671p5000dlc3mglnq7ttv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj5hsoc52000ewe3mgq5m4cz2" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -272,7 +303,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -309,7 +340,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
