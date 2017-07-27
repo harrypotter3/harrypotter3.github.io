@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>imooc|圣诞css | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.自适应rem布局rem和em单位一样，都是一个相对单位,不同的是em是相对于元素的父元素的font-size进行计算,rem是相对于根元素html的font-size进行计算,这样一来rem就绕开了复杂的层级关系，实现了类似于em单位的功能。默认情况下浏览器给的字体大小是16px，按照转化关系 16px = 1rem。1234recalc = function() &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="imooc|圣诞css">
+<meta property="og:url" content="http://yoursite.com/2017/06/30/慕课网圣诞/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.自适应rem布局rem和em单位一样，都是一个相对单位,不同的是em是相对于元素的父元素的font-size进行计算,rem是相对于根元素html的font-size进行计算,这样一来rem就绕开了复杂的层级关系，实现了类似于em单位的功能。默认情况下浏览器给的字体大小是16px，按照转化关系 16px = 1rem。1234recalc = function() &amp;#123;">
+<meta property="og:updated_time" content="2017-07-27T11:22:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="imooc|圣诞css">
+<meta name="twitter:description" content="1.自适应rem布局rem和em单位一样，都是一个相对单位,不同的是em是相对于元素的父元素的font-size进行计算,rem是相对于根元素html的font-size进行计算,这样一来rem就绕开了复杂的层级关系，实现了类似于em单位的功能。默认情况下浏览器给的字体大小是16px，按照转化关系 16px = 1rem。1234recalc = function() &amp;#123;">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-慕课网圣诞" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/慕课网圣诞/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      imooc|圣诞css
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-自适应rem布局"><a href="#1-自适应rem布局" class="headerlink" title="1.自适应rem布局"></a>1.自适应rem布局</h3><p>rem和em单位一样，都是一个相对单位,不同的是em是相对于元素的父元素的font-size进行计算,rem是相对于根元素html的font-size进行计算,这样一来rem就绕开了复杂的层级关系，实现了类似于em单位的功能。默认情况下浏览器给的字体大小是16px，按照转化关系 16px = 1rem。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">recalc = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">        //设置根字体大小</div><div class="line">        docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + <span class="string">'px'</span>;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="2-css3关键帧动画"><a href="#2-css3关键帧动画" class="headerlink" title="2.css3关键帧动画"></a>2.css3关键帧动画</h3><p>Animation有八个属性</p>
+<ol>
+<li>animation-name ：动画名</li>
+<li>animation-duration：时间</li>
+<li>animation-delay：延时</li>
+<li>animation-iteration-count：次数</li>
+<li>animation-direction：方向</li>
+<li>animation-play-state：控制</li>
+<li>animation-fill-mode：状态</li>
+<li>animation-timing-function：关键帧变化<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">animation:bird-slow 400ms steps(3) infinite;</div><div class="line">@keyframes bird-slow &#123;</div><div class="line">    0% &#123;background-position-x: -0px&#125;</div><div class="line">    100% &#123;background-position-x: -273px&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>通过定义一个类，类中定义的动画的一些关键数据，比如动画名，时间，次数，切换的位置<br>通过keyframes定义动画具体执行参数与时间段<br>steps(3)的意思就是：keyframes设置的0%-100%的段中，background-position的的x坐标会变化3次<br>steps会平分这些段落值，其变化值就是:</p>
+<ol>
+<li>background-position-x: -0px</li>
+<li>background-position-x: -91px</li>
+<li>background-position-x: -182px</li>
+</ol>
+<p>transition是css3引入的”过渡”属性，可以让css的属性值在一定的时间区间内平滑地过渡，考虑兼容性问题，这里会额外引入一个插件jquery.transit，这个就是具体封装了transition的CSS3过渡动画的实现<br>接下来代码部分就非常简单了<br>transition的使用与jQuery提供的animate()方法基本差不多，所以使用上很容易接受<br>参考右边的代码，让飞鸟执行一个飞的动作，可以这样用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">".bird"</span>).transition(&#123;</div><div class="line">    <span class="string">'right'</span>: <span class="string">"3rem"</span>,</div><div class="line">&#125;, 10000,<span class="string">'linear'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    alert(<span class="string">"结束"</span>)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="3-3D变换："><a href="#3-3D变换：" class="headerlink" title="3.3D变换："></a>3.3D变换：</h3><p>要想实现3D的效果，只需指定一个元素为容器并设置transform-style：preserve-3d，那么它的后代元素便会有3D效果。<br>1.父元素或者当前运动元素上设置透视角perspective，perspective属性的值决定了3D效果的强度。<br>可以呈现3d的属性有，translate3d、scale3d、rotateX、rotateY、rotateZ等等<br>2.3D视图：设置在父元素上，子元素都可以相对于父元素的平面进行3D变形操作。</p>
+<p>异步编程梳理：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	//任务一</div><div class="line">	setTimeout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		//任务二</div><div class="line">	&#125;,1000)</div><div class="line">&#125;,1000)</div><div class="line">var dtd = $.Deferred();  //创建</div><div class="line">dtd.resolve();          //成功</div><div class="line">dtd.then()              //执行回调</div></pre></td></tr></table></figure></p>
+<p>观察者模式：<br>var observer = new Observer(); //创建对象<br>observer.subscribe(“任务名”,处理函数)<br>observer.publish(“任务名”）／／触发事件<br>observer.unsubscribe(“任务名”)</p>
+<p>SVG概述<br>在之前的七夕主题中，在留言反馈中经常会有人说：”这个怎么又是图片，还以为是画出来的”。其实我很想说：靠人工是很难画的。当然基于七夕的优化，我在圣诞中还是特意引入的一部分svg与canvas来做一些图形操作。SVG是基于xml标记语言可缩放矢量图形，支持无损缩放的同时也因为是dom节点，所以也支持事件，但是弊端也很明显，dom的数量非常大，复杂度高，渲染就比较慢了，也不适合游戏的开发，一般会用canvas之后会介绍<br>SVG有什么优势？</p>
+<ul>
+<li>文件体积小，能够被大量的压缩</li>
+<li>图片可无限放大而不失真(矢量图的基本特征)</li>
+<li>在视网膜显示屏上效果极佳</li>
+<li>能够实现互动和滤镜效果</li>
+</ul>
+<p>CANVAS概述<br>Canvas是html5的新标签，看起来很屌的样子其实理解了就不难。Canvas意为画布，简单的来说通过Canvas提供的一些接口方法在这个指定的画布中画出我们想要的图片与执行一系列的动作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//第一步：获取canvas元素</div><div class="line">   var cvs = document.getElementById(<span class="string">'cvs'</span>); //画布</div><div class="line">    //第二步：获取上下文</div><div class="line">   var ctx = cvs.getContext(<span class="string">'2d'</span>); // 画笔</div><div class="line">   //第三步：指定绘制线样式、颜色</div><div class="line">   ctx.strokeStyle = <span class="string">"red"</span>;</div><div class="line">   //第四步：绘制矩形，只有线。内容是空的</div><div class="line">   //ctx.strokeRect(10, 10, 190, 100);</div><div class="line">   ctx.moveTo(50,50);</div><div class="line">   ctx.lineTo(300,200);</div><div class="line">   ctx.stroke();</div><div class="line">   //以下演示填充矩形。</div></pre></td></tr></table></figure>
+<ul>
+<li>创建HTML页面，设置画布标签</li>
+<li>编写js，获取画布dom对象</li>
+<li>通过Canvas标签的Dom对象获取上下文</li>
+<li>设置绘制线样式、颜色</li>
+<li>绘制矩形，或者填充矩形</li>
+</ul>
+<p>代码封装：<br>设计3个独立的JS文件分别是page-a.js、page-b.js、page-c.js，分别对应了3个场景类，把每一个场景的内容封装到每一个场景类中<br>然后在三个场景类之间通过接口去调用，比如切换页面，所以需要创建一个”中介”对象(christmas.js)充当，接口分配任务。</p>
+<p>在HTML5标准网页里面，我们可以运用audio标签来完成我们对声音的调用及播放.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var audio = new Audio(url);   //创建一个音频对象并传入地址</div><div class="line">audio.loop  = loop ||  <span class="literal">false</span>; //是否循环</div><div class="line">audio.play(); //开始播放</div></pre></td></tr></table></figure>
+<p>传递一个视频的地址，创建一个Audio对象，设置属性loop是否循环播放，然后调用play方法就可以实现播放了.</p>
+<p>在代码的编写上，我合并了next方法的处理，增加了Deferred异步的方法，让异步的代码可以有同步执行的逻辑，这样代码结构看起来会更清晰<br>在next方法中封装了Deferred是使用，所以可以连续调用<br>next().then().then().then()…….</p>
+<p>3D开窗效果</p>
+<p>在openWindow方法中，动态的通过JS对“门”增加对应的样式，从而执行动画。<br>this.$leftWin.addClass(“window-transition”).addClass(“hover”)<br>this.$rightWin.addClass(“window-transition”).addClass(“hover”)</p>
+<p>window-transition:定义的一个transition过渡动画。<br>hover：定义了一个transform过渡动画执行的变换scale(0.95)rotateY(60deg)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">.window-left.hover &#123;</div><div class="line"></div><div class="line">    transform-origin:left top;</div><div class="line">    transform:scale(0.95,0.95);</div><div class="line">    transform:rotateY(80deg);</div><div class="line">    top:0.1rem;</div><div class="line">    left: -0.25rem;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/慕课网圣诞/" data-id="cj5mcpcuy000ey53muxvctxah" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/30/axure/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nieuwer</strong>
+      <div class="article-nav-title">
+        
+          Axure|产品设计与原型
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/30/构造函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">Js|构造函数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/30/fffff的副本/">通过JavaScript操作DOM改变HTML结构</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/luomingchuan/">猜猜我是谁</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/jscookie/">js中cookie的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/C/">简单算法思想02|栈与队列</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

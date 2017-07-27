@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,9 +61,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-jscookie" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-lmc" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/jscookie/" class="article-date">
+    <a href="/2017/06/30/lmc/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/jscookie/">js中cookie的使用</a>
+      <a class="article-title" href="/2017/06/30/lmc/">暑假留校十天了</a>
     </h1>
   
 
@@ -83,58 +83,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><h3 id="用来保存信息"><a href="#用来保存信息" class="headerlink" title="用来保存信息"></a>用来保存信息</h3><p>特性：同一个网站中所有页面共享一套cookie<br>       数量大小有限<br>        过期时间<br>Js中使用cookie：document.cookie</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var oDate=new Date();</div><div class="line">oDate.setDate(oDate.getDate()+10);</div><div class="line">alert(oDate.getFullYear()+<span class="string">'-'</span>+(oDate.getMonth()+1)+<span class="string">'-'</span>+oDate.getDate());</div><div class="line">document.cookie=<span class="string">'user=emrys'</span>;</div><div class="line">alert(document.cookie);</div></pre></td></tr></table></figure>
-<p>###1.设置cookie：<br>    格式：名字=值<br>    不会覆盖<br>    过期时间：expires=时间<br>        日期对象的使用 get，set<br>    封装函数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> setCookie(name, value, iDay)</div><div class="line">	&#123;</div><div class="line">		var oDate=new Date();</div><div class="line">		oDate.setDate(oDate.getDate()+iDay);</div><div class="line">		document.cookie=<span class="string">'name=value;expires=date'</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<p>###2.读取cookie<br>    字符串分割</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> getCookie(name)</div><div class="line">	&#123;</div><div class="line">		var arr = document.cookie.split(<span class="string">'; '</span>);</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			var arr2=arr[i].split(<span class="string">'='</span>);</div><div class="line"></div><div class="line">			<span class="keyword">if</span> (arr2[0]==name) &#123;</div><div class="line">				<span class="built_in">return</span> arr2[1];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span> <span class="string">''</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<p>###3.删除cookie</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> removeCookie(name)</div><div class="line">	&#123;</div><div class="line">		setCookie(name, 1, -1);//-1天，昨天过期</div><div class="line">	&#125;</div><div class="line">	removeCookie(<span class="string">'name'</span>);</div><div class="line">	alert(document.cook</div></pre></td></tr></table></figure>
+        <p>似乎什么都学了些，但是似乎又没有学的很深。学习还是要一个一个脚印慢慢来哇。</p>
+<p>推荐js的几本书：<br>javascript高级程序设计<br>javascript 的DOM编程<br>head first javascript</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/jscookie/" data-id="cj5ix6jbn000abp3moxo9xp25" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/30/面向对象/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/面向对象/">面向对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>面向对象：不了解原理的情况下，会使用功能。<br>对象：不了解内部的结构，但是知道它的操作。（电视）<br>（Date对象）<br>Array对象，sort()方法。（内部的各种排序方法。）<br>使用对象时，只关注对象提供的功能，不关注其内部细节。</p>
-<p>里面至少有两种人：<br>1.用对象<br>2.写对象</p>
-<p>封装：把东西封装好，会用就可以。<br>继承：从已有对象上，继承出新的对象。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj5ix6jbp000bbp3m0qwdrubz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/lmc/" data-id="cj5mcpcup000ay53myzlgq5vg" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -185,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cj5ix6jbs000cbp3mso7mnztv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cj5mcpcur000by53m0cubyv6k" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -224,7 +179,137 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/判断内核/" data-id="cj5ix6jbt000dbp3mnkhvkyug" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/判断内核/" data-id="cj5mcpcuu000cy53m4ex19hqf" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-axure" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/axure/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/axure/">Axure|产品设计与原型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Axure-Axure-RP-能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。"><a href="#Axure-Axure-RP-能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。" class="headerlink" title="Axure:Axure RP 能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。"></a>Axure:Axure RP 能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。</h3><p>分成几个部分：<br>元件<br>变量<br>动态面板<br>交互<br>中继器</p>
+<h3 id="元件："><a href="#元件：" class="headerlink" title="元件："></a>元件：</h3><pre><code>        表单元件
+菜单与表格元件
+基本元件. 
+</code></pre><h3 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h3><p>全局变量：如果要在B页面获取A页面的数据，必须通过全局变量进行传递。</p>
+<h3 id="动态面板："><a href="#动态面板：" class="headerlink" title="动态面板："></a>动态面板：</h3><pre><code>二级菜单
+    遮罩效果
+    固定.
+</code></pre><p>小结：<br>PS与html的结合体<br>作图功能比不上PS，html效果也还行<br>交互设计这块却是很好，可在web完成前就看到效果<br>良好的用户体验</p>
+<p>command+ （改变角度）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/axure/" data-id="cj5mcpcu20002y53muswovqvq" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-慕课网圣诞" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/慕课网圣诞/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/慕课网圣诞/">imooc|圣诞css</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-自适应rem布局"><a href="#1-自适应rem布局" class="headerlink" title="1.自适应rem布局"></a>1.自适应rem布局</h3><p>rem和em单位一样，都是一个相对单位,不同的是em是相对于元素的父元素的font-size进行计算,rem是相对于根元素html的font-size进行计算,这样一来rem就绕开了复杂的层级关系，实现了类似于em单位的功能。默认情况下浏览器给的字体大小是16px，按照转化关系 16px = 1rem。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">recalc = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">        //设置根字体大小</div><div class="line">        docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + <span class="string">'px'</span>;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="2-css3关键帧动画"><a href="#2-css3关键帧动画" class="headerlink" title="2.css3关键帧动画"></a>2.css3关键帧动画</h3><p>Animation有八个属性</p>
+<ol>
+<li>animation-name ：动画名</li>
+<li>animation-duration：时间</li>
+<li>animation-delay：延时</li>
+<li>animation-iteration-count：次数</li>
+<li>animation-direction：方向</li>
+<li>animation-play-state：控制</li>
+<li>animation-fill-mode：状态</li>
+<li>animation-timing-function：关键帧变化<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">animation:bird-slow 400ms steps(3) infinite;</div><div class="line">@keyframes bird-slow &#123;</div><div class="line">    0% &#123;background-position-x: -0px&#125;</div><div class="line">    100% &#123;background-position-x: -273px&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>通过定义一个类，类中定义的动画的一些关键数据，比如动画名，时间，次数，切换的位置<br>通过keyframes定义动画具体执行参数与时间段<br>steps(3)的意思就是：keyframes设置的0%-100%的段中，background-position的的x坐标会变化3次<br>steps会平分这些段落值，其变化值就是:</p>
+<ol>
+<li>background-position-x: -0px</li>
+<li>background-position-x: -91px</li>
+<li>background-position-x: -182px</li>
+</ol>
+<p>transition是css3引入的”过渡”属性，可以让css的属性值在一定的时间区间内平滑地过渡，考虑兼容性问题，这里会额外引入一个插件jquery.transit，这个就是具体封装了transition的CSS3过渡动画的实现<br>接下来代码部分就非常简单了<br>transition的使用与jQuery提供的animate()方法基本差不多，所以使用上很容易接受<br>参考右边的代码，让飞鸟执行一个飞的动作，可以这样用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">".bird"</span>).transition(&#123;</div><div class="line">    <span class="string">'right'</span>: <span class="string">"3rem"</span>,</div><div class="line">&#125;, 10000,<span class="string">'linear'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    alert(<span class="string">"结束"</span>)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="3-3D变换："><a href="#3-3D变换：" class="headerlink" title="3.3D变换："></a>3.3D变换：</h3><p>要想实现3D的效果，只需指定一个元素为容器并设置transform-style：preserve-3d，那么它的后代元素便会有3D效果。<br>1.父元素或者当前运动元素上设置透视角perspective，perspective属性的值决定了3D效果的强度。<br>可以呈现3d的属性有，translate3d、scale3d、rotateX、rotateY、rotateZ等等<br>2.3D视图：设置在父元素上，子元素都可以相对于父元素的平面进行3D变形操作。</p>
+<p>异步编程梳理：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	//任务一</div><div class="line">	setTimeout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		//任务二</div><div class="line">	&#125;,1000)</div><div class="line">&#125;,1000)</div><div class="line">var dtd = $.Deferred();  //创建</div><div class="line">dtd.resolve();          //成功</div><div class="line">dtd.then()              //执行回调</div></pre></td></tr></table></figure></p>
+<p>观察者模式：<br>var observer = new Observer(); //创建对象<br>observer.subscribe(“任务名”,处理函数)<br>observer.publish(“任务名”）／／触发事件<br>observer.unsubscribe(“任务名”)</p>
+<p>SVG概述<br>在之前的七夕主题中，在留言反馈中经常会有人说：”这个怎么又是图片，还以为是画出来的”。其实我很想说：靠人工是很难画的。当然基于七夕的优化，我在圣诞中还是特意引入的一部分svg与canvas来做一些图形操作。SVG是基于xml标记语言可缩放矢量图形，支持无损缩放的同时也因为是dom节点，所以也支持事件，但是弊端也很明显，dom的数量非常大，复杂度高，渲染就比较慢了，也不适合游戏的开发，一般会用canvas之后会介绍<br>SVG有什么优势？</p>
+<ul>
+<li>文件体积小，能够被大量的压缩</li>
+<li>图片可无限放大而不失真(矢量图的基本特征)</li>
+<li>在视网膜显示屏上效果极佳</li>
+<li>能够实现互动和滤镜效果</li>
+</ul>
+<p>CANVAS概述<br>Canvas是html5的新标签，看起来很屌的样子其实理解了就不难。Canvas意为画布，简单的来说通过Canvas提供的一些接口方法在这个指定的画布中画出我们想要的图片与执行一系列的动作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//第一步：获取canvas元素</div><div class="line">   var cvs = document.getElementById(<span class="string">'cvs'</span>); //画布</div><div class="line">    //第二步：获取上下文</div><div class="line">   var ctx = cvs.getContext(<span class="string">'2d'</span>); // 画笔</div><div class="line">   //第三步：指定绘制线样式、颜色</div><div class="line">   ctx.strokeStyle = <span class="string">"red"</span>;</div><div class="line">   //第四步：绘制矩形，只有线。内容是空的</div><div class="line">   //ctx.strokeRect(10, 10, 190, 100);</div><div class="line">   ctx.moveTo(50,50);</div><div class="line">   ctx.lineTo(300,200);</div><div class="line">   ctx.stroke();</div><div class="line">   //以下演示填充矩形。</div></pre></td></tr></table></figure>
+<ul>
+<li>创建HTML页面，设置画布标签</li>
+<li>编写js，获取画布dom对象</li>
+<li>通过Canvas标签的Dom对象获取上下文</li>
+<li>设置绘制线样式、颜色</li>
+<li>绘制矩形，或者填充矩形</li>
+</ul>
+<p>代码封装：<br>设计3个独立的JS文件分别是page-a.js、page-b.js、page-c.js，分别对应了3个场景类，把每一个场景的内容封装到每一个场景类中<br>然后在三个场景类之间通过接口去调用，比如切换页面，所以需要创建一个”中介”对象(christmas.js)充当，接口分配任务。</p>
+<p>在HTML5标准网页里面，我们可以运用audio标签来完成我们对声音的调用及播放.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var audio = new Audio(url);   //创建一个音频对象并传入地址</div><div class="line">audio.loop  = loop ||  <span class="literal">false</span>; //是否循环</div><div class="line">audio.play(); //开始播放</div></pre></td></tr></table></figure>
+<p>传递一个视频的地址，创建一个Audio对象，设置属性loop是否循环播放，然后调用play方法就可以实现播放了.</p>
+<p>在代码的编写上，我合并了next方法的处理，增加了Deferred异步的方法，让异步的代码可以有同步执行的逻辑，这样代码结构看起来会更清晰<br>在next方法中封装了Deferred是使用，所以可以连续调用<br>next().then().then().then()…….</p>
+<p>3D开窗效果</p>
+<p>在openWindow方法中，动态的通过JS对“门”增加对应的样式，从而执行动画。<br>this.$leftWin.addClass(“window-transition”).addClass(“hover”)<br>this.$rightWin.addClass(“window-transition”).addClass(“hover”)</p>
+<p>window-transition:定义的一个transition过渡动画。<br>hover：定义了一个transform过渡动画执行的变换scale(0.95)rotateY(60deg)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">.window-left.hover &#123;</div><div class="line"></div><div class="line">    transform-origin:left top;</div><div class="line">    transform:scale(0.95,0.95);</div><div class="line">    transform:rotateY(80deg);</div><div class="line">    top:0.1rem;</div><div class="line">    left: -0.25rem;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/慕课网圣诞/" data-id="cj5mcpcuy000ey53muxvctxah" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -270,7 +355,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj5ix6jbu000ebp3mi6jz0hpc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj5mcpcuz000fy53my3t8lol4" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -280,9 +365,9 @@
 
 
   
-    <article id="post-lmc" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/lmc/" class="article-date">
+    <a href="/2017/06/30/面向对象/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -294,7 +379,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/lmc/">暑假留校十天了</a>
+      <a class="article-title" href="/2017/06/30/面向对象/">面向对象</a>
     </h1>
   
 
@@ -302,13 +387,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>似乎什么都学了些，但是似乎又没有学的很深。学习还是要一个一个脚印慢慢来哇。</p>
-<p>推荐js的几本书：<br>javascript高级程序设计<br>javascript 的DOM编程<br>head first javascript</p>
+        <p>面向对象：不了解原理的情况下，会使用功能。<br>对象：不了解内部的结构，但是知道它的操作。（电视）<br>（Date对象）<br>Array对象，sort()方法。（内部的各种排序方法。）<br>使用对象时，只关注对象提供的功能，不关注其内部细节。</p>
+<p>里面至少有两种人：<br>1.用对象<br>2.写对象</p>
+<p>封装：把东西封装好，会用就可以。<br>继承：从已有对象上，继承出新的对象。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/lmc/" data-id="cj5ix6jbv000fbp3mqgxg2rqw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj5mcpcvj000gy53mcrwjq5gk" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -337,7 +423,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -347,28 +433,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2017/06/30/luomingchuan/">猜猜我是谁</a>
-          </li>
         
           <li>
             <a href="/2017/06/30/fffff的副本/">通过JavaScript操作DOM改变HTML结构</a>
           </li>
         
           <li>
-            <a href="/2017/06/30/axure/">Axure|产品设计与原型</a>
+            <a href="/2017/06/30/luomingchuan/">猜猜我是谁</a>
           </li>
         
           <li>
-            <a href="/2017/06/30/css3/">进击的css3</a>
+            <a href="/2017/06/30/jscookie/">js中cookie的使用</a>
           </li>
         
           <li>
-            <a href="/2017/06/30/c2/">算法03|搜索</a>
+            <a href="/2017/06/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/C/">简单算法思想02|栈与队列</a>
           </li>
         
       </ul>
