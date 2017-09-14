@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,9 +61,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-c2" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-lmc" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/c2/" class="article-date">
+    <a href="/2017/06/30/lmc/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/c2/">算法03|搜索</a>
+      <a class="article-title" href="/2017/06/30/lmc/">暑假留校十天了</a>
     </h1>
   
 
@@ -83,13 +83,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="深度搜索模型；"><a href="#深度搜索模型；" class="headerlink" title="深度搜索模型；"></a>深度搜索模型；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">void bfs (int step)</div><div class="line">&#123; </div><div class="line">  	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">	       dfs(step+1);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h3 id="迷宫问题"><a href="#迷宫问题" class="headerlink" title="迷宫问题"></a>迷宫问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">//迷宫问题</div><div class="line">int n,m,p,q,min=99999999;</div><div class="line">int a[51][51],book[51][51];</div><div class="line">void dfs(int x,int y,int step)</div><div class="line">&#123;</div><div class="line">	int next[4][2] = &#123;</div><div class="line">		&#123;0,1&#125;,&#123;1,0&#125;,&#123;0,-1&#125;,&#123;-1,0&#125;</div><div class="line">	&#125;;</div><div class="line">	int tx,ty,k;</div><div class="line">	<span class="keyword">if</span> (x==p &amp;&amp; y==q) &#123;</div><div class="line">		<span class="keyword">if</span> (step&lt;min) </div><div class="line">			min = step;</div><div class="line">			<span class="built_in">return</span> ;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(k=0;k&lt;=3;k++)</div><div class="line">	&#123;</div><div class="line">		tx=x+next[k][0];</div><div class="line">		ty=y+next[k][1];</div><div class="line">		<span class="keyword">if</span> (tx&lt;1 || tx&gt;n || ty&lt;1 || ty&gt;m) </div><div class="line">			<span class="built_in">continue</span>;</div><div class="line">			//判断该点是否成为障碍物或者已经在路径中</div><div class="line">		<span class="keyword">if</span>(a[tx][ty]==0 &amp;&amp; book[tx][ty]==0)</div><div class="line">		&#123;</div><div class="line">			book[tx][ty]=1;</div><div class="line">			dfs(tx, ty, step+1);</div><div class="line">			book[tx][ty]=0;</div><div class="line">		&#125;	</div><div class="line">		</div><div class="line">	&#125;<span class="built_in">return</span>;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	int i,j,startx,starty;</div><div class="line">	scanf(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n;i++)</div><div class="line">		<span class="keyword">for</span>(j=1;j&lt;=m;j++)</div><div class="line">			scanf(<span class="string">"%d"</span>,&amp;a[i][j]);</div><div class="line">		scanf(<span class="string">"%d %d %d"</span>,&amp;startx,&amp;starty,&amp;p,&amp;q);</div><div class="line">		book[startx][startx]=1;</div><div class="line">		dfs(startx, starty, 0);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,min);</div><div class="line">		getchar();getchar();</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>似乎什么都学了些，但是似乎又没有学的很深。学习还是要一个一个脚印慢慢来哇。</p>
+<p>推荐js的几本书：<br>javascript高级程序设计<br>javascript 的DOM编程<br>head first javascript</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/c2/" data-id="cj775y75n0002he3m200jt5rr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/lmc/" data-id="cj7kc8vg4000a813mh7zw7ymq" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -99,9 +99,9 @@
 
 
   
-    <article id="post-react" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-jscookie" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/react/" class="article-date">
+    <a href="/2017/06/30/jscookie/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -113,7 +113,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/react/">React入门系列01</a>
+      <a class="article-title" href="/2017/06/30/jscookie/">js中cookie的使用</a>
     </h1>
   
 
@@ -121,26 +121,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="由于-React-的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来-Web-开发的主流工具。"><a href="#由于-React-的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来-Web-开发的主流工具。" class="headerlink" title="由于 React 的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来 Web 开发的主流工具。"></a>由于 React 的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来 Web 开发的主流工具。</h3><p>这个项目本身也越滚越大，从最早的UI引擎变成了一整套前后端通吃的 Web App 解决方案。衍生的 React Native 项目，目标更是宏伟，希望用写 Web App 的方式去写 Native App。如果能够实现，整个互联网行业都会被颠覆，因为同一组人只需要写一次 UI ，就能同时运行在服务器、浏览器和手机。—来自阮一峰</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react-dom.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/browser.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div></pre></td></tr></table></figure>
-<p>最后一个script标签的 type 属性为 text/babel 。这是因为 React 独有的 JSX 语法，跟 JavaScript 不兼容。凡是使用 JSX 的地方，都要加上 type=”text/babel” 。</p>
-<p>其次，上面代码一共用了三个库： react.js 、react-dom.js 和 Browser.js ，它们必须首先加载。其中，react.js 是 React 的核心库，react-dom.js 是提供与 DOM 相关的功能，Browser.js 的作用是将 JSX 语法转为 JavaScript 语法，这一步很消耗时间，实际上线的时候，应该将它放到服务器完成。</p>
-<p>JSX语法规则：<br>遇到HTML标签（以&lt;开头）遇到代码块，（以{开头），就用javascript规则解析</p>
-<p>JSX 允许直接在模板插入 JavaScript 变量。如果这个变量是一个数组，则会展开这个数组的所有成员。</p>
-<h3 id="React-允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。"><a href="#React-允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。" class="headerlink" title="React 允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。"></a>React 允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。</h3><p>React.createClass方法就用于生成一个组件类。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react-dom.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/browser.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"example"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</div><div class="line">      var HelloMessage = React.createClass(&#123;</div><div class="line">  render: <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">    <span class="built_in">return</span> &lt;h1&gt;Hello &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;HelloMessage name=<span class="string">"John"</span> /&gt;,</div><div class="line">  document.getElementById(<span class="string">'example'</span>)</div><div class="line">);</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>注意，组件类的第一个字母必须大写，否则会报错，比如HelloMessage不能写成helloMessage。另外，组件类只能包含一个顶层标签，否则也会报错。</p>
-<p>组件的用法与原生的 HTML 标签完全一致，可以任意加入属性，比如 <hellomessage name="John"> ，就是 HelloMessage 组件加入一个 name 属性，值为 John。组件的属性可以在组件类的 this.props 对象上获取，比如 name 属性就可以通过 this.props.name 读取。</hellomessage></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react-dom.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/browser.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"example"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</div><div class="line">      var NotesList = React.createClass(&#123;</div><div class="line">        render: <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">          <span class="built_in">return</span> (</div><div class="line">            &lt;ol&gt;</div><div class="line">            &#123;</div><div class="line">              React.Children.map(this.props.children, <span class="keyword">function</span>(child) &#123;</div><div class="line">                <span class="built_in">return</span> &lt;li&gt;&#123;child&#125;&lt;/li&gt;;</div><div class="line">              &#125;)</div><div class="line">            &#125;</div><div class="line">            &lt;/ol&gt;</div><div class="line">          );</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line"></div><div class="line">      ReactDOM.render(</div><div class="line">        &lt;NotesList&gt;</div><div class="line">          &lt;span&gt;Hello&lt;/span&gt;</div><div class="line">          &lt;span&gt;world&lt;/span&gt;</div><div class="line">        &lt;/NotesList&gt;,</div><div class="line">        document.body</div><div class="line">      );</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>上面的NoteList组件有两个span子节点，都通过this.props.children读取.</p>
-<p>组件的属性可以接受任意值，字符串、对象、函数等等都可以。有时，我们需要一种机制，验证别人使用组件时，提供的参数是否符合要求。<br>组件类的PropTypes属性，就是用来验证组件实例的属性是否符合要求。</p>
-<p>组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM （virtual DOM）。只有当它插入文档以后，才会变成真实的 DOM 。根据 React 的设计，所有的 DOM 变动，都先在虚拟 DOM 上发生，然后再将实际发生变动的部分，反映在真实 DOM上，这种算法叫做 DOM diff ，它可以极大提高网页的性能表现。<br>但是，有时需要从组件获取真实 DOM 的节点，这时就要用到 ref 属性.</p>
-<p>上面代码中，组件 MyComponent 的子节点有一个文本输入框，用于获取用户的输入。这时就必须获取真实的 DOM 节点，虚拟 DOM 是拿不到用户输入的。为了做到这一点，文本输入框必须有一个 ref 属性，然后 this.refs.[refName] 就会返回这个真实的 DOM 节点。<br>需要注意的是，由于 this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。上面代码中，通过为组件指定 Click 事件的回调函数，确保了只有等到真实 DOM 发生 Click 事件之后，才会读取 this.refs.[refName] 属性。</p>
+        <h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><h3 id="用来保存信息"><a href="#用来保存信息" class="headerlink" title="用来保存信息"></a>用来保存信息</h3><p>特性：同一个网站中所有页面共享一套cookie<br>       数量大小有限<br>        过期时间<br>Js中使用cookie：document.cookie</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var oDate=new Date();</div><div class="line">oDate.setDate(oDate.getDate()+10);</div><div class="line">alert(oDate.getFullYear()+<span class="string">'-'</span>+(oDate.getMonth()+1)+<span class="string">'-'</span>+oDate.getDate());</div><div class="line">document.cookie=<span class="string">'user=emrys'</span>;</div><div class="line">alert(document.cookie);</div></pre></td></tr></table></figure>
+<p>###1.设置cookie：<br>    格式：名字=值<br>    不会覆盖<br>    过期时间：expires=时间<br>        日期对象的使用 get，set<br>    封装函数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> setCookie(name, value, iDay)</div><div class="line">	&#123;</div><div class="line">		var oDate=new Date();</div><div class="line">		oDate.setDate(oDate.getDate()+iDay);</div><div class="line">		document.cookie=<span class="string">'name=value;expires=date'</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>###2.读取cookie<br>    字符串分割</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> getCookie(name)</div><div class="line">	&#123;</div><div class="line">		var arr = document.cookie.split(<span class="string">'; '</span>);</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			var arr2=arr[i].split(<span class="string">'='</span>);</div><div class="line"></div><div class="line">			<span class="keyword">if</span> (arr2[0]==name) &#123;</div><div class="line">				<span class="built_in">return</span> arr2[1];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span> <span class="string">''</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>###3.删除cookie</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> removeCookie(name)</div><div class="line">	&#123;</div><div class="line">		setCookie(name, 1, -1);//-1天，昨天过期</div><div class="line">	&#125;</div><div class="line">	removeCookie(<span class="string">'name'</span>);</div><div class="line">	alert(document.cook</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cj775y767000bhe3m5uqgan3n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/jscookie/" data-id="cj7kc8vg6000b813mgphwgkmj" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -179,7 +172,53 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/判断内核/" data-id="cj775y769000che3mp2l0v81z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/判断内核/" data-id="cj7kc8vg8000c813m2n4yi551" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-构造函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/构造函数/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/构造函数/">Js|构造函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="构造函数调用"><a href="#构造函数调用" class="headerlink" title="构造函数调用"></a>构造函数调用</h3><p>如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。<br>如下面两行代码等价：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o=new Object();</div><div class="line">var o=new Object;</div></pre></td></tr></table></figure>
+<p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象。构造函数一般不使用return关键字。<br>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.name=name;</div><div class="line">this.qq=qq;</div><div class="line">this.showName=<span class="function"><span class="title">function</span></span> ()</div><div class="line">&#123;</div><div class="line">	alert(<span class="string">'my name is :'</span>+this.name);</div><div class="line">&#125;</div><div class="line">this.showQq=<span class="function"><span class="title">function</span></span>()</div><div class="line">	&#123;</div><div class="line">		alert(<span class="string">'my qq is :'</span>+this.qq);</div><div class="line">	&#125;;</div><div class="line">&#125;//只需在调用时在对象前加new</div></pre></td></tr></table></figure>
+<h3 id="可变长的实参列表：实参对象"><a href="#可变长的实参列表：实参对象" class="headerlink" title="可变长的实参列表：实参对象"></a>可变长的实参列表：实参对象</h3><p>调用函数时传入的实参个数超过函数定义时的形参个数，没办法直接获得未命名值的引用，而参数对象解决了这个问题。<br>在函数体内，标识符arguments是指向实参对象的引用。</p>
+<p>假设定义了函数f，实参只有一个x。如果调用这个函数时传入两个实参，第一个实参可以通过参数名x来获得，也可以通过arguments[0]来得到，第二个实参只能通过arguments[1]来得到，此外，与真正的数组一样，arguments也包含一个length属性，用以标识其所包含元素的个数。因此，如果调用函数f（）时传入两个参数，arguments.length的值就是2.</p>
+<p>arduments并不是真正的数组，是一个实参对象。</p>
+<h3 id="闭包：函数对象可以通过作用域链相互关联起来。"><a href="#闭包：函数对象可以通过作用域链相互关联起来。" class="headerlink" title="闭包：函数对象可以通过作用域链相互关联起来。"></a>闭包：函数对象可以通过作用域链相互关联起来。</h3><p>js采用词法作用域，也就是说，函数的执行依赖与变量作用域。为了实现这种，js内部状态不仅包含函数的代码逻辑，还必须引用当前的作用域链。一定角度来讲，所有的函数都是闭包：它们都是对象，都关联到作用域链。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=“global scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">checkscope</span></span>()&#123;</div><div class="line">var scope=“<span class="built_in">local</span> scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;<span class="built_in">return</span> scope;&#125;</div><div class="line"><span class="built_in">return</span> f();</div><div class="line">&#125;</div><div class="line">checkscope();  //<span class="built_in">local</span> scope</div></pre></td></tr></table></figure>
+<p>如果是checkscope()();则返回函数内嵌套的一个函数对象</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj7kc8vga000d813m7t6ogbi0" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -263,7 +302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/慕课网圣诞/" data-id="cj775y76c000dhe3mj53rrhzq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/慕课网圣诞/" data-id="cj7kc8vgc000e813mhuhp6csj" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -273,9 +312,9 @@
 
 
   
-    <article id="post-构造函数" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-react" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/构造函数/" class="article-date">
+    <a href="/2017/06/30/react/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -287,7 +326,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/构造函数/">Js|构造函数</a>
+      <a class="article-title" href="/2017/06/30/react/">React入门系列01</a>
     </h1>
   
 
@@ -295,21 +334,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="构造函数调用"><a href="#构造函数调用" class="headerlink" title="构造函数调用"></a>构造函数调用</h3><p>如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。<br>如下面两行代码等价：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o=new Object();</div><div class="line">var o=new Object;</div></pre></td></tr></table></figure>
-<p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象。构造函数一般不使用return关键字。<br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.name=name;</div><div class="line">this.qq=qq;</div><div class="line">this.showName=<span class="function"><span class="title">function</span></span> ()</div><div class="line">&#123;</div><div class="line">	alert(<span class="string">'my name is :'</span>+this.name);</div><div class="line">&#125;</div><div class="line">this.showQq=<span class="function"><span class="title">function</span></span>()</div><div class="line">	&#123;</div><div class="line">		alert(<span class="string">'my qq is :'</span>+this.qq);</div><div class="line">	&#125;;</div><div class="line">&#125;//只需在调用时在对象前加new</div></pre></td></tr></table></figure>
-<h3 id="可变长的实参列表：实参对象"><a href="#可变长的实参列表：实参对象" class="headerlink" title="可变长的实参列表：实参对象"></a>可变长的实参列表：实参对象</h3><p>调用函数时传入的实参个数超过函数定义时的形参个数，没办法直接获得未命名值的引用，而参数对象解决了这个问题。<br>在函数体内，标识符arguments是指向实参对象的引用。</p>
-<p>假设定义了函数f，实参只有一个x。如果调用这个函数时传入两个实参，第一个实参可以通过参数名x来获得，也可以通过arguments[0]来得到，第二个实参只能通过arguments[1]来得到，此外，与真正的数组一样，arguments也包含一个length属性，用以标识其所包含元素的个数。因此，如果调用函数f（）时传入两个参数，arguments.length的值就是2.</p>
-<p>arduments并不是真正的数组，是一个实参对象。</p>
-<h3 id="闭包：函数对象可以通过作用域链相互关联起来。"><a href="#闭包：函数对象可以通过作用域链相互关联起来。" class="headerlink" title="闭包：函数对象可以通过作用域链相互关联起来。"></a>闭包：函数对象可以通过作用域链相互关联起来。</h3><p>js采用词法作用域，也就是说，函数的执行依赖与变量作用域。为了实现这种，js内部状态不仅包含函数的代码逻辑，还必须引用当前的作用域链。一定角度来讲，所有的函数都是闭包：它们都是对象，都关联到作用域链。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=“global scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">checkscope</span></span>()&#123;</div><div class="line">var scope=“<span class="built_in">local</span> scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;<span class="built_in">return</span> scope;&#125;</div><div class="line"><span class="built_in">return</span> f();</div><div class="line">&#125;</div><div class="line">checkscope();  //<span class="built_in">local</span> scope</div></pre></td></tr></table></figure>
-<p>如果是checkscope()();则返回函数内嵌套的一个函数对象</p>
+        <h3 id="由于-React-的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来-Web-开发的主流工具。"><a href="#由于-React-的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来-Web-开发的主流工具。" class="headerlink" title="由于 React 的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来 Web 开发的主流工具。"></a>由于 React 的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来 Web 开发的主流工具。</h3><p>这个项目本身也越滚越大，从最早的UI引擎变成了一整套前后端通吃的 Web App 解决方案。衍生的 React Native 项目，目标更是宏伟，希望用写 Web App 的方式去写 Native App。如果能够实现，整个互联网行业都会被颠覆，因为同一组人只需要写一次 UI ，就能同时运行在服务器、浏览器和手机。—来自阮一峰</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react-dom.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/browser.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div></pre></td></tr></table></figure>
+<p>最后一个script标签的 type 属性为 text/babel 。这是因为 React 独有的 JSX 语法，跟 JavaScript 不兼容。凡是使用 JSX 的地方，都要加上 type=”text/babel” 。</p>
+<p>其次，上面代码一共用了三个库： react.js 、react-dom.js 和 Browser.js ，它们必须首先加载。其中，react.js 是 React 的核心库，react-dom.js 是提供与 DOM 相关的功能，Browser.js 的作用是将 JSX 语法转为 JavaScript 语法，这一步很消耗时间，实际上线的时候，应该将它放到服务器完成。</p>
+<p>JSX语法规则：<br>遇到HTML标签（以&lt;开头）遇到代码块，（以{开头），就用javascript规则解析</p>
+<p>JSX 允许直接在模板插入 JavaScript 变量。如果这个变量是一个数组，则会展开这个数组的所有成员。</p>
+<h3 id="React-允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。"><a href="#React-允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。" class="headerlink" title="React 允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。"></a>React 允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。</h3><p>React.createClass方法就用于生成一个组件类。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react-dom.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/browser.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"example"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</div><div class="line">      var HelloMessage = React.createClass(&#123;</div><div class="line">  render: <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">    <span class="built_in">return</span> &lt;h1&gt;Hello &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;HelloMessage name=<span class="string">"John"</span> /&gt;,</div><div class="line">  document.getElementById(<span class="string">'example'</span>)</div><div class="line">);</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>注意，组件类的第一个字母必须大写，否则会报错，比如HelloMessage不能写成helloMessage。另外，组件类只能包含一个顶层标签，否则也会报错。</p>
+<p>组件的用法与原生的 HTML 标签完全一致，可以任意加入属性，比如 <hellomessage name="John"> ，就是 HelloMessage 组件加入一个 name 属性，值为 John。组件的属性可以在组件类的 this.props 对象上获取，比如 name 属性就可以通过 this.props.name 读取。</hellomessage></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react-dom.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/browser.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"example"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</div><div class="line">      var NotesList = React.createClass(&#123;</div><div class="line">        render: <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">          <span class="built_in">return</span> (</div><div class="line">            &lt;ol&gt;</div><div class="line">            &#123;</div><div class="line">              React.Children.map(this.props.children, <span class="keyword">function</span>(child) &#123;</div><div class="line">                <span class="built_in">return</span> &lt;li&gt;&#123;child&#125;&lt;/li&gt;;</div><div class="line">              &#125;)</div><div class="line">            &#125;</div><div class="line">            &lt;/ol&gt;</div><div class="line">          );</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line"></div><div class="line">      ReactDOM.render(</div><div class="line">        &lt;NotesList&gt;</div><div class="line">          &lt;span&gt;Hello&lt;/span&gt;</div><div class="line">          &lt;span&gt;world&lt;/span&gt;</div><div class="line">        &lt;/NotesList&gt;,</div><div class="line">        document.body</div><div class="line">      );</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>上面的NoteList组件有两个span子节点，都通过this.props.children读取.</p>
+<p>组件的属性可以接受任意值，字符串、对象、函数等等都可以。有时，我们需要一种机制，验证别人使用组件时，提供的参数是否符合要求。<br>组件类的PropTypes属性，就是用来验证组件实例的属性是否符合要求。</p>
+<p>组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM （virtual DOM）。只有当它插入文档以后，才会变成真实的 DOM 。根据 React 的设计，所有的 DOM 变动，都先在虚拟 DOM 上发生，然后再将实际发生变动的部分，反映在真实 DOM上，这种算法叫做 DOM diff ，它可以极大提高网页的性能表现。<br>但是，有时需要从组件获取真实 DOM 的节点，这时就要用到 ref 属性.</p>
+<p>上面代码中，组件 MyComponent 的子节点有一个文本输入框，用于获取用户的输入。这时就必须获取真实的 DOM 节点，虚拟 DOM 是拿不到用户输入的。为了做到这一点，文本输入框必须有一个 ref 属性，然后 this.refs.[refName] 就会返回这个真实的 DOM 节点。<br>需要注意的是，由于 this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。上面代码中，通过为组件指定 Click 事件的回调函数，确保了只有等到真实 DOM 发生 Click 事件之后，才会读取 this.refs.[refName] 属性。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj775y76e000ehe3mi7fl6dfp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cj7kc8vgd000f813mrmb4s70k" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -348,7 +392,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj775y76h000fhe3mdvfe3q4s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj7kc8vge000g813m0spa845b" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -377,7 +421,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -387,7 +431,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         
@@ -400,15 +444,15 @@
           </li>
         
           <li>
-            <a href="/2017/06/30/jscookie/">js中cookie的使用</a>
+            <a href="/2017/06/30/javascript/">推荐几个javascript思维导图</a>
           </li>
         
           <li>
-            <a href="/2017/06/30/c4/">算法04|搜索</a>
+            <a href="/2017/06/30/c2/">算法03|搜索</a>
           </li>
         
           <li>
-            <a href="/2017/06/30/C/">简单算法思想02|栈与队列</a>
+            <a href="/2017/06/30/PHP/">搭建php运行环境，编写并运行PHP程序</a>
           </li>
         
       </ul>
