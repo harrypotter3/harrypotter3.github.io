@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,9 +61,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-lmc" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-jscookie" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/lmc/" class="article-date">
+    <a href="/2017/06/30/jscookie/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/lmc/">暑假留校十天了</a>
+      <a class="article-title" href="/2017/06/30/jscookie/">js中cookie的使用</a>
     </h1>
   
 
@@ -83,13 +83,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>似乎什么都学了些，但是似乎又没有学的很深。学习还是要一个一个脚印慢慢来哇。</p>
-<p>推荐js的几本书：<br>javascript高级程序设计<br>javascript 的DOM编程<br>head first javascript</p>
+        <h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><h3 id="用来保存信息"><a href="#用来保存信息" class="headerlink" title="用来保存信息"></a>用来保存信息</h3><p>特性：同一个网站中所有页面共享一套cookie<br>       数量大小有限<br>        过期时间<br>Js中使用cookie：document.cookie</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var oDate=new Date();</div><div class="line">oDate.setDate(oDate.getDate()+10);</div><div class="line">alert(oDate.getFullYear()+<span class="string">'-'</span>+(oDate.getMonth()+1)+<span class="string">'-'</span>+oDate.getDate());</div><div class="line">document.cookie=<span class="string">'user=emrys'</span>;</div><div class="line">alert(document.cookie);</div></pre></td></tr></table></figure>
+<p>###1.设置cookie：<br>    格式：名字=值<br>    不会覆盖<br>    过期时间：expires=时间<br>        日期对象的使用 get，set<br>    封装函数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> setCookie(name, value, iDay)</div><div class="line">	&#123;</div><div class="line">		var oDate=new Date();</div><div class="line">		oDate.setDate(oDate.getDate()+iDay);</div><div class="line">		document.cookie=<span class="string">'name=value;expires=date'</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>###2.读取cookie<br>    字符串分割</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> getCookie(name)</div><div class="line">	&#123;</div><div class="line">		var arr = document.cookie.split(<span class="string">'; '</span>);</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			var arr2=arr[i].split(<span class="string">'='</span>);</div><div class="line"></div><div class="line">			<span class="keyword">if</span> (arr2[0]==name) &#123;</div><div class="line">				<span class="built_in">return</span> arr2[1];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span> <span class="string">''</span>;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>###3.删除cookie</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> removeCookie(name)</div><div class="line">	&#123;</div><div class="line">		setCookie(name, 1, -1);//-1天，昨天过期</div><div class="line">	&#125;</div><div class="line">	removeCookie(<span class="string">'name'</span>);</div><div class="line">	alert(document.cook</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/lmc/" data-id="cj93t70jo000afjthizo9edgh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/jscookie/" data-id="cj976ffjq000aq5thoo0mud28" class="article-share-link">Share</a>
       
       
     </footer>
@@ -99,9 +105,9 @@
 
 
   
-    <article id="post-axure" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-C" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/axure/" class="article-date">
+    <a href="/2017/06/30/C/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -113,7 +119,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/axure/">Axure|产品设计与原型</a>
+      <a class="article-title" href="/2017/06/30/C/">简单算法思想02|栈与队列</a>
     </h1>
   
 
@@ -121,21 +127,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Axure-Axure-RP-能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。"><a href="#Axure-Axure-RP-能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。" class="headerlink" title="Axure:Axure RP 能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。"></a>Axure:Axure RP 能帮助网站需求设计者，快捷而简便的创建基于网站构架图的带注释页面示意图、操作流程图、以及交互设计，并可自动生成用于演示的网页文件和规格文件，以提供演示与开发。</h3><p>分成几个部分：<br>元件<br>变量<br>动态面板<br>交互<br>中继器</p>
-<h3 id="元件："><a href="#元件：" class="headerlink" title="元件："></a>元件：</h3><pre><code>        表单元件
-菜单与表格元件
-基本元件. 
-</code></pre><h3 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h3><p>全局变量：如果要在B页面获取A页面的数据，必须通过全局变量进行传递。</p>
-<h3 id="动态面板："><a href="#动态面板：" class="headerlink" title="动态面板："></a>动态面板：</h3><pre><code>二级菜单
-    遮罩效果
-    固定.
-</code></pre><p>小结：<br>PS与html的结合体<br>作图功能比不上PS，html效果也还行<br>交互设计这块却是很好，可在web完成前就看到效果<br>良好的用户体验</p>
-<p>command+ （改变角度）</p>
+        <h3 id="（队列）数组操作："><a href="#（队列）数组操作：" class="headerlink" title="（队列）数组操作："></a>（队列）数组操作：</h3><p>两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。<br>在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++;</p>
+<p>简单队列：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int q[101]=&#123;0,6,3,1,7,5,8,9,2,4&#125;,head,tail;</div><div class="line">	int i;</div><div class="line">	head = 1;</div><div class="line">	tail = 10;</div><div class="line">	<span class="keyword">while</span>(head&lt;tail)</div><div class="line">	&#123;</div><div class="line">		//打印队首并将队首出列</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,q[head]);</div><div class="line">		head++;</div><div class="line">		q[tail]=q[head];</div><div class="line">		tail++;</div><div class="line">		//再将队首出列</div><div class="line">		head++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h3 id="队列将是我们今后学习广度优先搜索以及队列优化的-Bellman-Ford-最短路算法的核心-数据结构。所以现在将队列的三个基本元素-一个数组，两个变量-封装为一个结构体类型，-如下。"><a href="#队列将是我们今后学习广度优先搜索以及队列优化的-Bellman-Ford-最短路算法的核心-数据结构。所以现在将队列的三个基本元素-一个数组，两个变量-封装为一个结构体类型，-如下。" class="headerlink" title="队列将是我们今后学习广度优先搜索以及队列优化的 Bellman-Ford 最短路算法的核心 数据结构。所以现在将队列的三个基本元素(一个数组，两个变量)封装为一个结构体类型， 如下。"></a>队列将是我们今后学习广度优先搜索以及队列优化的 Bellman-Ford 最短路算法的核心 数据结构。所以现在将队列的三个基本元素(一个数组，两个变量)封装为一个结构体类型， 如下。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">struct queue</div><div class="line">&#123;</div><div class="line">int data[100];//队列的主体，用来存储内容</div><div class="line">int head;//队首</div><div class="line">int tail;//队尾 </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="回文字符串"><a href="#回文字符串" class="headerlink" title="回文字符串 :"></a>回文字符串 :</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#include &lt;string.h&gt;</span></div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	char a[101],s[101];</div><div class="line">	int i,len,mid,next,top;</div><div class="line">	gets(a);</div><div class="line">	len = strlen(a);</div><div class="line">	mid = len/2-1;</div><div class="line">	top = 0;//栈的初始化</div><div class="line">	<span class="keyword">for</span>(i=0;i&lt;=mid;i++)//将mid前的字符依次入栈</div><div class="line">		s[++top]=a[i];</div><div class="line">		//判断字符串的长度是奇数还是偶数，并找出需要进行字符匹配的起始下标</div><div class="line">		<span class="keyword">if</span> (len%2==0) &#123;</div><div class="line">			next = mid+1;</div><div class="line">		&#125;<span class="keyword">else</span></div><div class="line">			next=mid+2;</div><div class="line">	<span class="keyword">for</span>(i=next;i&lt;=len-1;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(a[i]!=s[top])</div><div class="line">		<span class="built_in">break</span>;</div><div class="line">		top--;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (top==0) </div><div class="line">		<span class="built_in">printf</span>(<span class="string">"yes"</span>);</div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"no"</span>);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>动态存储：</p>
+<p>malloc(4);<br>malloc函数的作用就是从内存中申请分配指定字节大小的内存空间。上面这行代码就申 请了 4 个字节。 </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/axure/" data-id="cj93t70iz0002fjth2wcqekmk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/C/" data-id="cj976ffj10002q5theuzubw7v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,7 +189,44 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cj93t70ju000cfjth1tmlrmz7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cj976ffjv000cq5thc72af4gq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-大马" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/大马/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/大马/">我会披荆斩棘，再去见你|马来西亚</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我一刻不停的怀念着–我们曾经相遇的时光。<br>年轻的时候去见你是我最正确的决定，大马。<br>必要努力学习，给自己一个能随时见你的未来。<br>                —9.22于先驌楼</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/大马/" data-id="cj976ffjx000dq5thggdbjwkd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -225,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/判断内核/" data-id="cj93t70jv000dfjthqbaoy4b0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/判断内核/" data-id="cj976ffjz000eq5thmod3j2ya" class="article-share-link">Share</a>
       
       
     </footer>
@@ -235,9 +275,9 @@
 
 
   
-    <article id="post-大马" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-牧羊少年" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/30/大马/" class="article-date">
+    <a href="/2017/06/30/牧羊少年/" class="article-date">
   <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
     
@@ -249,7 +289,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/大马/">我会披荆斩棘，再去见你|马来西亚</a>
+      <a class="article-title" href="/2017/06/30/牧羊少年/">牧羊少年奇幻之旅</a>
     </h1>
   
 
@@ -257,12 +297,105 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我一刻不停的怀念着–我们曾经相遇的时光。<br>年轻的时候去见你是我最正确的决定，大马。<br>必要努力学习，给自己一个能随时见你的未来。<br>                —9.22于先驌楼</p>
+        <pre><code>今天老师说思考对你人生有重大变化的一个结点，当时的我是没有想出来的，但是独处时我突然就想到了迄今所遇到的一些特别的人。
+然后就联想到了高中时期最喜欢的一本书—《牧羊少年奇幻之旅》，小说讲述了牧羊少年圣地亚哥追寻宝藏的奇幻冒险故事，在当时的我看来是热血沸腾的。幻想自己就是圣地亚哥，逃离当下高中体制的压抑去寻求自己所想象的自由。
+
+“没有一颗心，会因为追求梦想而受伤。当你真心渴望某样东西时，整个宇宙都会来帮忙。”当时的我渴望长大，但同时也在谈论着自己的梦想，现在看来也许每个阶段我们都在思考，思考着自己的未来，思考着自己想要的一切，思考着自己的牧羊之梦。那个时候，牧羊少年让我坚持下去。
+大学的时候我遇见了很多很好的人，他们也同时给予了我很多帮助，这个阶段的我就像是得到梦中法师指引下的牧羊少年，努力去抓住什么，但是就像书中所说的“好像每个人都清楚地知道别人该怎样生活，但却没有一个人知道自己的生活该怎样，就像释梦的老妇人，不知道如何把梦变为现实。”
+
+对我影响最深的一件事应该是跟竺仔和沈仔一起去大马的那次，我遇见了穿黑袍的女子，遇见了腼腆的司机，遇见了喜欢星球大战的哥哥，离开的时候我又想起了圣地亚哥：“因为我既不生活在过去，也不生活在未来，我只有现在，它才是我最感兴趣的。如果你能永远停留在现在，那你将是最幸福的人。你会发现沙漠里有生命，发现天空中有星星，发现士兵打仗是因为战争是人类生活的一部分。生活就是一个节日，是一个盛大的庆典。因为生活永远是，也仅仅是我们现在经历的这一刻。”
+
+圣地亚哥有属于自己的天命，而我遇见了你们。感谢生命中出现的一切。
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/牧羊少年/" data-id="cj976ffk0000fq5th6gn2zeq7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/面向对象/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/面向对象/">面向对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>面向对象：不了解原理的情况下，会使用功能。<br>对象：不了解内部的结构，但是知道它的操作。（电视）<br>（Date对象）<br>Array对象，sort()方法。（内部的各种排序方法。）<br>使用对象时，只关注对象提供的功能，不关注其内部细节。</p>
+<p>里面至少有两种人：<br>1.用对象<br>2.写对象</p>
+<p>封装：把东西封装好，会用就可以。<br>继承：从已有对象上，继承出新的对象。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/大马/" data-id="cj93t70jx000efjthh5vw683p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj976ffk3000gq5thufndbqfh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-构造函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/构造函数/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/构造函数/">Js|构造函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="构造函数调用"><a href="#构造函数调用" class="headerlink" title="构造函数调用"></a>构造函数调用</h3><p>如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。<br>如下面两行代码等价：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o=new Object();</div><div class="line">var o=new Object;</div></pre></td></tr></table></figure>
+<p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象。构造函数一般不使用return关键字。<br>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.name=name;</div><div class="line">this.qq=qq;</div><div class="line">this.showName=<span class="function"><span class="title">function</span></span> ()</div><div class="line">&#123;</div><div class="line">	alert(<span class="string">'my name is :'</span>+this.name);</div><div class="line">&#125;</div><div class="line">this.showQq=<span class="function"><span class="title">function</span></span>()</div><div class="line">	&#123;</div><div class="line">		alert(<span class="string">'my qq is :'</span>+this.qq);</div><div class="line">	&#125;;</div><div class="line">&#125;//只需在调用时在对象前加new</div></pre></td></tr></table></figure>
+<h3 id="可变长的实参列表：实参对象"><a href="#可变长的实参列表：实参对象" class="headerlink" title="可变长的实参列表：实参对象"></a>可变长的实参列表：实参对象</h3><p>调用函数时传入的实参个数超过函数定义时的形参个数，没办法直接获得未命名值的引用，而参数对象解决了这个问题。<br>在函数体内，标识符arguments是指向实参对象的引用。</p>
+<p>假设定义了函数f，实参只有一个x。如果调用这个函数时传入两个实参，第一个实参可以通过参数名x来获得，也可以通过arguments[0]来得到，第二个实参只能通过arguments[1]来得到，此外，与真正的数组一样，arguments也包含一个length属性，用以标识其所包含元素的个数。因此，如果调用函数f（）时传入两个参数，arguments.length的值就是2.</p>
+<p>arduments并不是真正的数组，是一个实参对象。</p>
+<h3 id="闭包：函数对象可以通过作用域链相互关联起来。"><a href="#闭包：函数对象可以通过作用域链相互关联起来。" class="headerlink" title="闭包：函数对象可以通过作用域链相互关联起来。"></a>闭包：函数对象可以通过作用域链相互关联起来。</h3><p>js采用词法作用域，也就是说，函数的执行依赖与变量作用域。为了实现这种，js内部状态不仅包含函数的代码逻辑，还必须引用当前的作用域链。一定角度来讲，所有的函数都是闭包：它们都是对象，都关联到作用域链。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=“global scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">checkscope</span></span>()&#123;</div><div class="line">var scope=“<span class="built_in">local</span> scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;<span class="built_in">return</span> scope;&#125;</div><div class="line"><span class="built_in">return</span> f();</div><div class="line">&#125;</div><div class="line">checkscope();  //<span class="built_in">local</span> scope</div></pre></td></tr></table></figure>
+<p>如果是checkscope()();则返回函数内嵌套的一个函数对象</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj976ffk4000hq5thputt4fjy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -346,92 +479,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/慕课网圣诞/" data-id="cj93t70jz000ffjth48fcfbbx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-构造函数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/30/构造函数/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/构造函数/">Js|构造函数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="构造函数调用"><a href="#构造函数调用" class="headerlink" title="构造函数调用"></a>构造函数调用</h3><p>如果函数或者方法调用之前带有关键字new，就构成函数调用。构造函数的语法允许省略实参列表和圆括号。<br>如下面两行代码等价：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o=new Object();</div><div class="line">var o=new Object;</div></pre></td></tr></table></figure>
-<p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性。 构造的函数会试图初始化新创建的对象。并将这个对象用作调用上下文因此可以使用this关键字来引用所创建的新对象。构造函数一般不使用return关键字。<br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">this.name=name;</div><div class="line">this.qq=qq;</div><div class="line">this.showName=<span class="function"><span class="title">function</span></span> ()</div><div class="line">&#123;</div><div class="line">	alert(<span class="string">'my name is :'</span>+this.name);</div><div class="line">&#125;</div><div class="line">this.showQq=<span class="function"><span class="title">function</span></span>()</div><div class="line">	&#123;</div><div class="line">		alert(<span class="string">'my qq is :'</span>+this.qq);</div><div class="line">	&#125;;</div><div class="line">&#125;//只需在调用时在对象前加new</div></pre></td></tr></table></figure>
-<h3 id="可变长的实参列表：实参对象"><a href="#可变长的实参列表：实参对象" class="headerlink" title="可变长的实参列表：实参对象"></a>可变长的实参列表：实参对象</h3><p>调用函数时传入的实参个数超过函数定义时的形参个数，没办法直接获得未命名值的引用，而参数对象解决了这个问题。<br>在函数体内，标识符arguments是指向实参对象的引用。</p>
-<p>假设定义了函数f，实参只有一个x。如果调用这个函数时传入两个实参，第一个实参可以通过参数名x来获得，也可以通过arguments[0]来得到，第二个实参只能通过arguments[1]来得到，此外，与真正的数组一样，arguments也包含一个length属性，用以标识其所包含元素的个数。因此，如果调用函数f（）时传入两个参数，arguments.length的值就是2.</p>
-<p>arduments并不是真正的数组，是一个实参对象。</p>
-<h3 id="闭包：函数对象可以通过作用域链相互关联起来。"><a href="#闭包：函数对象可以通过作用域链相互关联起来。" class="headerlink" title="闭包：函数对象可以通过作用域链相互关联起来。"></a>闭包：函数对象可以通过作用域链相互关联起来。</h3><p>js采用词法作用域，也就是说，函数的执行依赖与变量作用域。为了实现这种，js内部状态不仅包含函数的代码逻辑，还必须引用当前的作用域链。一定角度来讲，所有的函数都是闭包：它们都是对象，都关联到作用域链。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=“global scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">checkscope</span></span>()&#123;</div><div class="line">var scope=“<span class="built_in">local</span> scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;<span class="built_in">return</span> scope;&#125;</div><div class="line"><span class="built_in">return</span> f();</div><div class="line">&#125;</div><div class="line">checkscope();  //<span class="built_in">local</span> scope</div></pre></td></tr></table></figure>
-<p>如果是checkscope()();则返回函数内嵌套的一个函数对象</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj93t70k1000gfjthyp4vde9m" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/30/面向对象/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/面向对象/">面向对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>面向对象：不了解原理的情况下，会使用功能。<br>对象：不了解内部的结构，但是知道它的操作。（电视）<br>（Date对象）<br>Array对象，sort()方法。（内部的各种排序方法。）<br>使用对象时，只关注对象提供的功能，不关注其内部细节。</p>
-<p>里面至少有两种人：<br>1.用对象<br>2.写对象</p>
-<p>封装：把东西封装好，会用就可以。<br>继承：从已有对象上，继承出新的对象。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj93t70k3000hfjth4pxqxpzc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/慕课网圣诞/" data-id="cj976ffk5000iq5th246oyb20" class="article-share-link">Share</a>
       
       
     </footer>
@@ -460,7 +508,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -470,7 +518,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
         
@@ -483,15 +531,15 @@
           </li>
         
           <li>
-            <a href="/2017/06/30/jscookie/">js中cookie的使用</a>
+            <a href="/2017/06/30/lmc/">暑假留校十天了</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/hello-world/">Hello World</a>
           </li>
         
           <li>
             <a href="/2017/06/30/c2/">算法03|搜索</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/30/c4/">算法04|搜索</a>
           </li>
         
       </ul>
