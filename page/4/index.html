@@ -92,6 +92,114 @@ if (isWX) {
     <div class="outer">
       <section id="main">
   
+    <article id="post-react" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/06/30/react/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</h3>
+    
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/react/">React入门系列01</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h3 id="由于-React-的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来-Web-开发的主流工具。"><a href="#由于-React-的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来-Web-开发的主流工具。" class="headerlink" title="由于 React 的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来 Web 开发的主流工具。"></a>由于 React 的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来 Web 开发的主流工具。</h3><p>这个项目本身也越滚越大，从最早的UI引擎变成了一整套前后端通吃的 Web App 解决方案。衍生的 React Native 项目，目标更是宏伟，希望用写 Web App 的方式去写 Native App。如果能够实现，整个互联网行业都会被颠覆，因为同一组人只需要写一次 UI ，就能同时运行在服务器、浏览器和手机。—来自阮一峰</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react-dom.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/browser.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div></pre></td></tr></table></figure>
+<p>最后一个script标签的 type 属性为 text/babel 。这是因为 React 独有的 JSX 语法，跟 JavaScript 不兼容。凡是使用 JSX 的地方，都要加上 type=”text/babel” 。</p>
+<p>其次，上面代码一共用了三个库： react.js 、react-dom.js 和 Browser.js ，它们必须首先加载。其中，react.js 是 React 的核心库，react-dom.js 是提供与 DOM 相关的功能，Browser.js 的作用是将 JSX 语法转为 JavaScript 语法，这一步很消耗时间，实际上线的时候，应该将它放到服务器完成。</p>
+<p>JSX语法规则：<br>遇到HTML标签（以&lt;开头）遇到代码块，（以{开头），就用javascript规则解析</p>
+<p>JSX 允许直接在模板插入 JavaScript 变量。如果这个变量是一个数组，则会展开这个数组的所有成员。</p>
+<h3 id="React-允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。"><a href="#React-允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。" class="headerlink" title="React 允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。"></a>React 允许将代码封装成组件，然后像插入普通HTML标签一样，在网页中插入这个组件。</h3><p>React.createClass方法就用于生成一个组件类。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react-dom.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/browser.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"example"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</div><div class="line">      var HelloMessage = React.createClass(&#123;</div><div class="line">  render: <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">    <span class="built_in">return</span> &lt;h1&gt;Hello &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;HelloMessage name=<span class="string">"John"</span> /&gt;,</div><div class="line">  document.getElementById(<span class="string">'example'</span>)</div><div class="line">);</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>注意，组件类的第一个字母必须大写，否则会报错，比如HelloMessage不能写成helloMessage。另外，组件类只能包含一个顶层标签，否则也会报错。</p>
+<p>组件的用法与原生的 HTML 标签完全一致，可以任意加入属性，比如 <hellomessage name="John"> ，就是 HelloMessage 组件加入一个 name 属性，值为 John。组件的属性可以在组件类的 this.props 对象上获取，比如 name 属性就可以通过 this.props.name 读取。</hellomessage></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/react-dom.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=<span class="string">"../build/browser.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"example"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/babel"</span>&gt;</div><div class="line">      var NotesList = React.createClass(&#123;</div><div class="line">        render: <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">          <span class="built_in">return</span> (</div><div class="line">            &lt;ol&gt;</div><div class="line">            &#123;</div><div class="line">              React.Children.map(this.props.children, <span class="keyword">function</span>(child) &#123;</div><div class="line">                <span class="built_in">return</span> &lt;li&gt;&#123;child&#125;&lt;/li&gt;;</div><div class="line">              &#125;)</div><div class="line">            &#125;</div><div class="line">            &lt;/ol&gt;</div><div class="line">          );</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line"></div><div class="line">      ReactDOM.render(</div><div class="line">        &lt;NotesList&gt;</div><div class="line">          &lt;span&gt;Hello&lt;/span&gt;</div><div class="line">          &lt;span&gt;world&lt;/span&gt;</div><div class="line">        &lt;/NotesList&gt;,</div><div class="line">        document.body</div><div class="line">      );</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>上面的NoteList组件有两个span子节点，都通过this.props.children读取.</p>
+<p>组件的属性可以接受任意值，字符串、对象、函数等等都可以。有时，我们需要一种机制，验证别人使用组件时，提供的参数是否符合要求。<br>组件类的PropTypes属性，就是用来验证组件实例的属性是否符合要求。</p>
+<p>组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM （virtual DOM）。只有当它插入文档以后，才会变成真实的 DOM 。根据 React 的设计，所有的 DOM 变动，都先在虚拟 DOM 上发生，然后再将实际发生变动的部分，反映在真实 DOM上，这种算法叫做 DOM diff ，它可以极大提高网页的性能表现。<br>但是，有时需要从组件获取真实 DOM 的节点，这时就要用到 ref 属性.</p>
+<p>上面代码中，组件 MyComponent 的子节点有一个文本输入框，用于获取用户的输入。这时就必须获取真实的 DOM 节点，虚拟 DOM 是拿不到用户输入的。为了做到这一点，文本输入框必须有一个 ref 属性，然后 this.refs.[refName] 就会返回这个真实的 DOM 节点。<br>需要注意的是，由于 this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。上面代码中，通过为组件指定 Click 事件的回调函数，确保了只有等到真实 DOM 发生 Click 事件之后，才会读取 this.refs.[refName] 属性。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+        <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cj9obn5v2000f2athtbyqc7w4" class="article-share-link">Share</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-牧羊少年" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/06/30/牧羊少年/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</h3>
+    
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/牧羊少年/">牧羊少年奇幻之旅</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>今天老师说思考对你人生有重大变化的一个结点，当时的我是没有想出来的，但是独处时我突然就想到了迄今所遇到的一些特别的人。然后就联想到了高中时期最喜欢的一本书—《牧羊少年奇幻之旅》，小说讲述了牧羊少年圣地亚哥追寻宝藏的奇幻冒险故事，在当时的我看来是热血沸腾的。幻想自己就是圣地亚哥，逃离当下高中体制的压抑去寻求自己所想象的自由。</p>
+<p>“没有一颗心，会因为追求梦想而受伤。当你真心渴望某样东西时，整个宇宙都会来帮忙。”当时的我渴望长大，但同时也在谈论着自己的梦想，现在看来也许每个阶段我们都在思考，思考着自己的未来，思考着自己想要的一切，思考着自己的牧羊之梦。那个时候，牧羊少年让我坚持下去。</p>
+<p>大学的时候我遇见了很多很好的人，他们也同时给予了我很多帮助，这个阶段的我就像是得到梦中法师指引下的牧羊少年，努力去抓住什么，但是就像书中所说的“好像每个人都清楚地知道别人该怎样生活，但却没有一个人知道自己的生活该怎样，就像释梦的老妇人，不知道如何把梦变为现实。”</p>
+<p>对我影响最深的一件事应该是跟竺仔和沈仔一起去大马的那次，我遇见了穿黑袍的女子，遇见了腼腆的司机，遇见了喜欢星球大战的哥哥，离开的时候我又想起了圣地亚哥：“因为我既不生活在过去，也不生活在未来，我只有现在，它才是我最感兴趣的。如果你能永远停留在现在，那你将是最幸福的人。你会发现沙漠里有生命，发现天空中有星星，发现士兵打仗是因为战争是人类生活的一部分。生活就是一个节日，是一个盛大的庆典。因为生活永远是，也仅仅是我们现在经历的这一刻。”</p>
+<p>圣地亚哥有属于自己的天命，而我遇见了你们。感谢生命中出现的一切。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+        <a data-url="http://yoursite.com/2017/06/30/牧羊少年/" data-id="cj9obn5v4000g2athrfy2a258" class="article-share-link">Share</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-慕课网圣诞" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2017/06/30/慕课网圣诞/" class="article-date">
@@ -171,56 +279,7 @@ if (isWX) {
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/06/30/慕课网圣诞/" data-id="cj9e7lam1000g5c3mg3gyweht" class="article-share-link">Share</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-牧羊少年" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2017/06/30/牧羊少年/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/牧羊少年/">牧羊少年奇幻之旅</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <p>今天老师说思考对你人生有重大变化的一个结点，当时的我是没有想出来的，但是独处时我突然就想到了迄今所遇到的一些特别的人。然后就联想到了高中时期最喜欢的一本书—《牧羊少年奇幻之旅》，小说讲述了牧羊少年圣地亚哥追寻宝藏的奇幻冒险故事，在当时的我看来是热血沸腾的。幻想自己就是圣地亚哥，逃离当下高中体制的压抑去寻求自己所想象的自由。</p>
-<p>“没有一颗心，会因为追求梦想而受伤。当你真心渴望某样东西时，整个宇宙都会来帮忙。”当时的我渴望长大，但同时也在谈论着自己的梦想，现在看来也许每个阶段我们都在思考，思考着自己的未来，思考着自己想要的一切，思考着自己的牧羊之梦。那个时候，牧羊少年让我坚持下去。</p>
-<p>大学的时候我遇见了很多很好的人，他们也同时给予了我很多帮助，这个阶段的我就像是得到梦中法师指引下的牧羊少年，努力去抓住什么，但是就像书中所说的“好像每个人都清楚地知道别人该怎样生活，但却没有一个人知道自己的生活该怎样，就像释梦的老妇人，不知道如何把梦变为现实。”</p>
-<p>对我影响最深的一件事应该是跟竺仔和沈仔一起去大马的那次，我遇见了穿黑袍的女子，遇见了腼腆的司机，遇见了喜欢星球大战的哥哥，离开的时候我又想起了圣地亚哥：“因为我既不生活在过去，也不生活在未来，我只有现在，它才是我最感兴趣的。如果你能永远停留在现在，那你将是最幸福的人。你会发现沙漠里有生命，发现天空中有星星，发现士兵打仗是因为战争是人类生活的一部分。生活就是一个节日，是一个盛大的庆典。因为生活永远是，也仅仅是我们现在经历的这一刻。”</p>
-<p>圣地亚哥有属于自己的天命，而我遇见了你们。感谢生命中出现的一切。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-        <a data-url="http://yoursite.com/2017/06/30/牧羊少年/" data-id="cj9e7lam3000h5c3moaduvsvu" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/06/30/慕课网圣诞/" data-id="cj9obn5v6000h2athmvyat3em" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -274,7 +333,7 @@ if (isWX) {
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj9e7lam4000i5c3mfyioqy2g" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/06/30/构造函数/" data-id="cj9obn5v7000i2athd05y9del" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -321,7 +380,7 @@ if (isWX) {
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj9e7lam6000j5c3mdagpf22x" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/06/30/面向对象/" data-id="cj9obn5vb000j2athn0pqr33x" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -358,11 +417,11 @@ if (isWX) {
           </li>
         
           <li>
-            <a href="/2017/06/30/hello-world的副本/">简单算法思想01|排序</a>
+            <a href="/2017/06/30/javascript/">推荐几个javascript思维导图</a>
           </li>
         
           <li>
-            <a href="/2017/06/30/c2/">算法03|搜索</a>
+            <a href="/2017/06/30/c4/">算法04|搜索</a>
           </li>
         
           <li>
@@ -380,7 +439,7 @@ if (isWX) {
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">19</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">20</span></li></ul>
     </div>
   </div>
 
