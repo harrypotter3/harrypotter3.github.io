@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>数据结构|二叉树 | Emrys</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="新建结构体12345678#include &amp;lt;stdio.h&amp;gt;struct BinaryTreeNode&amp;#123;	int m_nValue;	BinaryTreeNode*m_pLeft;	BinaryTreeNode*m_pRight;&amp;#125;; 求二叉树的结点数采用递归分别遍历左右子树最后加上根节点。 12345678int GetNodeNum(BinaryTreeNod">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构|二叉树">
+<meta property="og:url" content="http://yoursite.com/2017/06/30/二叉树/index.html">
+<meta property="og:site_name" content="Emrys">
+<meta property="og:description" content="新建结构体12345678#include &amp;lt;stdio.h&amp;gt;struct BinaryTreeNode&amp;#123;	int m_nValue;	BinaryTreeNode*m_pLeft;	BinaryTreeNode*m_pRight;&amp;#125;; 求二叉树的结点数采用递归分别遍历左右子树最后加上根节点。 12345678int GetNodeNum(BinaryTreeNod">
+<meta property="og:updated_time" content="2017-11-19T06:03:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据结构|二叉树">
+<meta name="twitter:description" content="新建结构体12345678#include &amp;lt;stdio.h&amp;gt;struct BinaryTreeNode&amp;#123;	int m_nValue;	BinaryTreeNode*m_pLeft;	BinaryTreeNode*m_pRight;&amp;#125;; 求二叉树的结点数采用递归分别遍历左右子树最后加上根节点。 12345678int GetNodeNum(BinaryTreeNod">
+  
+    <link rel="alternative" href="/atom.xml" title="Emrys" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+<script type="text/javascript">
+var isWX = /micromessenger/i.test(navigator.userAgent);
+if (isWX) {
+  document.write('<br/><br/><h1 style="text-align: center;font-size:32px;" >╮(╯_╰)╭</h1><br/><br/><h4 style="text-align: center;" >请在浏览器中打开。</h4><br/><h4 style="text-align: center;" >Please open in the browser.</h4>');
+  window.stop ? window.stop() : document.execCommand("Stop");
+}
+</script>
+
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <nav id="upper-nav" class="inner">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <div class="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-github" class="nav-icon" href="https://github.com/harrypotter3"></a>
+        
+      </div>
+    </nav>
+    <div id="header-title">
+      
+        <h1 id="blog-title-wrap">
+          <a href="/" id="blog-title">Emrys</a>
+        </h1>
+      
+    </div>
+    <div id="contenedor">
+      <ul class="cube">
+        <li class="cara">Emrys</li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+      </ul>
+    </div>
+    <nav id="main-nav">
+      
+        <a class="main-nav-link" href="/">Home</a>
+      
+        <a class="main-nav-link" href="/archives">Archives</a>
+      
+        <a class="main-nav-link" href="/about">About</a>
+      
+        <a class="main-nav-link" href="/categories">Categories</a>
+      
+        <a class="main-nav-link" href="/tags">tags</a>
+      
+      <a class="main-nav-link st-search-show-outputs">Search</a>
+    </nav>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="post-二叉树" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/06/30/二叉树/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</h3>
+    
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据结构|二叉树
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h3 id="新建结构体"><a href="#新建结构体" class="headerlink" title="新建结构体"></a>新建结构体</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">struct BinaryTreeNode</div><div class="line">&#123;</div><div class="line">	int m_nValue;</div><div class="line">	BinaryTreeNode*m_pLeft;</div><div class="line">	BinaryTreeNode*m_pRight;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="求二叉树的结点数"><a href="#求二叉树的结点数" class="headerlink" title="求二叉树的结点数"></a>求二叉树的结点数</h3><p>采用递归分别遍历左右子树最后加上根节点。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">int GetNodeNum(BinaryTreeNode * pRoot)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span> (pRoot == NULL) &#123;</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">	&#125;<span class="keyword">else</span> &#123;</div><div class="line">		<span class="built_in">return</span> GetNodeNum(pRoot-&gt;m_pLeft) + GetNodeNum(pRoot-&gt;m_pRight) + 1;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">int GetDepth(BinarytreeNode * pRoot)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span> (pRoot == Null) &#123;</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">	&#125;<span class="keyword">else</span> &#123;</div><div class="line">		int a = GetDepth(pRoot-&gt;m_pleft);</div><div class="line">		int b = GetDepth(pRoot-&gt;m_pright);</div><div class="line">		<span class="built_in">return</span> a &gt; b ? (a+1) : (b+1);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">void Preorder1(BinaryTreeNode * pRoot)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span> (pRoot == NULL)</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%c"</span>,pRoot-&gt;data);</div><div class="line">	Preorder1(pRoot-&gt;m_pleft);</div><div class="line">	Preorder1(pRoot-&gt;m_plight);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="第k层结点个数"><a href="#第k层结点个数" class="headerlink" title="第k层结点个数"></a>第k层结点个数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">int GetNode(BinaryTreeNode * pRoot, int k)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span>(pRoot == NULL || k&lt;1)</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">	<span class="keyword">if</span>(k == 1)</div><div class="line">		<span class="built_in">return</span> 1;</div><div class="line">	int numl = GetNode(pRoot-&gt;m_pLeft, k-1);</div><div class="line">	int numr = GetNode(pRoot-&gt;m_pRight, k-1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+        <a data-url="http://yoursite.com/2017/06/30/二叉树/" data-id="cja6cxjj1000ee13m6s48te6n" class="article-share-link">分享到</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/30/PHP/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          搭建php运行环境，编写并运行PHP程序
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/30/react/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">React入门系列01</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/30/fffff的副本/">通过JavaScript操作DOM改变HTML结构</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/luomingchuan/">猜猜我是谁</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/lmc/">暑假留校十天了</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/axure/">Axure|产品设计与原型</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/c2/">算法03|搜索</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">歸檔</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">21</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Mingchuan Luo<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank">Paperbox</a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">tags</a>
+  
+  <a href="#search" class="mobile-nav-link st-search-show-outputs">Search</a>
+</nav>
+  
+
+<!-- totop start -->
+<div id="totop">
+	<a title="返回頂部"></a>
+</div>
+<!-- totop end -->
+
+<!-- swiftype search start -->
+
+<!-- swiftype search end -->
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/lrsjng.jquery-qrcode/0.12.0/jquery.qrcode.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+</div>
+</body>
+</html>
