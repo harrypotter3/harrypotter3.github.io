@@ -92,6 +92,52 @@ if (isWX) {
     <div class="outer">
       <section id="main">
   
+    <article id="post-lmc" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/06/30/lmc/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</h3>
+    
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/lmc/">暑假留校十天了</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>似乎什么都学了些，但是似乎又没有学的很深。学习还是要一个一个脚印慢慢来哇。</p>
+<p>推荐js的几本书：<br>javascript高级程序设计<br>javascript 的DOM编程<br>head first javascript</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+        <a data-url="http://yoursite.com/2017/06/30/lmc/" data-id="cjafh3c23000alrthynk9v8pr" class="article-share-link">Share</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-C" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2017/06/30/C/" class="article-date">
@@ -130,103 +176,7 @@ if (isWX) {
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/06/30/C/" data-id="cja6cxji70002e13mgb0937jo" class="article-share-link">分享到</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-判断内核" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2017/06/30/判断内核/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/判断内核/">JS来判断浏览器类型或内核的三种方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <h3 id="（一）"><a href="#（一）" class="headerlink" title="（一）"></a>（一）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line"> window.onload=<span class="function"><span class="title">function</span></span>()</div><div class="line">        &#123;</div><div class="line">        var oDiv = document.getElementById(<span class="string">'div1'</span>);</div><div class="line">        var oImg1 = document.getElementById(<span class="string">'img1'</span>);</div><div class="line">        var oImg2 = document.getElementById(<span class="string">'img2'</span>);</div><div class="line">    </div><div class="line">        <span class="keyword">function</span> <span class="function"><span class="title">getOs</span></span>()  </div><div class="line">        &#123;  </div><div class="line">            var OsObject = <span class="string">""</span>;  </div><div class="line">           <span class="keyword">if</span>(navigator.userAgent.indexOf(<span class="string">"MSIE"</span>)&gt;0) &#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"MSIE"</span>;  </div><div class="line">           &#125;  </div><div class="line">           <span class="keyword">if</span>(isFirefox=navigator.userAgent.indexOf(<span class="string">"Firefox"</span>)&gt;0)&#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Firefox"</span>;  </div><div class="line">           &#125; </div><div class="line">           <span class="keyword">if</span>(isChrome=navigator.userAgent.indexOf(<span class="string">"Chrome"</span>)&gt;0)&#123;</div><div class="line">                  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Chrome"</span>;  </div><div class="line">           &#125;   </div><div class="line">           <span class="keyword">if</span>(isSafari=navigator.userAgent.indexOf(<span class="string">"Safari"</span>)&gt;0) &#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Safari"</span>;  </div><div class="line">           &#125;   </div><div class="line">           <span class="keyword">if</span>(isCamino=navigator.userAgent.indexOf(<span class="string">"Camino"</span>)&gt;0)&#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Camino"</span>;  </div><div class="line">           &#125;  </div><div class="line">           <span class="keyword">if</span>(isMozilla=navigator.userAgent.indexOf(<span class="string">"Gecko/"</span>)&gt;0)&#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Gecko"</span>;  </div><div class="line">           &#125;  </div><div class="line">	&#125;</div><div class="line"> <span class="keyword">if</span> (getVendorPrefix()==<span class="string">"webkit"</span>) &#123;</div><div class="line">            document.getElementById(<span class="string">"img1"</span>).src = <span class="string">"1.webP"</span>; </div><div class="line">        &#125; <span class="keyword">else</span> </div><div class="line">        &#123;</div><div class="line">            document.getElementById(<span class="string">"img1"</span>).src = <span class="string">"web.jpg"</span>; </div><div class="line">         &#125;</div><div class="line">        &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<h3 id="（二）"><a href="#（二）" class="headerlink" title="（二）"></a>（二）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var browser=</div><div class="line">        &#123;  </div><div class="line">          versions:<span class="function"><span class="title">function</span></span>()</div><div class="line">          &#123;   </div><div class="line">          var u = navigator.userAgent, app = navigator.appVersion;   </div><div class="line">          <span class="built_in">return</span> &#123;//移动终端浏览器版本信息   </div><div class="line">               trident: u.indexOf(<span class="string">'Trident'</span>) &gt; -1, //IE内核  </div><div class="line">               presto: u.indexOf(<span class="string">'Presto'</span>) &gt; -1, //opera内核  </div><div class="line">               webKit: u.indexOf(<span class="string">'AppleWebKit'</span>) &gt; -1, //苹果、谷歌内核  </div><div class="line">               gecko: u.indexOf(<span class="string">'Gecko'</span>) &gt; -1 &amp;&amp; u.indexOf(<span class="string">'KHTML'</span>) == -1, //火狐内核  </div><div class="line">               mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端  </div><div class="line">               ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  </div><div class="line">               android: u.indexOf(<span class="string">'Android'</span>) &gt; -1 || u.indexOf(<span class="string">'Linux'</span>) &gt; -1, //android终端或者uc浏览器  </div><div class="line">               iPhone: u.indexOf(<span class="string">'iPhone'</span>) &gt; -1 || u.indexOf(<span class="string">'Mac'</span>) &gt; -1, //是否为iPhone或者QQHD浏览器  </div><div class="line">               iPad: u.indexOf(<span class="string">'iPad'</span>) &gt; -1, //是否iPad  </div><div class="line">               webApp: u.indexOf(<span class="string">'Safari'</span>) == -1 //是否web应该程序，没有头部与底部  </div><div class="line">                 &#125;;  </div><div class="line">        &#125;(),  </div><div class="line">        language:(navigator.browserLanguage || navigator.language).toLowerCase()  </div><div class="line">       &#125;   </div><div class="line">               document.writeln(<span class="string">"语言版本: "</span>+browser.language);  </div><div class="line">               document.writeln(<span class="string">" 是否为移动终端: "</span>+browser.versions.mobile);  </div><div class="line">               document.writeln(<span class="string">" ios终端: "</span>+browser.versions.ios);  </div><div class="line">               document.writeln(<span class="string">" android终端: "</span>+browser.versions.android);  </div><div class="line">               document.writeln(<span class="string">" 是否为iPhone: "</span>+browser.versions.iPhone);  </div><div class="line">               document.writeln(<span class="string">" 是否iPad: "</span>+browser.versions.iPad);  </div><div class="line">               document.writeln(navigator.userAgent);  </div><div class="line">         </div><div class="line">        alert(<span class="string">"您的浏览器类型为:"</span>+getOs());</div></pre></td></tr></table></figure>
-<h3 id="（三）"><a href="#（三）" class="headerlink" title="（三）"></a>（三）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">getVendorPrefix</span></span>() &#123;</div><div class="line">          // 使用body是为了避免在还需要传入元素</div><div class="line">          var body = document.body || document.documentElement,</div><div class="line">            style = body.style,</div><div class="line">            vendor = [<span class="string">'webkit'</span>, <span class="string">'khtml'</span>, <span class="string">'moz'</span>, <span class="string">'ms'</span>, <span class="string">'o'</span>],</div><div class="line">            i = 0;</div><div class="line"></div><div class="line">          <span class="keyword">while</span> (i &lt; vendor.length) &#123;</div><div class="line">            // 此处进行判断是否有对应的内核前缀</div><div class="line">            <span class="keyword">if</span> (typeof style[vendor[i] + <span class="string">'Transition'</span>] === <span class="string">'string'</span>) &#123;</div><div class="line">              <span class="built_in">return</span> vendor[i];</div><div class="line">            &#125;</div><div class="line">            i++;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">          alert(getVendorPrefix());</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-        <a data-url="http://yoursite.com/2017/06/30/判断内核/" data-id="cja6cxjix000ce13msxzhc9p7" class="article-share-link">分享到</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-PHP" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2017/06/30/PHP/" class="article-date">
-  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/PHP/">搭建php运行环境，编写并运行PHP程序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <p>1，    因为mac系统自带Apache服务器，且内置PHP，所以其中的一个方法是另外安装MYSQL数据库并且启动，在终端运行。<br>但是此方法有一个弊端：在MAC每次升级系统时会自动升级php和apache，所以之前可能已经安装的插件都会不见，所以这里还是不太推荐这种方法。</p>
-<p>2，    第二种方法是使用集成软件，我这里使用的是MAMP，集成了所需要的部分，比较方便，安装也不会有太大的问题。</p>
-<p>运行软件后只要点击打开网页就默认进入你的目录，环境也已经搭建好了，可以直接运行PHP文件。<br>但是有时侯会出现打不开的问题，如果上面的MySQL Server打不开，可能就是你的电脑终端已经启动了其他的MYSQL数据库，这时候你就要手动关掉，才能重新打开运行。</p>
-<p>3，    搭建完成之后你可以选择一个喜欢的代码编辑器，这里我选择的是Sublime Text，轻量级且功能强大，其中还可以安装许多插件，提高代码效率。<br>4，    这时候我们就可以来编写我们的第一个php程序，直接运行Sublime，输入你的代码，保存到固定的文件夹下，运行即可。</p>
-<p>5,在打开MAMP之后，很方便的一点就是你可以直接选择你的文件夹打开，不需要新建虚拟目录再配置。<br>6.接下来找到所命名的文件，推荐使用英文命名，不然可能会出现乱码。这样就可以看到你的第一个php运行结果啦。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-        <a data-url="http://yoursite.com/2017/06/30/PHP/" data-id="cja6cxjhy0000e13mcr3wqeci" class="article-share-link">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/30/C/" data-id="cjafh3c1a0001lrthjy7q38fu" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -276,7 +226,7 @@ if (isWX) {
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/06/30/二叉树/" data-id="cja6cxjj1000ee13m6s48te6n" class="article-share-link">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/30/二叉树/" data-id="cjafh3c29000clrth2jrvwkwi" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -335,7 +285,54 @@ if (isWX) {
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cja6cxjj3000fe13miidsbal6" class="article-share-link">分享到</a>
+        <a data-url="http://yoursite.com/2017/06/30/react/" data-id="cjafh3c2b000dlrthtjlkvw4s" class="article-share-link">Share</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-判断内核" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/06/30/判断内核/" class="article-date">
+  <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
+</h3>
+    
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/30/判断内核/">JS来判断浏览器类型或内核的三种方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h3 id="（一）"><a href="#（一）" class="headerlink" title="（一）"></a>（一）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line"> window.onload=<span class="function"><span class="title">function</span></span>()</div><div class="line">        &#123;</div><div class="line">        var oDiv = document.getElementById(<span class="string">'div1'</span>);</div><div class="line">        var oImg1 = document.getElementById(<span class="string">'img1'</span>);</div><div class="line">        var oImg2 = document.getElementById(<span class="string">'img2'</span>);</div><div class="line">    </div><div class="line">        <span class="keyword">function</span> <span class="function"><span class="title">getOs</span></span>()  </div><div class="line">        &#123;  </div><div class="line">            var OsObject = <span class="string">""</span>;  </div><div class="line">           <span class="keyword">if</span>(navigator.userAgent.indexOf(<span class="string">"MSIE"</span>)&gt;0) &#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"MSIE"</span>;  </div><div class="line">           &#125;  </div><div class="line">           <span class="keyword">if</span>(isFirefox=navigator.userAgent.indexOf(<span class="string">"Firefox"</span>)&gt;0)&#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Firefox"</span>;  </div><div class="line">           &#125; </div><div class="line">           <span class="keyword">if</span>(isChrome=navigator.userAgent.indexOf(<span class="string">"Chrome"</span>)&gt;0)&#123;</div><div class="line">                  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Chrome"</span>;  </div><div class="line">           &#125;   </div><div class="line">           <span class="keyword">if</span>(isSafari=navigator.userAgent.indexOf(<span class="string">"Safari"</span>)&gt;0) &#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Safari"</span>;  </div><div class="line">           &#125;   </div><div class="line">           <span class="keyword">if</span>(isCamino=navigator.userAgent.indexOf(<span class="string">"Camino"</span>)&gt;0)&#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Camino"</span>;  </div><div class="line">           &#125;  </div><div class="line">           <span class="keyword">if</span>(isMozilla=navigator.userAgent.indexOf(<span class="string">"Gecko/"</span>)&gt;0)&#123;  </div><div class="line">                <span class="built_in">return</span> <span class="string">"Gecko"</span>;  </div><div class="line">           &#125;  </div><div class="line">	&#125;</div><div class="line"> <span class="keyword">if</span> (getVendorPrefix()==<span class="string">"webkit"</span>) &#123;</div><div class="line">            document.getElementById(<span class="string">"img1"</span>).src = <span class="string">"1.webP"</span>; </div><div class="line">        &#125; <span class="keyword">else</span> </div><div class="line">        &#123;</div><div class="line">            document.getElementById(<span class="string">"img1"</span>).src = <span class="string">"web.jpg"</span>; </div><div class="line">         &#125;</div><div class="line">        &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="（二）"><a href="#（二）" class="headerlink" title="（二）"></a>（二）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var browser=</div><div class="line">        &#123;  </div><div class="line">          versions:<span class="function"><span class="title">function</span></span>()</div><div class="line">          &#123;   </div><div class="line">          var u = navigator.userAgent, app = navigator.appVersion;   </div><div class="line">          <span class="built_in">return</span> &#123;//移动终端浏览器版本信息   </div><div class="line">               trident: u.indexOf(<span class="string">'Trident'</span>) &gt; -1, //IE内核  </div><div class="line">               presto: u.indexOf(<span class="string">'Presto'</span>) &gt; -1, //opera内核  </div><div class="line">               webKit: u.indexOf(<span class="string">'AppleWebKit'</span>) &gt; -1, //苹果、谷歌内核  </div><div class="line">               gecko: u.indexOf(<span class="string">'Gecko'</span>) &gt; -1 &amp;&amp; u.indexOf(<span class="string">'KHTML'</span>) == -1, //火狐内核  </div><div class="line">               mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端  </div><div class="line">               ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  </div><div class="line">               android: u.indexOf(<span class="string">'Android'</span>) &gt; -1 || u.indexOf(<span class="string">'Linux'</span>) &gt; -1, //android终端或者uc浏览器  </div><div class="line">               iPhone: u.indexOf(<span class="string">'iPhone'</span>) &gt; -1 || u.indexOf(<span class="string">'Mac'</span>) &gt; -1, //是否为iPhone或者QQHD浏览器  </div><div class="line">               iPad: u.indexOf(<span class="string">'iPad'</span>) &gt; -1, //是否iPad  </div><div class="line">               webApp: u.indexOf(<span class="string">'Safari'</span>) == -1 //是否web应该程序，没有头部与底部  </div><div class="line">                 &#125;;  </div><div class="line">        &#125;(),  </div><div class="line">        language:(navigator.browserLanguage || navigator.language).toLowerCase()  </div><div class="line">       &#125;   </div><div class="line">               document.writeln(<span class="string">"语言版本: "</span>+browser.language);  </div><div class="line">               document.writeln(<span class="string">" 是否为移动终端: "</span>+browser.versions.mobile);  </div><div class="line">               document.writeln(<span class="string">" ios终端: "</span>+browser.versions.ios);  </div><div class="line">               document.writeln(<span class="string">" android终端: "</span>+browser.versions.android);  </div><div class="line">               document.writeln(<span class="string">" 是否为iPhone: "</span>+browser.versions.iPhone);  </div><div class="line">               document.writeln(<span class="string">" 是否iPad: "</span>+browser.versions.iPad);  </div><div class="line">               document.writeln(navigator.userAgent);  </div><div class="line">         </div><div class="line">        alert(<span class="string">"您的浏览器类型为:"</span>+getOs());</div></pre></td></tr></table></figure>
+<h3 id="（三）"><a href="#（三）" class="headerlink" title="（三）"></a>（三）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">getVendorPrefix</span></span>() &#123;</div><div class="line">          // 使用body是为了避免在还需要传入元素</div><div class="line">          var body = document.body || document.documentElement,</div><div class="line">            style = body.style,</div><div class="line">            vendor = [<span class="string">'webkit'</span>, <span class="string">'khtml'</span>, <span class="string">'moz'</span>, <span class="string">'ms'</span>, <span class="string">'o'</span>],</div><div class="line">            i = 0;</div><div class="line"></div><div class="line">          <span class="keyword">while</span> (i &lt; vendor.length) &#123;</div><div class="line">            // 此处进行判断是否有对应的内核前缀</div><div class="line">            <span class="keyword">if</span> (typeof style[vendor[i] + <span class="string">'Transition'</span>] === <span class="string">'string'</span>) &#123;</div><div class="line">              <span class="built_in">return</span> vendor[i];</div><div class="line">            &#125;</div><div class="line">            i++;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">          alert(getVendorPrefix());</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+        <a data-url="http://yoursite.com/2017/06/30/判断内核/" data-id="cjafh3c2c000elrthfqzsfozn" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -359,20 +356,16 @@ if (isWX) {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">近期文章</h3>
+    <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2017/06/30/fffff的副本/">通过JavaScript操作DOM改变HTML结构</a>
-          </li>
         
           <li>
             <a href="/2017/06/30/luomingchuan/">猜猜我是谁</a>
           </li>
         
           <li>
-            <a href="/2017/06/30/lmc/">暑假留校十天了</a>
+            <a href="/2017/06/30/fffff的副本/">通过JavaScript操作DOM改变HTML结构</a>
           </li>
         
           <li>
@@ -381,6 +374,10 @@ if (isWX) {
         
           <li>
             <a href="/2017/06/30/c2/">算法03|搜索</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/30/c4/">算法04|搜索</a>
           </li>
         
       </ul>
@@ -392,9 +389,9 @@ if (isWX) {
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">歸檔</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">21</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">22</span></li></ul>
     </div>
   </div>
 
@@ -432,7 +429,7 @@ if (isWX) {
 
 <!-- totop start -->
 <div id="totop">
-	<a title="返回頂部"></a>
+	<a title="To Top"></a>
 </div>
 <!-- totop end -->
 
