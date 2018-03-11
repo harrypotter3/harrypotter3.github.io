@@ -262,6 +262,66 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-大马" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/09/22/大马/" class="article-date">
+      <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">2017-09-22</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/22/大马/">我会披荆斩棘，再去见你|马来西亚</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>我一刻不停的怀念着–我们曾经相遇的时光。<br>年轻的时候去见你是我最正确的决定，大马。<br>必要努力学习，给自己一个能随时见你的未来。<br>                —9.22于先驌楼</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/仙境之桥/">仙境之桥</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-构造函数" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -301,6 +361,129 @@
 <h3 id="闭包：函数对象可以通过作用域链相互关联起来。"><a href="#闭包：函数对象可以通过作用域链相互关联起来。" class="headerlink" title="闭包：函数对象可以通过作用域链相互关联起来。"></a>闭包：函数对象可以通过作用域链相互关联起来。</h3><p>js采用词法作用域，也就是说，函数的执行依赖与变量作用域。为了实现这种，js内部状态不仅包含函数的代码逻辑，还必须引用当前的作用域链。一定角度来讲，所有的函数都是闭包：它们都是对象，都关联到作用域链。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var scope=“global scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">checkscope</span></span>()&#123;</div><div class="line">var scope=“<span class="built_in">local</span> scope”;</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>()&#123;<span class="built_in">return</span> scope;&#125;</div><div class="line"><span class="built_in">return</span> f();</div><div class="line">&#125;</div><div class="line">checkscope();  //<span class="built_in">local</span> scope</div></pre></td></tr></table></figure>
 <p>如果是checkscope()();则返回函数内嵌套的一个函数对象</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-蓝桥杯" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/09/14/蓝桥杯/" class="article-date">
+      <time datetime="2017-09-13T16:00:00.000Z" itemprop="datePublished">2017-09-14</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/14/蓝桥杯/">蓝桥杯|</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="矩阵面积交："><a href="#矩阵面积交：" class="headerlink" title="矩阵面积交："></a>矩阵面积交：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line"><span class="comment">#include&lt;stdio.h&gt;  </span></div><div class="line"><span class="comment">#define max(x,y) ((x)&gt;(y)?(x):(y))  </span></div><div class="line"><span class="comment">#define min(x,y) ((x)&lt;(y)?(x):(y))  </span></div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;  </div><div class="line">	double x1,y1,x2,y2;    //矩形1  </div><div class="line">	double x3,y3,x4,y4;    //矩形2  </div><div class="line">	double m1,n1;        //交集左上角坐标.  </div><div class="line">	double m2,n2;        //交集右下角坐标.  </div><div class="line">	scanf(<span class="string">"%lf%lf%lf%lf"</span>,&amp;x1,&amp;y1,&amp;x2,&amp;y2);  </div><div class="line">	scanf(<span class="string">"%lf%lf%lf%lf"</span>,&amp;x3,&amp;y3,&amp;x4,&amp;y4);  </div><div class="line">	m1 = max(min(x1,x2),min(x3,x4));  </div><div class="line">	n1 = max(min(y1,y2),min(y3,y4));  </div><div class="line">	m2 = min(max(x1,x2),max(x3,x4));  </div><div class="line">	n2 = min(max(y1,y2),max(y3,y4));  </div><div class="line">	<span class="keyword">if</span>(m2&gt;m1 &amp;&amp; n2&gt;n1)  </div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>,(m2 - m1)*(n2 - n1));  </div><div class="line">	<span class="keyword">else</span>  </div><div class="line">		<span class="built_in">printf</span>(<span class="string">"0.00\n"</span>);  </div><div class="line">	<span class="built_in">return</span> 0;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="（贪心算法）"><a href="#（贪心算法）" class="headerlink" title="（贪心算法）"></a>（贪心算法）</h3><p>设有n个活动的集合E={1,2,…,n}，其中每个活动都要求使用同一资源，如演讲会场等，而在同一时间内只有一个活动能使用这一资源。每个活动i都有一个要求使用该资源的起始时间Si和一个结束时间Fi，且Si<fi。如果选择了活动i，则它在半开时间区间[si,fi)内占用资源。若区间[si,fi)与区间[sj，fj）不相交，则称活动i与活动j是相容的。也就是说si>=Fj或Sj&gt;=Fi时，活动i与活动j相容。活动安排问题就是要在所给的活动集合中选择出最大的相容活动子集合。</fi。如果选择了活动i，则它在半开时间区间[si,fi)内占用资源。若区间[si,fi)与区间[sj，fj）不相交，则称活动i与活动j是相容的。也就是说si></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">/贪心算法-活动安排的实现</div><div class="line"></div><div class="line"><span class="comment">#include "stdafx.h"</span></div><div class="line"><span class="comment">#include "stdio.h"</span></div><div class="line"></div><div class="line">template&lt;class Type&gt;</div><div class="line">void GreedySelector(int n,Type s[],Type f[],bool A[])</div><div class="line">&#123;</div><div class="line">    A[0]=1;    //第一个直接选取</div><div class="line">    int j=0;</div><div class="line">    <span class="keyword">for</span>(int i=1;i&lt;n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(s[i]&gt;=f[j])&#123;A[i]=<span class="literal">true</span>;j=i;&#125;    //如果第i+1的活动的开始时间大于或等于第i个活动的结束时间，则标记该活动</div><div class="line">        <span class="keyword">else</span> A[i]=<span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int _tmain(int argc, _TCHAR* argv[])</div><div class="line">&#123;</div><div class="line">    //初始化数据</div><div class="line">    int n=3;</div><div class="line">    int s[3]=&#123;1,2,4&#125;;    //开始时间</div><div class="line">    int f[3]=&#123;3,3,5&#125;;    //结束时间</div><div class="line">    bool A[3]=&#123;0,0,0&#125;;    //数组A用于标记是否选择活动，1表示选择，0表示不选择</div><div class="line"></div><div class="line">    GreedySelector&lt;int&gt;(n,s,f,A);</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,A[i]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="完美的代价（贪心）"><a href="#完美的代价（贪心）" class="headerlink" title="完美的代价（贪心）"></a>完美的代价（贪心）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;stdio.h&gt;</span></div><div class="line"></div><div class="line"><span class="comment">#include&lt;stdlib.h&gt;</span></div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">int n,i,j,k,l,count=0,flag=1,c=-1;</div><div class="line">char*a;</div><div class="line">scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">a=(char*)malloc(n*sizeof(char));</div><div class="line">scanf(<span class="string">"%s"</span>,a);</div><div class="line">j=n-1;</div><div class="line"><span class="keyword">for</span>(i=0;i&lt;j;i++)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">for</span>(k=j;k&gt;=i;k--)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(k==i)</div><div class="line">		&#123;</div><div class="line"></div><div class="line">			<span class="keyword">if</span>(n%2==0||c!=-1)</div><div class="line"></div><div class="line">		&#123;</div><div class="line">			flag=0;</div><div class="line">			<span class="built_in">break</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line">	c=1;</div><div class="line">	count+=n/2-i;</div><div class="line">&#125;</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(a[k]==a[i])</div><div class="line">&#123;</div><div class="line">	<span class="keyword">for</span>(l=k;l&lt;j;l++)	</div><div class="line">	&#123;</div><div class="line">		a[l]=a[l+1];</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	a[j]=a[i];</div><div class="line">	count+=j-k;</div><div class="line">	j--;</div><div class="line">	<span class="built_in">break</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(flag==0)</div><div class="line"><span class="built_in">break</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(flag==0)</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"Impossible"</span>);</div><div class="line"><span class="keyword">else</span></div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,count);</div><div class="line"><span class="built_in">return</span> 0;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/09/14/javascript/" class="article-date">
+      <time datetime="2017-09-13T16:00:00.000Z" itemprop="datePublished">2017-09-14</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/14/javascript/">推荐几个javascript思维导图</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>来自简书—<br>九张图看懂javascript<br><a href="http://www.jianshu.com/p/a4171444e512" target="_blank" rel="external">http://www.jianshu.com/p/a4171444e512</a></p>
 
       
     </div>
@@ -393,193 +576,9 @@
 
 
   
-    <article id="post-javascript" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/09/14/javascript/" class="article-date">
-      <time datetime="2017-09-13T16:00:00.000Z" itemprop="datePublished">2017-09-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/14/javascript/">推荐几个javascript思维导图</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>来自简书—<br>九张图看懂javascript<br><a href="http://www.jianshu.com/p/a4171444e512" target="_blank" rel="external">http://www.jianshu.com/p/a4171444e512</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-c2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/09/14/c2/" class="article-date">
-      <time datetime="2017-09-13T16:00:00.000Z" itemprop="datePublished">2017-09-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/14/c2/">算法03|搜索</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="深度搜索模型；"><a href="#深度搜索模型；" class="headerlink" title="深度搜索模型；"></a>深度搜索模型；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">void bfs (int step)</div><div class="line">&#123; </div><div class="line">  	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">	       dfs(step+1);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h3 id="迷宫问题"><a href="#迷宫问题" class="headerlink" title="迷宫问题"></a>迷宫问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">//迷宫问题</div><div class="line">int n,m,p,q,min=99999999;</div><div class="line">int a[51][51],book[51][51];</div><div class="line">void dfs(int x,int y,int step)</div><div class="line">&#123;</div><div class="line">	int next[4][2] = &#123;</div><div class="line">		&#123;0,1&#125;,&#123;1,0&#125;,&#123;0,-1&#125;,&#123;-1,0&#125;</div><div class="line">	&#125;;</div><div class="line">	int tx,ty,k;</div><div class="line">	<span class="keyword">if</span> (x==p &amp;&amp; y==q) &#123;</div><div class="line">		<span class="keyword">if</span> (step&lt;min) </div><div class="line">			min = step;</div><div class="line">			<span class="built_in">return</span> ;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(k=0;k&lt;=3;k++)</div><div class="line">	&#123;</div><div class="line">		tx=x+next[k][0];</div><div class="line">		ty=y+next[k][1];</div><div class="line">		<span class="keyword">if</span> (tx&lt;1 || tx&gt;n || ty&lt;1 || ty&gt;m) </div><div class="line">			<span class="built_in">continue</span>;</div><div class="line">			//判断该点是否成为障碍物或者已经在路径中</div><div class="line">		<span class="keyword">if</span>(a[tx][ty]==0 &amp;&amp; book[tx][ty]==0)</div><div class="line">		&#123;</div><div class="line">			book[tx][ty]=1;</div><div class="line">			dfs(tx, ty, step+1);</div><div class="line">			book[tx][ty]=0;</div><div class="line">		&#125;	</div><div class="line">		</div><div class="line">	&#125;<span class="built_in">return</span>;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	int i,j,startx,starty;</div><div class="line">	scanf(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n;i++)</div><div class="line">		<span class="keyword">for</span>(j=1;j&lt;=m;j++)</div><div class="line">			scanf(<span class="string">"%d"</span>,&amp;a[i][j]);</div><div class="line">		scanf(<span class="string">"%d %d %d"</span>,&amp;startx,&amp;starty,&amp;p,&amp;q);</div><div class="line">		book[startx][startx]=1;</div><div class="line">		dfs(startx, starty, 0);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,min);</div><div class="line">		getchar();getchar();</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-蓝桥杯" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/09/14/蓝桥杯/" class="article-date">
-      <time datetime="2017-09-13T16:00:00.000Z" itemprop="datePublished">2017-09-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/14/蓝桥杯/">蓝桥杯|</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="矩阵面积交："><a href="#矩阵面积交：" class="headerlink" title="矩阵面积交："></a>矩阵面积交：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line"><span class="comment">#include&lt;stdio.h&gt;  </span></div><div class="line"><span class="comment">#define max(x,y) ((x)&gt;(y)?(x):(y))  </span></div><div class="line"><span class="comment">#define min(x,y) ((x)&lt;(y)?(x):(y))  </span></div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;  </div><div class="line">	double x1,y1,x2,y2;    //矩形1  </div><div class="line">	double x3,y3,x4,y4;    //矩形2  </div><div class="line">	double m1,n1;        //交集左上角坐标.  </div><div class="line">	double m2,n2;        //交集右下角坐标.  </div><div class="line">	scanf(<span class="string">"%lf%lf%lf%lf"</span>,&amp;x1,&amp;y1,&amp;x2,&amp;y2);  </div><div class="line">	scanf(<span class="string">"%lf%lf%lf%lf"</span>,&amp;x3,&amp;y3,&amp;x4,&amp;y4);  </div><div class="line">	m1 = max(min(x1,x2),min(x3,x4));  </div><div class="line">	n1 = max(min(y1,y2),min(y3,y4));  </div><div class="line">	m2 = min(max(x1,x2),max(x3,x4));  </div><div class="line">	n2 = min(max(y1,y2),max(y3,y4));  </div><div class="line">	<span class="keyword">if</span>(m2&gt;m1 &amp;&amp; n2&gt;n1)  </div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>,(m2 - m1)*(n2 - n1));  </div><div class="line">	<span class="keyword">else</span>  </div><div class="line">		<span class="built_in">printf</span>(<span class="string">"0.00\n"</span>);  </div><div class="line">	<span class="built_in">return</span> 0;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="（贪心算法）"><a href="#（贪心算法）" class="headerlink" title="（贪心算法）"></a>（贪心算法）</h3><p>设有n个活动的集合E={1,2,…,n}，其中每个活动都要求使用同一资源，如演讲会场等，而在同一时间内只有一个活动能使用这一资源。每个活动i都有一个要求使用该资源的起始时间Si和一个结束时间Fi，且Si<fi。如果选择了活动i，则它在半开时间区间[si,fi)内占用资源。若区间[si,fi)与区间[sj，fj）不相交，则称活动i与活动j是相容的。也就是说si>=Fj或Sj&gt;=Fi时，活动i与活动j相容。活动安排问题就是要在所给的活动集合中选择出最大的相容活动子集合。</fi。如果选择了活动i，则它在半开时间区间[si,fi)内占用资源。若区间[si,fi)与区间[sj，fj）不相交，则称活动i与活动j是相容的。也就是说si></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">/贪心算法-活动安排的实现</div><div class="line"></div><div class="line"><span class="comment">#include "stdafx.h"</span></div><div class="line"><span class="comment">#include "stdio.h"</span></div><div class="line"></div><div class="line">template&lt;class Type&gt;</div><div class="line">void GreedySelector(int n,Type s[],Type f[],bool A[])</div><div class="line">&#123;</div><div class="line">    A[0]=1;    //第一个直接选取</div><div class="line">    int j=0;</div><div class="line">    <span class="keyword">for</span>(int i=1;i&lt;n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(s[i]&gt;=f[j])&#123;A[i]=<span class="literal">true</span>;j=i;&#125;    //如果第i+1的活动的开始时间大于或等于第i个活动的结束时间，则标记该活动</div><div class="line">        <span class="keyword">else</span> A[i]=<span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int _tmain(int argc, _TCHAR* argv[])</div><div class="line">&#123;</div><div class="line">    //初始化数据</div><div class="line">    int n=3;</div><div class="line">    int s[3]=&#123;1,2,4&#125;;    //开始时间</div><div class="line">    int f[3]=&#123;3,3,5&#125;;    //结束时间</div><div class="line">    bool A[3]=&#123;0,0,0&#125;;    //数组A用于标记是否选择活动，1表示选择，0表示不选择</div><div class="line"></div><div class="line">    GreedySelector&lt;int&gt;(n,s,f,A);</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,A[i]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="完美的代价（贪心）"><a href="#完美的代价（贪心）" class="headerlink" title="完美的代价（贪心）"></a>完美的代价（贪心）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;stdio.h&gt;</span></div><div class="line"></div><div class="line"><span class="comment">#include&lt;stdlib.h&gt;</span></div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">int n,i,j,k,l,count=0,flag=1,c=-1;</div><div class="line">char*a;</div><div class="line">scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">a=(char*)malloc(n*sizeof(char));</div><div class="line">scanf(<span class="string">"%s"</span>,a);</div><div class="line">j=n-1;</div><div class="line"><span class="keyword">for</span>(i=0;i&lt;j;i++)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">for</span>(k=j;k&gt;=i;k--)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(k==i)</div><div class="line">		&#123;</div><div class="line"></div><div class="line">			<span class="keyword">if</span>(n%2==0||c!=-1)</div><div class="line"></div><div class="line">		&#123;</div><div class="line">			flag=0;</div><div class="line">			<span class="built_in">break</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line">	c=1;</div><div class="line">	count+=n/2-i;</div><div class="line">&#125;</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(a[k]==a[i])</div><div class="line">&#123;</div><div class="line">	<span class="keyword">for</span>(l=k;l&lt;j;l++)	</div><div class="line">	&#123;</div><div class="line">		a[l]=a[l+1];</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	a[j]=a[i];</div><div class="line">	count+=j-k;</div><div class="line">	j--;</div><div class="line">	<span class="built_in">break</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(flag==0)</div><div class="line"><span class="built_in">break</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(flag==0)</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"Impossible"</span>);</div><div class="line"><span class="keyword">else</span></div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,count);</div><div class="line"><span class="built_in">return</span> 0;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 </div>

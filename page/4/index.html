@@ -331,6 +331,67 @@
 
 
   
+    <article id="post-c2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/09/14/c2/" class="article-date">
+      <time datetime="2017-09-13T16:00:00.000Z" itemprop="datePublished">2017-09-14</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/14/c2/">算法03|搜索</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="深度搜索模型；"><a href="#深度搜索模型；" class="headerlink" title="深度搜索模型；"></a>深度搜索模型；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">void bfs (int step)</div><div class="line">&#123; </div><div class="line">  	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">	       dfs(step+1);</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h3 id="迷宫问题"><a href="#迷宫问题" class="headerlink" title="迷宫问题"></a>迷宫问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">//迷宫问题</div><div class="line">int n,m,p,q,min=99999999;</div><div class="line">int a[51][51],book[51][51];</div><div class="line">void dfs(int x,int y,int step)</div><div class="line">&#123;</div><div class="line">	int next[4][2] = &#123;</div><div class="line">		&#123;0,1&#125;,&#123;1,0&#125;,&#123;0,-1&#125;,&#123;-1,0&#125;</div><div class="line">	&#125;;</div><div class="line">	int tx,ty,k;</div><div class="line">	<span class="keyword">if</span> (x==p &amp;&amp; y==q) &#123;</div><div class="line">		<span class="keyword">if</span> (step&lt;min) </div><div class="line">			min = step;</div><div class="line">			<span class="built_in">return</span> ;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(k=0;k&lt;=3;k++)</div><div class="line">	&#123;</div><div class="line">		tx=x+next[k][0];</div><div class="line">		ty=y+next[k][1];</div><div class="line">		<span class="keyword">if</span> (tx&lt;1 || tx&gt;n || ty&lt;1 || ty&gt;m) </div><div class="line">			<span class="built_in">continue</span>;</div><div class="line">			//判断该点是否成为障碍物或者已经在路径中</div><div class="line">		<span class="keyword">if</span>(a[tx][ty]==0 &amp;&amp; book[tx][ty]==0)</div><div class="line">		&#123;</div><div class="line">			book[tx][ty]=1;</div><div class="line">			dfs(tx, ty, step+1);</div><div class="line">			book[tx][ty]=0;</div><div class="line">		&#125;	</div><div class="line">		</div><div class="line">	&#125;<span class="built_in">return</span>;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	int i,j,startx,starty;</div><div class="line">	scanf(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n;i++)</div><div class="line">		<span class="keyword">for</span>(j=1;j&lt;=m;j++)</div><div class="line">			scanf(<span class="string">"%d"</span>,&amp;a[i][j]);</div><div class="line">		scanf(<span class="string">"%d %d %d"</span>,&amp;startx,&amp;starty,&amp;p,&amp;q);</div><div class="line">		book[startx][startx]=1;</div><div class="line">		dfs(startx, starty, 0);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,min);</div><div class="line">		getchar();getchar();</div><div class="line">		<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-C" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -536,116 +597,9 @@
 
 
   
-    <article id="post-慕课网圣诞" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/07/22/慕课网圣诞/" class="article-date">
-      <time datetime="2017-07-21T16:00:00.000Z" itemprop="datePublished">2017-07-22</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/22/慕课网圣诞/">imooc|圣诞css</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="1-自适应rem布局"><a href="#1-自适应rem布局" class="headerlink" title="1.自适应rem布局"></a>1.自适应rem布局</h3><p>rem和em单位一样，都是一个相对单位,不同的是em是相对于元素的父元素的font-size进行计算,rem是相对于根元素html的font-size进行计算,这样一来rem就绕开了复杂的层级关系，实现了类似于em单位的功能。默认情况下浏览器给的字体大小是16px，按照转化关系 16px = 1rem。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">recalc = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">        //设置根字体大小</div><div class="line">        docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + <span class="string">'px'</span>;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure></p>
-<h3 id="2-css3关键帧动画"><a href="#2-css3关键帧动画" class="headerlink" title="2.css3关键帧动画"></a>2.css3关键帧动画</h3><p>Animation有八个属性</p>
-<ol>
-<li>animation-name ：动画名</li>
-<li>animation-duration：时间</li>
-<li>animation-delay：延时</li>
-<li>animation-iteration-count：次数</li>
-<li>animation-direction：方向</li>
-<li>animation-play-state：控制</li>
-<li>animation-fill-mode：状态</li>
-<li>animation-timing-function：关键帧变化<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">animation:bird-slow 400ms steps(3) infinite;</div><div class="line">@keyframes bird-slow &#123;</div><div class="line">    0% &#123;background-position-x: -0px&#125;</div><div class="line">    100% &#123;background-position-x: -273px&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>通过定义一个类，类中定义的动画的一些关键数据，比如动画名，时间，次数，切换的位置<br>通过keyframes定义动画具体执行参数与时间段<br>steps(3)的意思就是：keyframes设置的0%-100%的段中，background-position的的x坐标会变化3次<br>steps会平分这些段落值，其变化值就是:</p>
-<ol>
-<li>background-position-x: -0px</li>
-<li>background-position-x: -91px</li>
-<li>background-position-x: -182px</li>
-</ol>
-<p>transition是css3引入的”过渡”属性，可以让css的属性值在一定的时间区间内平滑地过渡，考虑兼容性问题，这里会额外引入一个插件jquery.transit，这个就是具体封装了transition的CSS3过渡动画的实现<br>接下来代码部分就非常简单了<br>transition的使用与jQuery提供的animate()方法基本差不多，所以使用上很容易接受<br>参考右边的代码，让飞鸟执行一个飞的动作，可以这样用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">".bird"</span>).transition(&#123;</div><div class="line">    <span class="string">'right'</span>: <span class="string">"3rem"</span>,</div><div class="line">&#125;, 10000,<span class="string">'linear'</span>,<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    alert(<span class="string">"结束"</span>)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="3-3D变换："><a href="#3-3D变换：" class="headerlink" title="3.3D变换："></a>3.3D变换：</h3><p>要想实现3D的效果，只需指定一个元素为容器并设置transform-style：preserve-3d，那么它的后代元素便会有3D效果。<br>1.父元素或者当前运动元素上设置透视角perspective，perspective属性的值决定了3D效果的强度。<br>可以呈现3d的属性有，translate3d、scale3d、rotateX、rotateY、rotateZ等等<br>2.3D视图：设置在父元素上，子元素都可以相对于父元素的平面进行3D变形操作。</p>
-<p>异步编程梳理：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">	//任务一</div><div class="line">	setTimeout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">		//任务二</div><div class="line">	&#125;,1000)</div><div class="line">&#125;,1000)</div><div class="line">var dtd = $.Deferred();  //创建</div><div class="line">dtd.resolve();          //成功</div><div class="line">dtd.then()              //执行回调</div></pre></td></tr></table></figure></p>
-<p>观察者模式：<br>var observer = new Observer(); //创建对象<br>observer.subscribe(“任务名”,处理函数)<br>observer.publish(“任务名”）／／触发事件<br>observer.unsubscribe(“任务名”)</p>
-<p>SVG概述<br>在之前的七夕主题中，在留言反馈中经常会有人说：”这个怎么又是图片，还以为是画出来的”。其实我很想说：靠人工是很难画的。当然基于七夕的优化，我在圣诞中还是特意引入的一部分svg与canvas来做一些图形操作。SVG是基于xml标记语言可缩放矢量图形，支持无损缩放的同时也因为是dom节点，所以也支持事件，但是弊端也很明显，dom的数量非常大，复杂度高，渲染就比较慢了，也不适合游戏的开发，一般会用canvas之后会介绍<br>SVG有什么优势？</p>
-<ul>
-<li>文件体积小，能够被大量的压缩</li>
-<li>图片可无限放大而不失真(矢量图的基本特征)</li>
-<li>在视网膜显示屏上效果极佳</li>
-<li>能够实现互动和滤镜效果</li>
-</ul>
-<p>CANVAS概述<br>Canvas是html5的新标签，看起来很屌的样子其实理解了就不难。Canvas意为画布，简单的来说通过Canvas提供的一些接口方法在这个指定的画布中画出我们想要的图片与执行一系列的动作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//第一步：获取canvas元素</div><div class="line">   var cvs = document.getElementById(<span class="string">'cvs'</span>); //画布</div><div class="line">    //第二步：获取上下文</div><div class="line">   var ctx = cvs.getContext(<span class="string">'2d'</span>); // 画笔</div><div class="line">   //第三步：指定绘制线样式、颜色</div><div class="line">   ctx.strokeStyle = <span class="string">"red"</span>;</div><div class="line">   //第四步：绘制矩形，只有线。内容是空的</div><div class="line">   //ctx.strokeRect(10, 10, 190, 100);</div><div class="line">   ctx.moveTo(50,50);</div><div class="line">   ctx.lineTo(300,200);</div><div class="line">   ctx.stroke();</div><div class="line">   //以下演示填充矩形。</div></pre></td></tr></table></figure>
-<ul>
-<li>创建HTML页面，设置画布标签</li>
-<li>编写js，获取画布dom对象</li>
-<li>通过Canvas标签的Dom对象获取上下文</li>
-<li>设置绘制线样式、颜色</li>
-<li>绘制矩形，或者填充矩形</li>
-</ul>
-<p>代码封装：<br>设计3个独立的JS文件分别是page-a.js、page-b.js、page-c.js，分别对应了3个场景类，把每一个场景的内容封装到每一个场景类中<br>然后在三个场景类之间通过接口去调用，比如切换页面，所以需要创建一个”中介”对象(christmas.js)充当，接口分配任务。</p>
-<p>在HTML5标准网页里面，我们可以运用audio标签来完成我们对声音的调用及播放.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var audio = new Audio(url);   //创建一个音频对象并传入地址</div><div class="line">audio.loop  = loop ||  <span class="literal">false</span>; //是否循环</div><div class="line">audio.play(); //开始播放</div></pre></td></tr></table></figure>
-<p>传递一个视频的地址，创建一个Audio对象，设置属性loop是否循环播放，然后调用play方法就可以实现播放了.</p>
-<p>在代码的编写上，我合并了next方法的处理，增加了Deferred异步的方法，让异步的代码可以有同步执行的逻辑，这样代码结构看起来会更清晰<br>在next方法中封装了Deferred是使用，所以可以连续调用<br>next().then().then().then()…….</p>
-<p>3D开窗效果</p>
-<p>在openWindow方法中，动态的通过JS对“门”增加对应的样式，从而执行动画。<br>this.$leftWin.addClass(“window-transition”).addClass(“hover”)<br>this.$rightWin.addClass(“window-transition”).addClass(“hover”)</p>
-<p>window-transition:定义的一个transition过渡动画。<br>hover：定义了一个transform过渡动画执行的变换scale(0.95)rotateY(60deg)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">.window-left.hover &#123;</div><div class="line"></div><div class="line">    transform-origin:left top;</div><div class="line">    transform:scale(0.95,0.95);</div><div class="line">    transform:rotateY(80deg);</div><div class="line">    top:0.1rem;</div><div class="line">    left: -0.25rem;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/魔法音符/">魔法音符</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 </div>
