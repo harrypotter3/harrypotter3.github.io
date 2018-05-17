@@ -185,7 +185,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello，guys/">Hello，guys</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac环境/">mac环境</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/产品经理/">产品经理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/仙境之桥/">仙境之桥</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/魔法音符/">魔法音符</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello，guys/">Hello，guys</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac环境/">mac环境</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/产品经理/">产品经理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/仙境之桥/">仙境之桥</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/魔法音符/">魔法音符</a></li></ul>
                     </div>
                 </section>
                 
@@ -261,6 +261,66 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-java" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/05/17/java/" class="article-date">
+      <time datetime="2018-05-16T16:00:00.000Z" itemprop="datePublished">2018-05-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/17/java/">Java生产者消费者</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div></pre></td><td class="code"><pre><div class="line">import java.util.Vector;</div><div class="line"></div><div class="line">//工厂</div><div class="line">class Factory</div><div class="line">&#123;</div><div class="line">	private Vector&lt;String&gt; goods;</div><div class="line">	private int goodFlag = 5;//货物上限</div><div class="line">	public <span class="function"><span class="title">Factory</span></span>()&#123;</div><div class="line">		goods = new Vector&lt;String&gt; ();</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public synchronized void <span class="function"><span class="title">production</span></span>()</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (goods.size() &lt; goodFlag) &#123;</div><div class="line">			goods.addElement(<span class="string">"货物"</span>+(goods.size()+1));</div><div class="line">			System.out.printf(<span class="string">"%s生产货物：货物%d，现有货物数量：%d\n"</span>, Thread.currentThread().getName(),</div><div class="line">             (goods.size() + 1),goods.size());</div><div class="line">			notifyAll();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> &#123;</div><div class="line">			System.out.println(<span class="string">"货物已满可以取货"</span>);</div><div class="line">         try</div><div class="line">         &#123;</div><div class="line">            // 货物满等待消费</div><div class="line">            <span class="built_in">wait</span>();</div><div class="line">         &#125;</div><div class="line">         catch (InterruptedException e)</div><div class="line">         &#123;</div><div class="line">            System.out.println(<span class="string">"生产事故..."</span>);</div><div class="line">         &#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	 public synchronized void <span class="function"><span class="title">getProduction</span></span>()</div><div class="line">   &#123;</div><div class="line">      <span class="keyword">if</span> (goods.size() &lt; 1)</div><div class="line">      &#123;</div><div class="line">         try</div><div class="line">         &#123;</div><div class="line">            System.out.println(<span class="string">"货物取完..."</span>);</div><div class="line">            // 等待生产</div><div class="line">            <span class="built_in">wait</span>();</div><div class="line">         &#125;</div><div class="line">         catch (InterruptedException e)</div><div class="line">         &#123;</div><div class="line">            System.out.println(<span class="string">"账户余额不足..."</span>);</div><div class="line">         &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span></div><div class="line">      &#123;</div><div class="line">         System.out.printf(<span class="string">"%s取走货物：%s，还有货物数量：%d\n"</span>, Thread.currentThread().getName(),</div><div class="line">             goods.elementAt(goods.size() - 1),</div><div class="line">               goods.size());</div><div class="line">         goods.remove(goods.size() - 1);</div><div class="line">         // 唤醒生产线程</div><div class="line">         notifyAll();</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//生产者</div><div class="line"></div><div class="line">class ProductThread extends Thread </div><div class="line">&#123;</div><div class="line">	private Factory factory = null;</div><div class="line">	public ProductThread(String name,Factory factory)</div><div class="line">	&#123;</div><div class="line">		super(name);</div><div class="line">		this.factory=factory;</div><div class="line">	&#125;</div><div class="line">	public void <span class="function"><span class="title">run</span></span>()</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">while</span> (<span class="literal">true</span>)</div><div class="line">      &#123;</div><div class="line">         factory.production();</div><div class="line">         try</div><div class="line">         &#123;</div><div class="line">            Thread.sleep(10);</div><div class="line">         &#125;</div><div class="line">         catch (InterruptedException e)</div><div class="line">         &#123;</div><div class="line">            System.out.println(<span class="string">"生产事故..."</span>);</div><div class="line">         &#125;</div><div class="line">      &#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//消费者</div><div class="line">class ConsumThread extends Thread</div><div class="line">&#123;</div><div class="line">   private Factory factory = null;</div><div class="line"></div><div class="line">   public ConsumThread(String name, Factory factory)</div><div class="line">   &#123;</div><div class="line">      super(name);</div><div class="line">      this.factory = factory;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   @Override</div><div class="line">   public void <span class="function"><span class="title">run</span></span>()</div><div class="line">   &#123;</div><div class="line">      <span class="keyword">while</span> (<span class="literal">true</span>)</div><div class="line">      &#123;</div><div class="line">         factory.getProduction();</div><div class="line">         try</div><div class="line">         &#123;</div><div class="line">            Thread.sleep(10);</div><div class="line">         &#125;</div><div class="line">         catch (InterruptedException e)</div><div class="line">         &#123;</div><div class="line">            System.out.println(<span class="string">"账户余额不足..."</span>);</div><div class="line">         &#125;</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"> class ProducConsumDome</div><div class="line">&#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Factory factory = new Factory();</div><div class="line">		ProductThread productThread = new ProductThread(<span class="string">"生产工厂"</span>, factory);</div><div class="line">        ConsumThread consumThread = new ConsumThread(<span class="string">"消费者"</span>, factory);</div><div class="line">        productThread.start();</div><div class="line">        consumThread.start();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-环境变量" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -493,70 +553,6 @@
 <p>高中时看三傻大闹宝莱坞和现在心境似乎也同样发生了变化，那时候的我是兴奋的，像一个勇者探索着生活，不畏惧自己的将来。但现在我似乎又陷入了迷茫，虽然依然坚定自己的理想，却害怕不能做的很好，害怕被社会改变，害怕成为与自己年少时相背的懦弱者。</p>
 <p>或许这也是一种成长，就像勇者打怪升级之后遇见伙伴，遇见诱惑不断挑战自己，他变得成熟，变得害怕失去同伴，失去珍惜的人，但是不管怎样，他依然是勇者，只要同伴在其身边，他就不会变成恶龙。但是如果他是孤身一人呢，或许他会迷茫，会无聊，会慢慢长出触角，这只是我臆想的勇者故事，但我现在心中的勇者是一定不会孤身一人的。而两年前的我认为勇者就是应该孤身一人才酷。</p>
 <p>回到原来的那个故事，或许是警告你不要滋生邪恶的想法，当你出现邪恶的想法，或许下一刻你就被黑暗吞噬。但是这句话对我来说很神奇，每次看到我都能看到现在的自己，感到灵魂深处的震撼，对啊前方是深渊，但是我不可避免，只能迎头向前，毕竟我身边有这么多人，毕竟这个世界如此有趣，毕竟我是一个勇者。每天太阳会照常升起，也依然是Good Time。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/仙境之桥/">仙境之桥</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-牧羊少年" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/14/牧羊少年/" class="article-date">
-      <time datetime="2017-12-13T16:00:00.000Z" itemprop="datePublished">2017-12-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/14/牧羊少年/">牧羊少年奇幻之旅</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>今天老师说思考对你人生有重大变化的一个结点，当时的我是没有想出来的，但是独处时我突然就想到了迄今所遇到的一些特别的人。然后就联想到了高中时期最喜欢的一本书—《牧羊少年奇幻之旅》，小说讲述了牧羊少年圣地亚哥追寻宝藏的奇幻冒险故事，在当时的我看来是热血沸腾的。幻想自己就是圣地亚哥，逃离当下高中体制的压抑去寻求自己所想象的自由。</p>
-<p>“没有一颗心，会因为追求梦想而受伤。当你真心渴望某样东西时，整个宇宙都会来帮忙。”当时的我渴望长大，但同时也在谈论着自己的梦想，现在看来也许每个阶段我们都在思考，思考着自己的未来，思考着自己想要的一切，思考着自己的牧羊之梦。那个时候，牧羊少年让我坚持下去。</p>
-<p>大学的时候我遇见了很多很好的人，他们也同时给予了我很多帮助，这个阶段的我就像是得到梦中法师指引下的牧羊少年，努力去抓住什么，但是就像书中所说的“好像每个人都清楚地知道别人该怎样生活，但却没有一个人知道自己的生活该怎样，就像释梦的老妇人，不知道如何把梦变为现实。”</p>
-<p>对我影响最深的一件事应该是跟竺仔和沈仔一起去大马的那次，我遇见了穿黑袍的女子，遇见了腼腆的司机，遇见了喜欢星球大战的哥哥，离开的时候我又想起了圣地亚哥：“因为我既不生活在过去，也不生活在未来，我只有现在，它才是我最感兴趣的。如果你能永远停留在现在，那你将是最幸福的人。你会发现沙漠里有生命，发现天空中有星星，发现士兵打仗是因为战争是人类生活的一部分。生活就是一个节日，是一个盛大的庆典。因为生活永远是，也仅仅是我们现在经历的这一刻。”</p>
-<p>圣地亚哥有属于自己的天命，而我遇见了你们。感谢生命中出现的一切。</p>
 
       
     </div>
