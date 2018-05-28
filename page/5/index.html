@@ -140,13 +140,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -185,7 +185,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello，guys/">Hello，guys</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI之路/">UI之路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac环境/">mac环境</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/产品经理/">产品经理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/仙境之桥/">仙境之桥</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/魔法音符/">魔法音符</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello，guys/">Hello，guys</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI前端之路/">UI前端之路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac环境/">mac环境</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/产品经理/">产品经理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/仙境之桥/">仙境之桥</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/魔法音符/">魔法音符</a></li></ul>
                     </div>
                 </section>
                 
@@ -258,14 +258,14 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
   
-    <article id="post-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-C" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/09/14/javascript/" class="article-date">
+      <a href="/2017/09/14/C/" class="article-date">
       <time datetime="2017-09-13T16:00:00.000Z" itemprop="datePublished">2017-09-14</time>
 </a>
 
@@ -281,7 +281,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/14/javascript/">推荐几个javascript思维导图</a>
+      <a class="article-title" href="/2017/09/14/C/">简单算法思想02|栈与队列</a>
     </h1>
   
 
@@ -291,7 +291,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>来自简书—<br>九张图看懂javascript<br><a href="http://www.jianshu.com/p/a4171444e512" target="_blank" rel="external">http://www.jianshu.com/p/a4171444e512</a></p>
+        <h3 id="（队列）数组操作："><a href="#（队列）数组操作：" class="headerlink" title="（队列）数组操作："></a>（队列）数组操作：</h3><p>两个变量：head与tail，head指向队首，tail指向队尾最后一个位置。<br>在队首删除一个数是head++，在队尾加一个数是q[tail]=x;tail++;</p>
+<p>简单队列：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int q[101]=&#123;0,6,3,1,7,5,8,9,2,4&#125;,head,tail;</div><div class="line">	int i;</div><div class="line">	head = 1;</div><div class="line">	tail = 10;</div><div class="line">	<span class="keyword">while</span>(head&lt;tail)</div><div class="line">	&#123;</div><div class="line">		//打印队首并将队首出列</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d"</span>,q[head]);</div><div class="line">		head++;</div><div class="line">		q[tail]=q[head];</div><div class="line">		tail++;</div><div class="line">		//再将队首出列</div><div class="line">		head++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h3 id="队列将是我们今后学习广度优先搜索以及队列优化的-Bellman-Ford-最短路算法的核心-数据结构。所以现在将队列的三个基本元素-一个数组，两个变量-封装为一个结构体类型，-如下。"><a href="#队列将是我们今后学习广度优先搜索以及队列优化的-Bellman-Ford-最短路算法的核心-数据结构。所以现在将队列的三个基本元素-一个数组，两个变量-封装为一个结构体类型，-如下。" class="headerlink" title="队列将是我们今后学习广度优先搜索以及队列优化的 Bellman-Ford 最短路算法的核心 数据结构。所以现在将队列的三个基本元素(一个数组，两个变量)封装为一个结构体类型， 如下。"></a>队列将是我们今后学习广度优先搜索以及队列优化的 Bellman-Ford 最短路算法的核心 数据结构。所以现在将队列的三个基本元素(一个数组，两个变量)封装为一个结构体类型， 如下。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">struct queue</div><div class="line">&#123;</div><div class="line">int data[100];//队列的主体，用来存储内容</div><div class="line">int head;//队首</div><div class="line">int tail;//队尾 </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="回文字符串"><a href="#回文字符串" class="headerlink" title="回文字符串 :"></a>回文字符串 :</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#include &lt;string.h&gt;</span></div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	char a[101],s[101];</div><div class="line">	int i,len,mid,next,top;</div><div class="line">	gets(a);</div><div class="line">	len = strlen(a);</div><div class="line">	mid = len/2-1;</div><div class="line">	top = 0;//栈的初始化</div><div class="line">	<span class="keyword">for</span>(i=0;i&lt;=mid;i++)//将mid前的字符依次入栈</div><div class="line">		s[++top]=a[i];</div><div class="line">		//判断字符串的长度是奇数还是偶数，并找出需要进行字符匹配的起始下标</div><div class="line">		<span class="keyword">if</span> (len%2==0) &#123;</div><div class="line">			next = mid+1;</div><div class="line">		&#125;<span class="keyword">else</span></div><div class="line">			next=mid+2;</div><div class="line">	<span class="keyword">for</span>(i=next;i&lt;=len-1;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(a[i]!=s[top])</div><div class="line">		<span class="built_in">break</span>;</div><div class="line">		top--;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (top==0) </div><div class="line">		<span class="built_in">printf</span>(<span class="string">"yes"</span>);</div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"no"</span>);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>动态存储：</p>
+<p>malloc(4);<br>malloc函数的作用就是从内存中申请分配指定字节大小的内存空间。上面这行代码就申 请了 4 个字节。 </p>
 
       
     </div>
@@ -302,7 +308,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li></ul>
     </div>
 
       
@@ -568,10 +574,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-PHP" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/06/30/hello-world/" class="article-date">
+      <a href="/2017/06/30/PHP/" class="article-date">
       <time datetime="2017-06-30T08:04:41.000Z" itemprop="datePublished">2017-06-30</time>
 </a>
 
@@ -583,21 +589,16 @@
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/30/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+        <hr>
+<p>title: 搭建php运行环境，编写并运行PHP程序<br>date: 2017-10-14</p>
+<h2 id="tags-PHP"><a href="#tags-PHP" class="headerlink" title="tags: [PHP]"></a>tags: [PHP]</h2><p>1，    因为mac系统自带Apache服务器，且内置PHP，所以其中的一个方法是另外安装MYSQL数据库并且启动，在终端运行。<br>但是此方法有一个弊端：在MAC每次升级系统时会自动升级php和apache，所以之前可能已经安装的插件都会不见，所以这里还是不太推荐这种方法。</p>
+<p>2，    第二种方法是使用集成软件，我这里使用的是MAMP，集成了所需要的部分，比较方便，安装也不会有太大的问题。</p>
+<p>运行软件后只要点击打开网页就默认进入你的目录，环境也已经搭建好了，可以直接运行PHP文件。<br>但是有时侯会出现打不开的问题，如果上面的MySQL Server打不开，可能就是你的电脑终端已经启动了其他的MYSQL数据库，这时候你就要手动关掉，才能重新打开运行。</p>
+<p>3，    搭建完成之后你可以选择一个喜欢的代码编辑器，这里我选择的是Sublime Text，轻量级且功能强大，其中还可以安装许多插件，提高代码效率。<br>4，    这时候我们就可以来编写我们的第一个php程序，直接运行Sublime，输入你的代码，保存到固定的文件夹下，运行即可。</p>
+<p>5,在打开MAMP之后，很方便的一点就是你可以直接选择你的文件夹打开，不需要新建虚拟目录再配置。<br>6.接下来找到所命名的文件，推荐使用英文命名，不然可能会出现乱码。这样就可以看到你的第一个php运行结果啦。</p>
 
       
     </div>
@@ -638,14 +639,14 @@
                 2016-2018 Mingchuan Luo
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -654,7 +655,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -687,9 +688,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
